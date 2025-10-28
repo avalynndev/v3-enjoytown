@@ -25,7 +25,7 @@ export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const pathnameHasLocale = appLanguages.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
   if (!pathnameHasLocale) {

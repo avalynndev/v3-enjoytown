@@ -79,31 +79,31 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Providers>
-            <div className="flex h-screen flex-col">
-              <div className="flex-none min-w-screen">
-                <Navbar />
-              </div>
-
-              <div className="flex flex-1 overflow-hidden">
-                <SidebarProvider
-                  defaultOpen={false}
-                  style={
-                    {
-                      "--sidebar-width": "calc(var(--spacing) * 72)",
-                      "--header-height": "calc(var(--spacing) * 12)",
-                    } as React.CSSProperties
-                  }
-                >
-                  <AppSidebar
-                    variant="floating"
-                    className="inset-y-11 h-[calc(100vh-2.75rem)] bg-background"
-                  />
-                  <SidebarInset className="m-2 rounded-xl border bg-background shadow-md flex flex-col h-[calc(100vh-3.75rem)]">
-                    <ScrollArea className="h-full">{children}</ScrollArea>
-                  </SidebarInset>
-                </SidebarProvider>
-              </div>
+          <div className="flex h-screen flex-col">
+            <div className="flex-none min-w-screen">
+              <Navbar />
             </div>
+
+            <div className="flex flex-1 overflow-hidden">
+              <SidebarProvider
+                defaultOpen={false}
+                style={
+                  {
+                    "--sidebar-width": "calc(var(--spacing) * 72)",
+                    "--header-height": "calc(var(--spacing) * 12)",
+                  } as React.CSSProperties
+                }
+              >
+                <AppSidebar
+                  variant="floating"
+                  className="inset-y-11 h-[calc(100vh-2.75rem)] bg-background"
+                />
+                <SidebarInset className="m-2 rounded-xl border bg-background shadow-md flex flex-col h-[calc(100vh-3.75rem)]">
+                  <ScrollArea className="h-full">{children}</ScrollArea>
+                </SidebarInset>
+              </SidebarProvider>
+            </div>
+          </div>
         </Providers>
       </body>
     </html>

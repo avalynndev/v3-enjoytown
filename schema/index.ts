@@ -1,10 +1,4 @@
-import {
-  pgTable,
-  text,
-  timestamp,
-  boolean,
-  integer,
-} from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, boolean } from "drizzle-orm/pg-core";
 import { randomUUID } from "crypto";
 
 export const user = pgTable("user", {
@@ -88,4 +82,11 @@ export const userSettings = pgTable("user_settings", {
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 
-export const schema = { user, session, account, verification, feedback, userSettings };
+export const schema = {
+  user,
+  session,
+  account,
+  verification,
+  feedback,
+  userSettings,
+};

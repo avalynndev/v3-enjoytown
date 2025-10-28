@@ -18,7 +18,7 @@ export const auth = betterAuth({
     minPasswordLength: 8,
     maxPasswordLength: 128,
     requireEmailVerification: false,
-    sendResetPassword: async ({ user, url, token }) => {
+    sendResetPassword: async ({ user, url }) => {
       await resend.emails.send({
         from: fromEmail,
         to: user.email,
@@ -39,10 +39,7 @@ export const auth = betterAuth({
   user: {
     changeEmail: {
       enabled: true,
-      sendChangeEmailVerification: async (
-        { user, newEmail, url, token },
-        request
-      ) => {
+      sendChangeEmailVerification: async ({ user, url }) => {
         await resend.emails.send({
           from: fromEmail,
           to: user.email,
@@ -72,7 +69,7 @@ export const auth = betterAuth({
     username(),
     multiSession(),
     magicLink({
-      sendMagicLink: async ({ email, token, url }, request) => {
+      sendMagicLink: async ({ email, url }) => {
         await resend.emails.send({
           from: fromEmail,
           to: email,
@@ -87,41 +84,6 @@ export const auth = betterAuth({
       },
     }),
   ],
-  callbacks: {
-    before: {
-      signUp: async (ctx: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
-        // Custom password validation
-        if (ctx.body.password) {
-          const password = ctx.body.password as string;
-          
-          if (password.length < 8) {
-            throw new Error("Password must be at least 8 characters long");
-          }
-          
-          if (password.length > 128) {
-            throw new Error("Password must be less than 128 characters");
-          }
-          
-          // Check for at least one uppercase letter
-          if (!/[A-Z]/.test(password)) {
-            throw new Error("Password must contain at least one uppercase letter");
-          }
-          
-          // Check for at least one lowercase letter
-          if (!/[a-z]/.test(password)) {
-            throw new Error("Password must contain at least one lowercase letter");
-          }
-          
-          // Check for at least one number
-          if (!/\d/.test(password)) {
-            throw new Error("Password must contain at least one number");
-          }
-        }
-        
-        return ctx;
-      },
-    },
-  },
 });
 export const { getSession } = auth.api;
 

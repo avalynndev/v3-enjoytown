@@ -1,5 +1,5 @@
 "use client";
-import { Clapperboard, Clipboard, User, ChevronDown } from "lucide-react";
+import { Clapperboard, User } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
 import {
@@ -52,7 +52,7 @@ export default function Navbar() {
 
   const currentLang = currentLangFromPath ?? ("en-US" as Language);
   const currentLangOption = SUPPORTED_LANGUAGES.find(
-    (l) => l.value === currentLang
+    (l) => l.value === currentLang,
   );
 
   const replaceLanguageInPath = (nextLang: Language) => {
@@ -127,7 +127,7 @@ export default function Navbar() {
                       />
                       {label}
                     </SelectItem>
-                  )
+                  ),
                 )}
               </SelectContent>
             </Select>

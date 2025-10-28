@@ -4,7 +4,6 @@ import {
   IconDeviceTvOld,
   IconClock,
   IconHeart,
-  IconBook,
   IconList,
   IconAntenna,
   IconUser,
