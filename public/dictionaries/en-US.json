@@ -1,0 +1,868 @@
+{
+  "home": {
+    "keywords": "organize movies, organize series, movie and series app, personalized recommendations, create movie lists, series control, best movie apps, app for series marathons, organize marathons, series reviews, online movie lists, elegant interface for series, movie suggestions, track watched movies"
+  },
+  "home_prices": {
+    "title": "Start Your Journey Today",
+    "description": "Discover the world of movies and TV Series like never before. Start your Enjoytown journey today and become part of a growing community of cinema enthusiasts!",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "free_plan": {
+      "title": "Free",
+      "price": "$0/month",
+      "description": "Explore movies and series and manage your content.",
+      "benefits": [
+        "Full access to the platform",
+        "Unlimited ratings",
+        "Unlimited lists",
+        "Tools to manage your watched, watching, or planned content",
+        "Collaborative lists",
+        "Recommend content to friends"
+      ],
+      "start_now": "Start Now!"
+    },
+    "pro_plan": {
+      "title": "Pro",
+      "price": "$5/month",
+      "recommended": "Recommended",
+      "description": "Everything in the free plan and much more!",
+      "benefits": [
+        "Personalized recommendations based on your history",
+        "Badges and achievements",
+        "Detailed personal statistics",
+        "Priority access to new platform features"
+      ],
+      "subscribe": "Subscribe"
+    }
+  },
+  "movies_list": {
+    "now_playing": "Now playing movies",
+    "popular": "Popular movies",
+    "top_rated": "Top rated movies",
+    "upcoming": "Upcoming movies",
+    "show_all": "Show all"
+  },
+  "animes_page": {
+    "title": "Animes",
+    "description": "From legendary classics to new hits, find the anime you love, organize your lists, and dive into incredible stories."
+  },
+  "login_form": {
+    "email_label": "E-mail",
+    "password_label": "Password",
+    "show_password": "Show password",
+    "hide_password": "Hide password",
+    "access_button": "Access",
+    "email_required": "Please enter your e-mail address.",
+    "email_invalid": "Please enter a valid e-mail address.",
+    "password_required": "Please enter your password.",
+    "password_length": "Your password must be at least 8 characters long.",
+    "login_success": "Login successful. Welcome! 🎉",
+    "invalid_login_credentials": "Invalid login credentials.",
+    "try_again": "Try again"
+  },
+  "sign_up_form": {
+    "email_label": "E-mail",
+    "password_label": "Password",
+    "show_password": "Show password",
+    "hide_password": "Hide password",
+    "submit_button": "Submit",
+    "email_required": "Please enter your e-mail address.",
+    "email_invalid": "Please enter a valid e-mail address.",
+    "password_required": "Please enter your password.",
+    "password_length": "Your password must be at least 8 characters long.",
+    "sign_up_success": "Registration successful. Welcome! 🎉",
+    "invalid_sign_up_credentials": "Invalid sign up credentials",
+    "try_again": "Try again"
+  },
+  "app_page": {
+    "dashboard_title": "Home",
+    "dashboard_description": "Overview of your activities and trends.",
+    "popular_movies_title": "Popular Movies",
+    "popular_tv_series_title": "Popular TV Series"
+  },
+  "tabs": {
+    "reviews": "Reviews",
+    "credits": "Credits",
+    "recommendations": "Recommendations",
+    "similar": "Similar",
+    "images": "Images",
+    "videos": "Videos",
+    "seasons": "Seasons"
+  },
+  "navigation": {
+    "home": "Home",
+    "discover": "Discover",
+    "discover_description": "Ready for something new? Let us surprise you with movies and shows you'll love.",
+    "now_playing": "Now Playing",
+    "now_playing_description": "Stay up-to-date with the movies shining on the big screens right now.",
+    "popular": "Popular",
+    "popular_description": "See what's trending! These are the movies and shows everyone is watching and talking about.",
+    "top_rated": "Top Rated",
+    "top_rated_description": "Discover what have won over the hearts and minds of audiences and critics.",
+    "upcoming": "Upcoming",
+    "upcoming_description": "Stay tuned about the next big hits set to premiere soon.",
+    "tv_series_description": "Binge-worthy series. Explore new stories, unforgettable characters, and your next binge-watches.",
+    "airing_today": "Airing Today",
+    "airing_today_description": "Don't miss a beat! See which shows have fresh episodes coming out of the oven today.",
+    "on_the_air": "On the Air",
+    "on_the_air_description": "Tune in here to not miss out on current episodes of the hottest series right now.",
+    "lists": "Lists",
+    "lists_description": "Your picks, your interests. Create and share lists of your favorite movies and shows with the community.",
+    "animes_description": "Discover epic adventures and stunning visuals."
+  },
+  "sidebar_search": {
+    "placeholder": "Search for movies, TV Series, or people",
+    "search_everything": "Search anything",
+    "no_results": "No results found.",
+    "tv_series": "TV Series"
+  },
+  "watch_providers": {
+    "label": "Watch Providers",
+    "stream": "Stream",
+    "rent": "Rent",
+    "buy": "Buy"
+  },
+  "lists_dropdown": {
+    "my_lists": "My lists",
+    "removed_successfully": "Removed successfully.",
+    "added_successfully": "Added successfully."
+  },
+  "credits": {
+    "cast": "Cast",
+    "crew": "Crew"
+  },
+  "review_form": {
+    "required": "Review is required.",
+    "rating_max": "Max value of rating is 5",
+    "success": "Review created successfully.",
+    "publish": "Publish",
+    "placeholder": "What you think about?",
+    "login": "Login",
+    "register": "Register",
+    "or": "or",
+    "make_first_review": "to make your first review!"
+  },
+  "review_reply_form": {
+    "success": "Reply created successfully."
+  },
+  "review_reply": {
+    "reply": "Reply",
+    "placeholder": "Add a reply...",
+    "open_replies": "View replies",
+    "hide_replies": "Hide replies"
+  },
+  "review_item_actions": {
+    "reply": "Reply",
+    "dialog_title": "Are you absolutely sure?",
+    "dialog_description": "This action cannot be undone."
+  },
+  "review_reply_actions": {
+    "delete": "Delete",
+    "delete_success": "Reply deleted successfully.",
+    "dialog_title": "Are you absolutely sure?",
+    "dialog_description": "This action cannot be undone.",
+    "dialog_close": "Close"
+  },
+  "movie_collection": {
+    "part_of": "Part of",
+    "see_collection": "See collection"
+  },
+  "collection_list_dropdown": {
+    "add_collection_to_list": "Add collection to list",
+    "my_lists": "My lists",
+    "collection_removed_successfully": "Collection removed successfully.",
+    "collection_added_successfully": "Collection added successfully."
+  },
+  "auth": {
+    "logout_success": "Successfully logged out. See you next time ✌"
+  },
+  "list_card": {
+    "delete": "Delete",
+    "delete_success": "List deleted successfully.",
+    "dialog_title": "Are you absolutely sure?",
+    "dialog_description": "This action cannot be undone. This preset will no longer be accessible by you or others you've shared it with.",
+    "dialog_close": "Close"
+  },
+  "list_form": {
+    "create_new_list": "Create new list",
+    "name_placeholder": "My List",
+    "name_required": "Name of list is required.",
+    "description": "Description",
+    "description_placeholder": "Movies, Animes and TV Series I plan to watch.",
+    "visibility": "Visibility",
+    "visibility_option_public": "Public",
+    "visibility_option_network": "Network",
+    "visibility_option_private": "Private",
+    "visibility_option_description_public": "Visible to everyone.",
+    "visibility_option_description_network": "Visible to friends only.",
+    "visibility_option_description_private": "Visible to just me.",
+    "submit": "Submit",
+    "edit_list": "Edit List"
+  },
+  "list_page": {
+    "list_not_found": "List not found.",
+    "see_your_lists_or_create_new": "See your lists or create new clicking",
+    "here": "here"
+  },
+  "list_items": {
+    "table": "Table",
+    "grid": "Grid"
+  },
+  "data_table": {
+    "title": "Title",
+    "type": "Type",
+    "overview": "Overview",
+    "added_at": "Added at",
+    "status": "Status",
+    "no_results": "No results found.",
+    "clear_filters": "Clear filters"
+  },
+  "data_table_column_header": {
+    "asc": "Asc",
+    "desc": "Desc",
+    "hide": "Hide"
+  },
+  "data_table_toolbar": {
+    "filter_items_placeholder": "Filter items...",
+    "reset": "Reset"
+  },
+  "data_table_columns": {
+    "index": "Index",
+    "title": "Title",
+    "type": "Type",
+    "added_at": "Added at",
+    "status": "Status",
+    "actions": "Actions",
+    "movie": "Movie",
+    "tv_serie": "TV Show"
+  },
+  "data_table_view_options": {
+    "view": "View",
+    "toggle_columns": "Toggle columns"
+  },
+  "list_item_actions": {
+    "use_as_cover": "Use as cover",
+    "status": "Status",
+    "delete": "Delete",
+    "removed_successfully": "Removed successfully.",
+    "cover_changed_successfully": "Cover changed successfully.",
+    "see_details": "See details"
+  },
+  "credits_columns": {
+    "year": "Year",
+    "title": "Title",
+    "role": "Role",
+    "rating": "Rating"
+  },
+  "movie_pages": {
+    "discover": {
+      "title": "Discover",
+      "description": "Explore a wide selection of movies with personalized filters and sorting options."
+    },
+    "now_playing": {
+      "title": "Now Playing",
+      "description": "Discover movies currently showing in theaters near you."
+    },
+    "popular": {
+      "title": "Popular",
+      "description": "Check out the movies capturing audiences and dominating popularity charts."
+    },
+    "top_rated": {
+      "title": "Top Rated",
+      "description": "Explore the most acclaimed movies with the highest ratings from audiences and critics."
+    },
+    "upcoming": {
+      "title": "Upcoming",
+      "description": "Stay updated on the most anticipated movies hitting the screens soon."
+    }
+  },
+  "tv_serie_pages": {
+    "airing_today": {
+      "title": "Airing Today",
+      "description": "Check out the TV series airing today."
+    },
+    "on_the_air": {
+      "title": "On the Air",
+      "description": "Discover the TV series scheduled to air in the next 7 days."
+    },
+    "popular": {
+      "title": "Popular",
+      "description": "Explore the TV series dominating popularity charts and capturing audiences."
+    },
+    "top_rated": {
+      "title": "Top Rated",
+      "description": "Discover the most acclaimed TV series with the highest ratings from audiences and critics."
+    },
+    "discover": {
+      "title": "Discover",
+      "description": "Explore new TV series using advanced filters to find exactly what you love."
+    }
+  },
+  "user_last_review": {
+    "title": "Your last review",
+    "no_review_message": "Looks like you haven't written any reviews yet!",
+    "no_review_action": "Click here to see top-rated movies.",
+    "login": "Login",
+    "register": "Register",
+    "or": "or",
+    "make_first_review": "to make your first review!"
+  },
+  "latest_reviews": {
+    "title": "Recent Reviews",
+    "no_reviews_found": "We didn't find any reviews.",
+    "explore_popular_movies": "Explore popular movies, and give us your opinion."
+  },
+  "movies_list_filters": {
+    "title": "Discover Movies",
+    "tabs": {
+      "filters": "Filters",
+      "order": "Sort",
+      "watch_providers": "Where to Watch"
+    },
+    "actions": {
+      "close": "Close",
+      "save_changes": "Save Changes"
+    },
+    "genres_field": {
+      "label": "Genres",
+      "placeholder": "Select a genre",
+      "no_genre_message": "You haven't selected any genres."
+    },
+    "language_field": {
+      "label": "Language",
+      "placeholder": "Select a language"
+    },
+    "release_date_field": {
+      "from_label": "From",
+      "to_label": "To",
+      "from_placeholder": "18/11/2002",
+      "to_placeholder": "18/11/2003",
+      "select_date": "Select a date"
+    },
+    "sort_by": {
+      "label": "Sort by",
+      "placeholder": "Sort by",
+      "options": {
+        "popularity.desc": "Highest Popularity",
+        "popularity.asc": "Lowest Popularity",
+        "revenue.desc": "Highest Revenue",
+        "revenue.asc": "Lowest Revenue",
+        "primary_release_date.desc": "Most Recent",
+        "primary_release_date.asc": "Least Recent",
+        "vote_average.desc": "Highest Rated",
+        "vote_average.asc": "Lowest Rated",
+        "vote_count.desc": "Most Voted",
+        "vote_count.asc": "Least Voted"
+      }
+    },
+    "watch_providers_field": {
+      "label": "Watch providers",
+      "placeholder": "Filter by watch providers",
+      "clear_filters": "Clear filters",
+      "no_results": "No results found."
+    },
+    "vote_average_field": {
+      "label": "Average Score"
+    },
+    "vote_count_field": {
+      "label": "Minimum Votes"
+    },
+    "no_results": "No results."
+  },
+  "tv_series_list_filters": {
+    "title": "Discover TV Series",
+    "tabs": {
+      "filters": "Filters",
+      "order": "Order",
+      "watch_providers": "Where to Watch"
+    },
+    "actions": {
+      "close": "Close",
+      "save_changes": "Save Changes"
+    },
+    "genres_field": {
+      "label": "Genres",
+      "placeholder": "Select a genre",
+      "no_genre_message": "No genre selected."
+    },
+    "language_field": {
+      "label": "Language",
+      "placeholder": "Select a language"
+    },
+    "air_date": {
+      "from_label": "From",
+      "to_label": "To",
+      "from_placeholder": "18/11/2002",
+      "to_placeholder": "18/11/2003",
+      "select_date": "Select a date"
+    },
+    "sort_by": {
+      "label": "Sort by",
+      "placeholder": "Sort by",
+      "options": {
+        "popularity.desc": "Most Popular",
+        "popularity.asc": "Least Popular",
+        "air_date.desc": "Newest",
+        "air_date.asc": "Oldest",
+        "vote_average.desc": "Highest Rated",
+        "vote_average.asc": "Lowest Rated",
+        "vote_count.desc": "Most Voted",
+        "vote_count.asc": "Least Voted"
+      }
+    },
+    "watch_providers_field": {
+      "label": "Watch Providers",
+      "placeholder": "Filter by provider",
+      "clear_filters": "Clear filters",
+      "no_results": "No results found."
+    },
+    "watch_region_field": {
+      "label": "Region",
+      "placeholder": "Select a region"
+    },
+    "vote_average_field": {
+      "label": "Average Score"
+    },
+    "vote_count_field": {
+      "label": "Minimum Votes"
+    },
+    "no_results": "No results."
+  },
+  "collection_filters": {
+    "title": "Filter your collection",
+    "filters_tab": "Filters",
+    "order_tab": "Order",
+    "rating_field_label": "Rating",
+    "media_type_field_label": "Type",
+    "media_type_TV_SHOW": "TV Show",
+    "media_type_MOVIE": "Movie",
+    "only_items_without_review_field_label": "Show only items without review",
+    "sort_by_label": "Sort by",
+    "sort_by_placeholder": "Sort by",
+    "rating_disabled_message": "Rating cannot be adjusted when 'Show only items without review' is selected",
+    "sort_by_options": {
+      "addedAt.desc": "Latest Added",
+      "addedAt.asc": "Oldest Added",
+      "updatedAt.desc": "Latest Updated",
+      "updatedAt.asc": "Oldest Updated",
+      "rating.desc": "Highest Rated",
+      "rating.asc": "Lowest Rated"
+    },
+    "options": {
+      "TV_SHOW": "TV Show",
+      "MOVIE": "Movie"
+    },
+    "close_button": "Close",
+    "save_changes_button": "Save Changes"
+  },
+  "list_command": {
+    "search_placeholder": "Search for anything...",
+    "no_results": "No results found.",
+    "tv_added_success": "TV Series successfully added.",
+    "tv_removed_success": "TV Series successfully removed.",
+    "remove_from_list": "Remove from list",
+    "view_details": "View details",
+    "movie_added_success": "Movie successfully added.",
+    "movie_removed_success": "Movie successfully removed.",
+    "year_prefix": "•"
+  },
+  "no_account_tooltip": "It looks like you don't have an account yet. Click here to join the platform.",
+  "user_resume": {
+    "by": "by"
+  },
+  "tv_serie_season_details": {
+    "episode_number": "Episode",
+    "name": "Name",
+    "overview": "Overview",
+    "runtime": "Runtime",
+    "vote": "Vote"
+  },
+  "popular_people": {
+    "title": "Popular People",
+    "description": "Get a list of people ordered by popularity."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "description": "New updates and improvements.",
+    "subscribe": "Subscribe to updates!"
+  },
+  "text_actions": {
+    "expand": "See more",
+    "contract": "See less"
+  },
+  "grid": "Grid",
+  "table": "Table",
+  "person_page": {
+    "credit_list": {
+      "show_all": "Show all",
+      "show_less": "Show less"
+    }
+  },
+  "thank_you": {
+    "title": "Thank you for your support!",
+    "subtitle": "You're now part of the pros' plan!",
+    "description": "With great powers come great responsibilities:",
+    "feature1": {
+      "title": "Endless Lists",
+      "description": "Say goodbye to limitations! Create and maintain as many lists as you'd like, to organize your binge-watching sessions, plan movie nights, and much more."
+    },
+    "feature2": {
+      "title": "Tailored Recommendations",
+      "description": "Discover new titles that perfectly match your unique taste, thanks to our smart system for personalized recommendations."
+    },
+    "feature3": {
+      "title": "Clone and Conquer",
+      "description": "Get inspired by other members' lists or create personalized versions of your own lists with the ease of a click."
+    },
+    "feature4": {
+      "title": "Your Name, Your Identity",
+      "description": "Feeling the need for a change? Update your username whenever you wish, keeping your digital identity aligned with your cinephile self."
+    }
+  },
+  "profile": {
+    "achievements": "Achievements",
+    "reviews": "Reviews",
+    "lists": "Lists",
+    "recommendations": "Recommendations",
+    "communities": "Communities",
+    "work_in_progress": "Work in progress",
+    "no_lists": "This user has no lists yet.",
+    "explore_popular_lists": "Click here to explore the most popular lists"
+  },
+  "profile_form": {
+    "dialog_title": "Edit profile",
+    "username_label": "Username",
+    "username_placeholder": "John",
+    "username_required": "New username is required",
+    "username_invalid": "Invalid username",
+    "error_existent_username": "already exists.",
+    "same_username": "You have to try a new username",
+    "submit_button": "Save changes"
+  },
+  "profile_banner": {
+    "change_banner": "Change banner",
+    "changed_successfully": "Banner changed successfully."
+  },
+  "private_list": {
+    "title": "✋ Hold on, buddy!",
+    "description": "You are not authorized to view this list.",
+    "cta": "View other lists."
+  },
+  "review_likes": {
+    "view_profile": "View profile"
+  },
+  "legacy_user": {
+    "title": "Password Reset",
+    "description": "We have updated our system, and for your security, it's necessary to reset your password. We have sent instructions to your registered email.",
+    "resend_email": "Resend Email",
+    "agree": "Got it"
+  },
+  "access_button": "Access",
+  "access_now": "Access now",
+  "create_account": "Create account",
+  "search_movies_or_series": "Search movies or series...",
+  "select_an_image": "Select an image",
+  "profile_image_changed_successfully": "Profile image successfully changed.",
+  "review_deleted_successfully": "Review deleted successfully.",
+  "edit": "Edit",
+  "delete": "Delete",
+  "close": "Close",
+  "edit_reply": "Edit reply",
+  "my_lists": "My Lists",
+  "manage_your_lists": "Manage your lists and share them with other members!",
+  "lists": "Lists",
+  "latest_lists": "Recent Lists",
+  "follow": "Follow",
+  "unfollow": "Unfollow",
+  "followers": "Followers",
+  "following": "Following",
+  "visit": "Visit",
+  "like": "Like",
+  "remove_like": "Unlike",
+  "clone": "Clone",
+  "share": "Share",
+  "copy_link": "Copy Link",
+  "link_copied_to_clipboard": "Link copied to clipboard",
+  "share_to_twitter": "Share to Twitter",
+  "share_to_instagram": "Share to Instagram",
+  "list_cloned_successfully": "List cloned successfully!",
+  "see_list": "See list",
+  "unable_to_clone_list": "Unable to clone list.",
+  "see_all_list": "See all",
+  "recommend": "Recommend",
+  "recommendation_sended_successfully": "Recommendation sent successfully.",
+  "recommendation_deleted_successfully": "Recommendation deleted successfully.",
+  "to": "to",
+  "suggestions": "Suggestions",
+  "search": "Search...",
+  "write_a_message": "Write a message...",
+  "ago": "ago",
+  "here": "here",
+  "no_user_recommendations": "We don't have any recommendations from other users for you yet 😿",
+  "explore_popular_movies": "How about exploring popular movies in the meantime? Click",
+  "no_recommendations_sent": "You haven't sent any recommendations to anyone yet.",
+  "recommend_movies_to_friends": "How about recommending your favorite movies to friends? In the meantime, explore popular movies by clicking",
+  "received": "Received",
+  "sent": "Sent",
+  "sent_to": "sent to",
+  "cancel_shipping": "Cancel shipping",
+  "add_to_list": "Add to list",
+  "become_pro_button": "Become",
+  "welcome_to_enjoytown": "Welcome to Enjoytown:",
+  "your_cinema_platform": "Your cinema platform",
+  "join_enjoytown": "Discover a new way to experience cinema. Join Enjoytown and explore everything we have to offer.",
+  "discover_advantages": "Discover the advantages of being",
+  "about": "About",
+  "features": "Features",
+  "pricing": "Pricing",
+  "community": "Communities",
+  "brand": "Brand",
+  "legal": "Legal",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "data_provided_by": "Data provided by TMDB.",
+  "explore": "Explore",
+  "save_order": "Save Order",
+  "edit_order": "Edit Order",
+  "start_your_journey": "Start your journey in just a few steps.",
+  "already_have_an_account": "Already have an account?",
+  "continue_with_google": "Continue with Google",
+  "continue_with_x": "Continue with X",
+  "continue_with_email": "Continue with email",
+  "or": "or",
+  "sign_up": "Sign Up",
+  "login": "Log In",
+  "theme": "Theme",
+  "language": "Language",
+  "continue": "Continue",
+  "do_not_have_an_account": "Don't have an account?",
+  "create_now": "Create now",
+  "access_enjoytown": "Access Enjoytown",
+  "logout": "Logout",
+  "email_already_taken": "This email is already in use.",
+  "username_label": "Username",
+  "select_your_username": "Select your username",
+  "select_your_username_description": "Choose your username and finish your sign-up to start using the platform.",
+  "finish_sign_up": "Finish sign-up",
+  "username_required": "Username is required.",
+  "username_invalid": "Username cannot contain spaces or special characters.",
+  "email_invalid": "Please enter a valid e-mail address.",
+  "login_required": "Please enter your email or username.",
+  "login_label": "Email or username",
+  "login_placeholder": "email@domain.com or username",
+  "submit_button": "Submit",
+  "remembered_your_password": "Remembered your password?",
+  "forgot_your_password": "Forgot your password?",
+  "password_label": "Password",
+  "password_required": "Please enter your password.",
+  "password_length": "Your password must be at least 8 characters long.",
+  "request_password_reset_form_response": "If the email you entered is associated with an account, you will receive an email with instructions to reset your password.",
+  "invalid_reset_password_code": "Invalid reset password code.",
+  "unexpected_error": "An unexpected error occurred.",
+  "reset_password_success": "Password reset successfully.",
+  "reset_your_password": "Reset your password",
+  "new": "New",
+  "roadmap": "Roadmap",
+  "documentation": "Documentation",
+  "username_already_taken": "This username is already taken.",
+  "list_created_success": "List created successfully.",
+  "unable_to_create_list": "Unable to create list.",
+  "title": "Title",
+  "list_edited_successfully": "List edited successfully.",
+  "upgrade_list_message": "Subscribe to the PRO plan to get unlimited lists.",
+  "activity": "Activity",
+  "watched": "Watched",
+  "watching": "Watching",
+  "watchlist": "Watchlist",
+  "all": "All",
+  "stats": "Stats",
+  "where_to_watch": "Where to watch",
+  "unavailable": "Unavailable",
+  "watchlist_added": "Added to Watchlist!",
+  "watchlist_removed": "Removed from Watchlist!",
+  "watched_added": "Added to Watched List!",
+  "watched_removed": "Removed from Watched List!",
+  "watching_added": "Added to Watching List!",
+  "watching_removed": "Removed from Watching List!",
+  "contain_spoilers": "Contains spoilers",
+  "no_lists_found": "We did not find any lists.",
+  "organize": "Organizing",
+  "movies_and_series": "movies and series",
+  "never_been_easier": "has never been easier.",
+  "most_apps_functional": "Most apps are functional, but boring.",
+  "enjoytown_incredible_interface": "At Enjoytown, we prefer an incredible interface, even if you never watch that series on your list.",
+  "keep_exploring": "Keep exploring",
+  "elegant_control": "Elegant Control",
+  "elegant_control_description": "Keep everything under control. Mark what you've watched, organize by status, and never get lost in your marathons.",
+  "recommendations": "Recommendations",
+  "recommendations_description": "Discover suggestions tailored to your taste.",
+  "create_and_share_lists": "Create and Share Lists",
+  "create_and_share_lists_description": "Create thematic lists and share them with friends to inspire their choices or plan sessions together.",
+  "reviews": "Reviews",
+  "reviews_description": "Leave your opinion and read reviews from other members to decide what to watch.",
+  "choose_the": "Choose the",
+  "perfect_plan": "perfect plan",
+  "for_you": "for you.",
+  "explore_features": "Explore free features or take your experience to a new level with Pro.",
+  "already_in_free": "You are already on the Free plan",
+  "already_in_pro": "You are already on the PRO plan",
+  "biography": "Biography",
+  "biography_placeholder": "Write a brief description about yourself.",
+  "member_since": "Member since",
+  "save_social_links": "Save social links",
+  "account_data": "Account data",
+  "social_links": "Social links",
+  "subscription": "Subscription",
+  "overall_progress": "Overall Progress",
+  "episodes": "Episodes",
+  "when_you_mark_all_episodes": "When you mark all episodes as watched, the series/anime will automatically be updated to the status of",
+  "update_progress": "Update Progress",
+  "update_status": "Update Status",
+  "feature_only_in_pro_plan": "This feature is available only in the PRO Plan.",
+  "more": "View more",
+  "popular_reviews": "Popular Reviews",
+  "liked": "Liked",
+  "likes": "Likes",
+  "movies": "Movies",
+  "tv_series": "TV Series",
+  "total_hours_watched": "Hours Watched",
+  "days": "days",
+  "and": "and",
+  "hours": "hours",
+  "reviews_conducted": "Reviews conducted",
+  "most_watched_series": "Most Watched Series",
+  "most_watched_genres": "Most Watched Genres",
+  "see_all_genres": "See All",
+  "featured_actors": "Featured Actors",
+  "featured_actors_description": "Meet the actors who frequently appear in your movie and series history.",
+  "origin_countries": "Origin countries",
+  "distribution_by_countries": "Distribution by countries of production",
+  "best_reviews": "Best reviews",
+  "best_reviews_description": "Your most highly rated works recently",
+  "title_status": "Title Status",
+  "title_status_description": "Watched, watching and watchlist",
+  "titles": "Titles",
+  "get_14_days_free": "Get 14 days free",
+  "today": "Today",
+  "this_week": "This week",
+  "this_month": "This month",
+  "all_time": "All time",
+  "review": "Review",
+  "reviewed": "Reviewed",
+  "what_did_you_think": "What did you think?",
+  "share_your_opinion_here": "Share your opinion here",
+  "edit_review": "Edit review",
+  "submit_review": "Submit review",
+  "edit_image": "Edit image",
+  "cancel": "Cancel",
+  "apply": "Apply",
+  "people": "People",
+  "users": "Users",
+  "birth": "Birth",
+  "death": "Death",
+  "popularity": "Popularity",
+  "directing": "Directing",
+  "acting": "Acting",
+  "production": "Production",
+  "writing": "Writing",
+  "camera": "Camera",
+  "editing": "Editing",
+  "sound": "Sound",
+  "art": "Art",
+  "costume_and_make_up": "Costume and Make-Up",
+  "visual_effects": "Visual Effects",
+  "crew": "Crew",
+  "lighting": "Lighting",
+  "actor": "Actor",
+  "executive_producer": "Executive Producer",
+  "musician": "Musician",
+  "director": "Director",
+  "writer": "Writer",
+  "novel": "Novelist",
+  "audio_post_coordinator": "Audio Post Coordinator",
+  "producer": "Producer",
+  "screenplay": "Screenplay",
+  "original_series_creator": "Original Series Creator",
+  "creator": "Creator",
+  "comic_book": "Comic Book",
+  "characters": "Characters",
+  "thanks": "Thanks",
+  "in_memory_of": "In Memory Of",
+  "original_film_writer": "Original Film Writer",
+  "co_executive_producer": "Co-Executive Producer",
+  "presenter": "Presenter",
+  "script_consultant": "Script Consultant",
+  "consulting_producer": "Consulting Producer",
+  "story": "Story",
+  "executive_story_editor": "Executive Story Editor",
+  "creative_consultant": "Creative Consultant",
+  "supervising_producer": "Supervising Producer",
+  "story_editor": "Story Editor",
+  "costume_design": "Costume Design",
+  "production_design": "Production Design",
+  "editor": "Editor",
+  "as": "as",
+  "marked": "marked",
+  "added": "added",
+  "removed": "removed",
+  "from": "from",
+  "created_list": "created the list",
+  "liked_list": "liked the list",
+  "followed": "followed",
+  "unfollowed": "unfollowed",
+  "user_reviewed": "reviewed",
+  "liked_review": "liked the review of",
+  "watched_episodes": "watched",
+  "episode": "episode",
+  "replied_to_review": "replied to the review of",
+  "liked_reply": "liked the reply of",
+  "joined_enjoytown": "joined Enjoytown 🎉",
+  "dropped": "Dropped",
+  "collection": "Collection",
+  "dropped_add": "Added to the Dropped List.",
+  "dropped_removed": "Removed from the Dropped List.",
+  "doramas": "Doramas",
+  "doramas_description": "Organize your favorite doramas, discover new hits, and share your passion with the community.",
+  "be_the_first_to_leave_your_opinion": "Be the first to leave your opinion!",
+  "click_here_and_share_your_experience": "Click here and share your experience.",
+  "save_preferences": "Save preferences",
+  "region": "Region",
+  "select_the_region": "Select the region",
+  "clear": "Clear",
+  "watch_providers_label": "Streaming services",
+  "select_the_watch_providers": "Select streaming services",
+  "preferences_updated": "Preferences updated successfully.",
+  "preferences_description": "Your preferences are used to personalize your experience on Enjoytown, such as recommendations and filters.",
+  "preferences": "Preferences",
+  "no_results": "No results found",
+  "available_on_streaming_services": "✨ Results based on your preferences",
+  "review_summary_generated_by_ai": "Review summary generated by AI",
+  "reading_reviews": "Reading reviews...",
+  "analyzing_reviews": "Analyzing reviews...",
+  "identifying_main_points": "Identifying main points...",
+  "generating_summary": "Generating summary...",
+  "previous_episode": "Previous Episode",
+  "next_episode": "Next Episode",
+  "coming_soon": "Coming soon...",
+  "no_videos_found": "No videos available at the moment",
+  "no_images_found": "No images available at the moment",
+  "no_episodes_found": "No episodes available at the moment",
+  "get_14_days_free_pro": "🎉 Get 14 days free of the ",
+  "network_activity": "Network activity",
+  "known_for": "Known for",
+  "credits_count": "Credited in",
+  "gender": "Gender",
+  "birthdate": "Birthdate",
+  "also_known_as": "Also known as",
+  "male": "Male",
+  "female": "Female",
+  "not_specified": "Not specified",
+  "progress_completed": "Progress completed",
+  "overview": "Overview",
+  "your_progress": "Your progress",
+  "community_badge": "✨ Be part of a community of +400 users",
+  "perfect_place_for_watching": "The perfect place for who watch",
+  "everything": "everything",
+  "manage_rate_discover": "Manage, rate, discover, and share your favorite content. Create lists, receive recommendations, and keep track of everything you've watched.",
+  "start_now": "Start now"
+}

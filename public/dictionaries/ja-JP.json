@@ -1,0 +1,872 @@
+{
+  "home": {
+    "keywords": "映画を整理, シリーズを整理, 映画とシリーズのアプリ, パーソナライズされたおすすめ, 映画リストを作成, シリーズ管理, ベスト映画アプリ, シリーズマラソン用アプリ, マラソンを整理, シリーズレビュー, オンライン映画リスト, シリーズのエレガントなインターフェース, 映画のおすすめ, 見た映画を管理"
+  },
+  "home_prices": {
+    "title": "今日からあなたの旅を始めましょう",
+    "description": "これまでにない映画やテレビ番組の世界を発見しましょう。今日からEnjoytownの旅を始めて、成長する映画ファンのコミュニティの一員になりましょう！",
+    "monthly": "月額",
+    "yearly": "年間",
+    "free_plan": {
+      "title": "無料",
+      "price": "¥0/月",
+      "description": "映画やシリーズを探索し、コンテンツを管理しましょう。",
+      "benefits": [
+        "プラットフォームへの完全アクセス",
+        "無制限の評価",
+        "無制限のリスト",
+        "視聴済み、視聴中、または視聴予定のコンテンツを管理するためのツール",
+        "共同作業リスト",
+        "友達にコンテンツをおすすめ"
+      ],
+      "start_now": "今すぐ始める！"
+    },
+    "pro_plan": {
+      "title": "プロ",
+      "price": "¥500/月",
+      "recommended": "おすすめ",
+      "description": "無料プランのすべてに加え、さらに多くの特典！",
+      "benefits": [
+        "履歴に基づいたパーソナライズされたおすすめ",
+        "バッジと実績",
+        "詳細な個人統計",
+        "プラットフォームの新機能への優先アクセス"
+      ],
+      "subscribe": "購読する"
+    }
+  },
+  "movies_list": {
+    "now_playing": "上映中の映画",
+    "popular": "人気の映画",
+    "top_rated": "最高評価作品",
+    "upcoming": "公開予定の映画",
+    "show_all": "すべて表示"
+  },
+  "animes_page": {
+    "title": "アニメ",
+    "description": "伝説的なクラシックから新しいヒット作まで、あなたの好きなアニメを見つけて、リストを整理し、素晴らしい物語に没頭しましょう。"
+  },
+  "login_form": {
+    "email_label": "Eメールアドレス",
+    "password_label": "パスワード",
+    "show_password": "パスワードを表示",
+    "hide_password": "パスワードを隠す",
+    "access_button": "アクセス",
+    "email_required": "メールアドレスを入力してください。",
+    "email_invalid": "有効なEメールアドレスを入力してください。",
+    "password_required": "パスワードを入力してください。",
+    "password_length": "パスワードは最低8文字必要です。",
+    "login_success": "ログイン成功！お帰りなさい！",
+    "invalid_login_credentials": "無効なログイン情報です。",
+    "try_again": "もう一度試す"
+  },
+  "sign_up_form": {
+    "email_label": "Eメールアドレス",
+    "password_label": "パスワード",
+    "show_password": "パスワードを表示",
+    "hide_password": "パスワードを隠す",
+    "submit_button": "提出",
+    "email_required": "メールアドレスを入力してください。",
+    "email_invalid": "有効なメールアドレスを入力してください。",
+    "password_required": "パスワードを入力してください。",
+    "password_length": "パスワードは最低8文字です",
+    "sign_up_success": "登録完了。ようこそ！",
+    "invalid_sign_up_credentials": "登録情報が無効です。",
+    "try_again": "再試行"
+  },
+  "app_page": {
+    "dashboard_title": "ダッシュボード",
+    "dashboard_description": "あなたの活動とトレンドの概要。",
+    "popular_movies_title": "人気の映画",
+    "popular_tv_series_title": "人気のテレビ番組"
+  },
+  "tabs": {
+    "reviews": "レビュー",
+    "credits": "クレジット",
+    "recommendations": "おすすめ",
+    "similar": "類似",
+    "images": "画像",
+    "videos": "ビデオ",
+    "seasons": "シーズン"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "discover": "発見",
+    "discover_description": "新しい何かに準備はできていますか？お好きになる映画やシリーズであなたを驚かせましょう。",
+    "now_playing": "上映中",
+    "now_playing_description": "今、スクリーンで輝いている映画の最新情報を入手してください。",
+    "popular": "人気",
+    "popular_description": "何が流行っているか見てみましょう！これらは、皆が観て、話している映画やシリーズです。",
+    "top_rated": "高評価",
+    "top_rated_description": "何が観客や批評家の心を掴んだのかを発見してください。",
+    "upcoming": "公開予定",
+    "upcoming_description": "先を行き、まもなくスクリーンに登場する次のヒット作について情報を入手してください。",
+    "tv_series_description": "あなたを引き込むシリーズ。新しい物語、忘れられないキャラクター、そしてあなたの次のマラソンを探索してください。",
+    "airing_today": "今日放送",
+    "airing_today_description": "リズムを逃さないでください！今日、新鮮なエピソードが放送されるシリーズを見てください。",
+    "on_the_air": "放送中",
+    "on_the_air_description": "今の最もホットなシリーズの現在のエピソードを逃さないように、ここにチューニングしてください。",
+    "lists": "リスト",
+    "lists_description": "あなたの選択、あなたの興味。コミュニティとあなたのお気に入りの映画やシリーズのリストを作成して共有してください。",
+    "animes_description": "壮大な冒険と美しいビジュアルを発見してください。"
+  },
+  "sidebar_search": {
+    "placeholder": "映画、テレビ番組、人物を探す",
+    "search_everything": "すべてを検索",
+    "no_results": "結果は見つからなかった。",
+    "tv_series": "テレビ番組"
+  },
+  "watch_providers": {
+    "label": "視聴プロバイダー",
+    "stream": "ストリーム",
+    "rent": "レンタル",
+    "buy": "購入"
+  },
+  "lists_dropdown": {
+    "my_lists": "僕のリスト",
+    "removed_successfully": "排除に成功。",
+    "added_successfully": "追加に成功。"
+  },
+  "credits": {
+    "cast": "キャスト",
+    "crew": "クルー"
+  },
+  "review_form": {
+    "required": "レビューが必要です。",
+    "rating_max": "最高評価は5点です。",
+    "success": "レビューが投稿されました。",
+    "publish": "公開する",
+    "placeholder": "感想をお聞かせください？",
+    "login": "ログイン",
+    "register": "登録",
+    "or": "または",
+    "make_first_review": "して、最初のレビューを書きましょう！"
+  },
+  "review_reply_form": {
+    "success": "返信が正常に作成されました。"
+  },
+  "review_reply": {
+    "reply": "返信",
+    "placeholder": "返信を追加する...",
+    "open_replies": "返信を見る",
+    "hide_replies": "返信を隠す"
+  },
+  "review_item_actions": {
+    "like": "いいね",
+    "reply": "返信",
+    "dialog_title": "本当によろしいですか？",
+    "dialog_description": "この操作は取り消しできません。"
+  },
+  "review_reply_actions": {
+    "like": "いいね",
+    "delete": "削除",
+    "delete_success": "返信が正常に削除されました。",
+    "dialog_title": "本当によろしいですか？",
+    "dialog_description": "この操作は取り消しできません。",
+    "dialog_close": "閉じる"
+  },
+  "movie_collection": {
+    "part_of": "の一部",
+    "see_collection": "コレクションを見る"
+  },
+  "collection_list_dropdown": {
+    "add_collection_to_list": "リストにコレクションを追加",
+    "my_lists": "マイリスト",
+    "collection_removed_successfully": "コレクションが正常に削除されました。",
+    "collection_added_successfully": "コレクションが正常に追加されました。"
+  },
+  "auth": {
+    "logout_success": "ログアウト成功しました。また次回 ✌"
+  },
+  "list_card": {
+    "delete": "削除",
+    "delete_success": "リストが正常に削除されました。",
+    "dialog_title": "本当によろしいですか？",
+    "dialog_description": "この操作は取り消すことができません。このリストは永遠に消えます。",
+    "dialog_close": "閉じる"
+  },
+  "list_form": {
+    "create_new_list": "新しいリストを作成",
+    "name_placeholder": "マイリスト",
+    "name_required": "リストの名前が必要です。",
+    "description": "説明",
+    "description_placeholder": "視聴予定の映画やテレビ番組。",
+    "visibility": "可視性",
+    "visibility_option_public": "公共",
+    "visibility_option_network": "ネットワーク",
+    "visibility_option_private": "私的",
+    "visibility_option_description_public": "誰でも閲覧可能。",
+    "visibility_option_description_network": "友人のみ閲覧可能。",
+    "visibility_option_description_private": "自分のみ閲覧可能。",
+    "submit": "提出する",
+    "edit_list": "リストを編集"
+  },
+  "list_page": {
+    "list_not_found": "リストが見つかりませんでした。",
+    "see_your_lists_or_create_new": "リストを見るか、ここをクリックして新しいリストを作成する",
+    "here": "ここ"
+  },
+  "list_items": {
+    "table": "テーブル",
+    "grid": "グリッド"
+  },
+  "data_table": {
+    "title": "タイトル",
+    "type": "タイプ",
+    "overview": "概要",
+    "added_at": "追加日",
+    "status": "ステータス",
+    "no_results": "結果が見つかりませんでした。",
+    "clear_filters": "フィルターをクリア"
+  },
+  "data_table_column_header": {
+    "asc": "昇順",
+    "desc": "降順",
+    "hide": "非表示"
+  },
+  "data_table_toolbar": {
+    "filter_items_placeholder": "アイテムをフィルター...",
+    "reset": "リセット"
+  },
+  "data_table_columns": {
+    "index": "インデックス",
+    "title": "タイトル",
+    "type": "タイプ",
+    "added_at": "追加日",
+    "status": "ステータス",
+    "actions": "アクション",
+    "movie": "映画",
+    "tv_serie": "テレビ番組"
+  },
+  "data_table_view_options": {
+    "view": "表示",
+    "toggle_columns": "列の切り替え"
+  },
+  "list_item_actions": {
+    "use_as_cover": "カバーとして使用",
+    "status": "ステータス",
+    "delete": "削除",
+    "removed_successfully": "排除に成功。",
+    "cover_changed_successfully": "カバーは無事に交換された。",
+    "see_details": "詳細を見る"
+  },
+  "credits_columns": {
+    "year": "年",
+    "title": "タイトル",
+    "role": "役割",
+    "rating": "評価"
+  },
+  "movie_pages": {
+    "discover": {
+      "title": "発見する",
+      "description": "パーソナライズされたフィルターと並び替えオプションで幅広い映画を探索しましょう。"
+    },
+    "now_playing": {
+      "title": "上映中",
+      "description": "現在、近くの映画館で上映中の映画をチェックしましょう。"
+    },
+    "popular": {
+      "title": "人気",
+      "description": "観客を魅了し、人気チャートを席巻している映画をご覧ください。"
+    },
+    "top_rated": {
+      "title": "高評価",
+      "description": "観客や評論家から高い評価を得ている最も称賛されている映画を探索しましょう。"
+    },
+    "upcoming": {
+      "title": "近日公開",
+      "description": "まもなく公開予定の注目の映画をいち早くチェックしましょう。"
+    }
+  },
+  "tv_serie_pages": {
+    "airing_today": {
+      "title": "今日放送",
+      "description": "今日放送されるテレビシリーズをチェックしましょう。"
+    },
+    "on_the_air": {
+      "title": "放送中",
+      "description": "今後7日間に放送予定のテレビシリーズを発見しましょう。"
+    },
+    "popular": {
+      "title": "人気",
+      "description": "人気ランキングを席巻し、観客を魅了しているテレビシリーズを探索しましょう。"
+    },
+    "top_rated": {
+      "title": "高評価",
+      "description": "視聴者と批評家から高い評価を得ている最も評価の高いテレビシリーズを見つけましょう。"
+    },
+    "discover": {
+      "title": "発見する",
+      "description": "高度なフィルターを使用して、好きなテレビシリーズを見つけましょう。"
+    }
+  },
+  "user_last_review": {
+    "title": "あなたの最後のレビュー",
+    "no_review_message": "レビューを書いていないようです！😿",
+    "no_review_action": "ここをクリックして、最も評価の高い映画を見る。",
+    "login": "ログイン",
+    "register": "登録",
+    "or": "または",
+    "make_first_review": "して、最初のレビューを書きましょう！"
+  },
+  "latest_reviews": {
+    "title": "最近のレビュー",
+    "no_reviews_found": "評価が見つかりませんでした。",
+    "explore_popular_movies": "人気の映画を探索して、ご意見をお聞かせください。"
+  },
+  "movies_list_filters": {
+    "title": "映画を発見",
+    "tabs": {
+      "filters": "フィルター",
+      "order": "並べ替え",
+      "watch_providers": "視聴方法"
+    },
+    "actions": {
+      "close": "閉じる",
+      "save_changes": "変更を保存"
+    },
+    "genres_field": {
+      "label": "ジャンル",
+      "placeholder": "ジャンルを選択",
+      "no_genre_message": "ジャンルが選択されていません。"
+    },
+    "language_field": {
+      "label": "言語",
+      "placeholder": "言語を選択"
+    },
+    "release_date_field": {
+      "from_label": "開始日",
+      "to_label": "終了日",
+      "from_placeholder": "開始日を選択",
+      "to_placeholder": "終了日を選択",
+      "select_date": "日付を選択"
+    },
+    "sort_by": {
+      "label": "並び替え",
+      "placeholder": "並び替え",
+      "options": {
+        "popularity.desc": "人気度が高い",
+        "popularity.asc": "人気度が低い",
+        "revenue.desc": "収益が高い",
+        "revenue.asc": "収益が低い",
+        "primary_release_date.desc": "最新",
+        "primary_release_date.asc": "最も古い",
+        "vote_average.desc": "評価が高い",
+        "vote_average.asc": "評価が低い",
+        "vote_count.desc": "投票数が多い",
+        "vote_count.asc": "投票数が少ない"
+      }
+    },
+    "watch_providers_field": {
+      "label": "配信プロバイダー",
+      "placeholder": "プロバイダーでフィルター",
+      "clear_filters": "フィルターをクリア",
+      "no_results": "結果が見つかりませんでした。"
+    },
+    "vote_average_field": {
+      "label": "平均スコア"
+    },
+    "vote_count_field": {
+      "label": "最小投票数"
+    },
+    "no_results": "結果なし。"
+  },
+  "tv_series_list_filters": {
+    "title": "TV番組を発見する",
+    "tabs": {
+      "filters": "フィルター",
+      "order": "並び替え",
+      "watch_providers": "視聴プロバイダー"
+    },
+    "actions": {
+      "close": "閉じる",
+      "save_changes": "変更を保存"
+    },
+    "genres_field": {
+      "label": "ジャンル",
+      "placeholder": "ジャンルを選択",
+      "no_genre_message": "ジャンルが選択されていません。"
+    },
+    "language_field": {
+      "label": "言語",
+      "placeholder": "言語を選択"
+    },
+    "air_date": {
+      "from_label": "開始日",
+      "to_label": "終了日",
+      "from_placeholder": "18/11/2002",
+      "to_placeholder": "18/11/2003",
+      "select_date": "日付を選択"
+    },
+    "sort_by": {
+      "label": "並び替え基準",
+      "placeholder": "並び替え基準",
+      "options": {
+        "popularity.desc": "人気が高い順",
+        "popularity.asc": "人気が低い順",
+        "air_date.desc": "放送日が新しい順",
+        "air_date.asc": "放送日が古い順",
+        "vote_average.desc": "評価が高い順",
+        "vote_average.asc": "評価が低い順",
+        "vote_count.desc": "投票数が多い順",
+        "vote_count.asc": "投票数が少ない順"
+      }
+    },
+    "watch_providers_field": {
+      "label": "視聴可能なプロバイダー",
+      "placeholder": "プロバイダーでフィルター",
+      "clear_filters": "フィルターをクリア",
+      "no_results": "結果が見つかりません。"
+    },
+    "watch_region_field": {
+      "label": "リージョン",
+      "placeholder": "リージョンを選択"
+    },
+    "vote_average_field": {
+      "label": "平均評価"
+    },
+    "vote_count_field": {
+      "label": "最低投票数"
+    },
+    "no_results": "結果がありません。"
+  },
+  "collection_filters": {
+    "title": "コレクションをフィルター",
+    "filters_tab": "フィルター",
+    "order_tab": "並び替え",
+    "rating_field_label": "評価",
+    "media_type_field_label": "タイプ",
+    "media_type_TV_SHOW": "テレビ番組",
+    "media_type_MOVIE": "映画",
+    "only_items_without_review_field_label": "レビューのないアイテムのみ表示",
+    "sort_by_label": "並び替え",
+    "sort_by_placeholder": "並び替え",
+    "sort_by_options": {
+      "addedAt.desc": "最近追加",
+      "addedAt.asc": "最初に追加",
+      "updatedAt.desc": "最近更新",
+      "updatedAt.asc": "最初に更新",
+      "rating.desc": "評価高い順",
+      "rating.asc": "評価低い順"
+    },
+    "close_button": "閉じる",
+    "save_changes_button": "変更を保存",
+    "rating_disabled_message": "評価はレビューのないアイテムのみ表示が選択されている場合は変更できません。",
+    "options": {
+      "TV_SHOW": "テレビ番組",
+      "MOVIE": "映画"
+    }
+  },
+  "list_command": {
+    "search_placeholder": "何でも検索...",
+    "no_results": "結果が見つかりませんでした。",
+    "tv_added_success": "TVシリーズを成功裏に追加しました。",
+    "tv_removed_success": "TVシリーズを成功裏に削除しました。",
+    "remove_from_list": "リストから削除",
+    "view_details": "詳細を見る",
+    "movie_added_success": "映画を成功裏に追加しました。",
+    "movie_removed_success": "映画を成功裏に削除しました。"
+  },
+  "no_account_tooltip": "アカウントを持っていないようです。こちらをクリックしてプラットフォームに参加してください。",
+  "user_resume": {
+    "by": "著"
+  },
+  "tv_serie_season_details": {
+    "episode_number": "エピソード",
+    "name": "名前",
+    "overview": "概要",
+    "runtime": "実行時間",
+    "vote": "投票"
+  },
+  "popular_people": {
+    "title": "人気のある人々",
+    "description": "人気順に並べられた人々のリストを取得します。"
+  },
+  "changelog": {
+    "title": "変更ログ",
+    "description": "Enjoytownへの新しいアップデートと改善。",
+    "subscribe": "アップデートを購読する！"
+  },
+  "text_actions": {
+    "expand": "もっと見る",
+    "contract": "閉じる"
+  },
+  "grid": "グリッド",
+  "table": "テーブル",
+  "person_page": {
+    "credit_list": {
+      "show_all": "すべて表示",
+      "show_less": "表示を減らす"
+    }
+  },
+  "thank_you": {
+    "title": "ご支援いただきありがとうございます！",
+    "subtitle": "あなたはメンバープランの一部です！",
+    "description": "偉大な力には偉大な責任が伴います：",
+    "feature1": {
+      "title": "無限のリスト",
+      "description": "制限とはおさらばしましょう！ お好きなだけリストを作成・維持し、ビンジウォッチングセッションを整理したり、映画の夜を計画したりしてください。"
+    },
+    "feature2": {
+      "title": "パーソナライズされたおすすめ",
+      "description": "私たちのスマートなパーソナライズ推薦システムのおかげで、あなたのユニークな好みにぴったり合う新しいタイトルを発見してください。"
+    },
+    "feature3": {
+      "title": "クローンと征服",
+      "description": "他のメンバーのリストからインスピレーションを得たり、クリック一つで自分のリストのパーソナライズされたバージョンを作成してください。"
+    },
+    "feature4": {
+      "title": "あなたの名前、あなたのアイデンティティ",
+      "description": "変化が必要ですか？ いつでもユーザーネームを更新して、あなたのデジタルアイデンティティを映画ファンのあなたと一致させてください。"
+    }
+  },
+  "profile": {
+    "achievements": "実績",
+    "reviews": "レビュー",
+    "lists": "リスト",
+    "recommendations": "おすすめ",
+    "communities": "コミュニティ",
+    "work_in_progress": "作業中",
+    "no_lists": "このユーザーはまだリストを持っていません。",
+    "explore_popular_lists": "ここをクリックして人気のリストを探す"
+  },
+  "profile_form": {
+    "dialog_title": "プロフィール編集",
+    "username_label": "ユーザー名",
+    "username_placeholder": "ジョン",
+    "username_required": "新しいユーザー名が必要です",
+    "username_invalid": "無効なユーザー名です",
+    "same_username": "新しいユーザー名を試してください",
+    "error_existent_username": "すでに存在しています。",
+    "submit_button": "変更を保存する。"
+  },
+  "profile_banner": {
+    "change_banner": "バナーを変更",
+    "changed_successfully": "バナーが正常に変更されました。"
+  },
+  "private_list": {
+    "title": "✋ 落ち着いて、友よ！",
+    "description": "このリストを見る権限がありません。",
+    "cta": "他のリストを見る"
+  },
+  "review_likes": {
+    "view_profile": "プロフィールを見る"
+  },
+  "legacy_user": {
+    "title": "パスワードの再設定",
+    "description": "システムを更新しました。セキュリティのため、パスワードを再設定する必要があります。登録されたメールアドレスに手順を送信しました。",
+    "resend_email": "メールを再送信",
+    "agree": "了解しました"
+  },
+  "access_button": "アクセス",
+  "access_now": "今すぐアクセス",
+  "create_account": "アカウントを作成する",
+  "search_movies_or_series": "映画やシリーズを検索...",
+  "select_an_image": "画像を選択してください",
+  "profile_image_changed_successfully": "プロフィール画像が正常に変更されました。",
+  "review_deleted_successfully": "レビューが正常に削除されました。",
+  "edit": "編集",
+  "delete": "消去",
+  "close": "閉じる",
+  "edit_reply": "返信を編集する",
+  "my_lists": "マイリスト",
+  "manage_your_lists": "リストを管理し、他のメンバーと共有しましょう！",
+  "lists": "リスト",
+  "latest_lists": "最近のリスト",
+  "follow": "フォローする",
+  "unfollow": "フォローを解除する",
+  "followers": "フォロワー",
+  "following": "フォロー中",
+  "visit": "訪問",
+  "like": "いいね",
+  "remove_like": "いいねを取り消す",
+  "clone": "クローン",
+  "share": "共有",
+  "copy_link": "リンクをコピー",
+  "link_copied_to_clipboard": "リンクをクリップボードにコピーしました",
+  "share_to_twitter": "Twitterで共有",
+  "share_to_instagram": "Instagramで共有",
+  "list_cloned_successfully": "リストを成功裏にクローンしました！",
+  "see_list": "リストを見る",
+  "unable_to_clone_list": "リストをクローンできませんでした。",
+  "see_all_list": "すべてを見る",
+  "recommend": "おすすめ",
+  "recommendation_sended_successfully": "推奨が正常に送信されました。",
+  "recommendation_deleted_successfully": "推奨事項が正常に削除されました。",
+  "to": "へ",
+  "suggestions": "提案",
+  "search": "検索...",
+  "write_a_message": "メッセージを書く...",
+  "ago": "前",
+  "here": "ここをクリック",
+  "no_user_recommendations": "まだ他のユーザーからのおすすめがありません 😿",
+  "explore_popular_movies": "その間に人気の映画を探索してみませんか？クリック",
+  "no_recommendations_sent": "まだ誰にもおすすめを送信していません。",
+  "recommend_movies_to_friends": "お気に入りの映画を友達におすすめしてみませんか？その間に人気の映画を探索してみてください",
+  "received": "受信済み",
+  "sent": "送信済み",
+  "sent_to": "送信先",
+  "cancel_shipping": "配送をキャンセル",
+  "add_to_list": "リストに追加",
+  "become_pro_button": "なる",
+  "welcome_to_enjoytown": "プロットウィストへようこそ：",
+  "your_cinema_platform": "あなたのシネマプラットフォーム",
+  "join_enjoytown": "映画を体験する新しい方法を発見してください。プロットウィストに参加して、私たちが提供するすべてを探検してください。",
+  "discover_advantages": "の利点を発見する",
+  "about": "の上",
+  "features": "機能",
+  "pricing": "価格設定",
+  "community": "コミュニティ",
+  "github": "GitHub",
+  "brand": "ブランド",
+  "legal": "法的",
+  "privacy_policy": "プライバシーポリシー",
+  "terms_of_service": "利用規約",
+  "data_provided_by": "データ提供元：TMDB.",
+  "explore": "探検する",
+  "save_order": "順序を保存",
+  "edit_order": "順序を編集",
+  "start_now": "今すぐ始める!",
+  "start_your_journey": "わずか数ステップで旅を始めましょう。",
+  "already_have_an_account": "すでにアカウントをお持ちですか?",
+  "continue_with_google": "Googleで続行",
+  "continue_with_x": "Xで続行",
+  "continue_with_email": "メールで続行",
+  "or": "または",
+  "sign_up": "サインアップ",
+  "login": "ログイン",
+  "theme": "テーマ",
+  "language": "言語",
+  "continue": "続ける",
+  "do_not_have_an_account": "アカウントをお持ちではありませんか？",
+  "create_now": "今すぐ作成",
+  "access_enjoytown": "プロットウィストにアクセス",
+  "logout": "ログアウト",
+  "email_already_taken": "このメールアドレスは既に使用されています。",
+  "username_label": "ユーザー名",
+  "select_your_username": "ユーザー名を選択してください",
+  "select_your_username_description": "ユーザー名を選択し、プラットフォームの利用を開始するためにサインアップを完了してください。",
+  "finish_sign_up": "サインアップを完了",
+  "username_required": "ユーザー名は必須です。",
+  "username_invalid": "ユーザー名にスペースや特殊文字を含めることはできません。",
+  "email_invalid": "有効なメールアドレスを入力してください。",
+  "login_required": "メールアドレスまたはユーザー名を入力してください。",
+  "login_label": "メールアドレスまたはユーザー名",
+  "login_placeholder": "email@domain.com またはユーザー名",
+  "email_required": "メールアドレスを入力してください。",
+  "email_label": "メールアドレス",
+  "submit_button": "送信",
+  "remembered_your_password": "パスワードを思い出しましたか？",
+  "forgot_your_password": "パスワードをお忘れですか？",
+  "password_label": "パスワード",
+  "password_required": "パスワードを入力してください。",
+  "password_length": "パスワードは8文字以上でなければなりません。",
+  "request_password_reset_form_response": "入力したメールアドレスがアカウントに関連付けられている場合、パスワードをリセットする手順を記載したメールが届きます。",
+  "invalid_reset_password_code": "無効なパスワードリセットコードです。",
+  "unexpected_error": "予期しないエラーが発生しました。",
+  "reset_password_success": "パスワードが正常にリセットされました。",
+  "reset_your_password": "パスワードをリセットする",
+  "new": "新しい",
+  "roadmap": "ロードマップ",
+  "documentation": "ドキュメント",
+  "username_already_taken": "このユーザー名は既に使用されています。",
+  "list_created_success": "リストが正常に作成されました。",
+  "unable_to_create_list": "リストを作成できませんでした。",
+  "title": "タイトル",
+  "list_edited_successfully": "リストが正常に編集されました。",
+  "upgrade_list_message": "無制限のリストを利用するにはPROプランを購読してください。",
+  "activity": "アクティビティ",
+  "watched": "視聴済み",
+  "watching": "視聴中",
+  "watchlist": "ウォッチリスト",
+  "all": "すべて",
+  "stats": "統計",
+  "where_to_watch": "視聴可能な場所",
+  "unavailable": "利用不可",
+  "watchlist_added": "ウォッチリストに追加しました！",
+  "watchlist_removed": "ウォッチリストから削除しました！",
+  "watched_added": "視聴済みリストに追加しました！",
+  "watched_removed": "視聴済みリストから削除しました！",
+  "watching_added": "視聴中リストに追加しました！",
+  "watching_removed": "視聴中リストから削除しました！",
+  "contain_spoilers": "ネタバレあり",
+  "no_lists_found": "リストは見つかりませんでした。",
+  "organize": "整理する",
+  "movies_and_series": "映画とシリーズ",
+  "never_been_easier": "これほど簡単になったことはありません。",
+  "most_apps_functional": "ほとんどのアプリは機能的ですが、退屈です。",
+  "enjoytown_incredible_interface": "Enjoytownでは、リストにあるシリーズを一度も見ない場合でも、素晴らしいインターフェースを選びます。",
+  "keep_exploring": "探索を続ける",
+  "elegant_control": "エレガントなコントロール",
+  "elegant_control_description": "すべてを管理下に置きます。視聴済みのものをマークし、ステータスで整理し、マラソン中に迷子にならないようにします。",
+  "recommendations": "おすすめ",
+  "recommendations_description": "あなたの好みに合わせた提案を発見してください。",
+  "create_and_share_lists": "リストを作成して共有",
+  "create_and_share_lists_description": "テーマリストを作成し、友達と共有して選択を刺激したり、一緒にセッションを計画したりします。",
+  "reviews": "レビュー",
+  "reviews_description": "あなたの意見を残し、他のメンバーのレビューを読んで、視聴するものを決定してください。",
+  "choose_the": "選んでください",
+  "perfect_plan": "完璧なプラン",
+  "for_you": "あなたに。",
+  "explore_features": "無料機能を試すか、Proで体験を新しいレベルに引き上げましょう。",
+  "already_in_free": "無料プランをご利用中です",
+  "already_in_pro": "PROプランをご利用中です",
+  "biography": "バイオグラフィー",
+  "biography_placeholder": "簡単な自己紹介を書いてください。",
+  "member_since": "会員登録日",
+  "save_social_links": "ソーシャルリンクを保存",
+  "account_data": "アカウントデータ",
+  "social_links": "ソーシャルリンク",
+  "subscription": "サブスクリプション",
+  "overall_progress": "全体の進捗",
+  "episodes": "エピソード",
+  "when_you_mark_all_episodes": "すべてのエピソードを視聴済みにすると、シリーズ/アニメは自動的にステータスに更新されます",
+  "update_progress": "進捗を更新する",
+  "update_status": "ステータスを更新する",
+  "feature_only_in_pro_plan": "この機能はPROプランでのみ利用可能です。",
+  "more": "もっと見る",
+  "popular_reviews": "人気のレビュー",
+  "liked": "気に入った",
+  "likes": "いいね！",
+  "movies": "映画",
+  "tv_series": "シリーズ",
+  "total_hours_watched": "総視聴時間",
+  "days": "日",
+  "and": "と",
+  "hours": "時間",
+  "reviews_conducted": "実施されたレビュー",
+  "most_watched_series": "最も視聴されたシリーズ",
+  "most_watched_genres": "最も視聴されたジャンル",
+  "see_all_genres": "すべてを見る",
+  "featured_actors": "注目の俳優",
+  "featured_actors_description": "映画やドラマの履歴に頻繁に登場する俳優を知る。",
+  "origin_countries": "原産国",
+  "distribution_by_countries": "生産国別の分布",
+  "best_reviews": "最高のレビュー",
+  "best_reviews_description": "最近最も高く評価された作品",
+  "title_status": "タイトルの状態",
+  "title_status_description": "視聴済み、視聴中、視聴リスト",
+  "titles": "タイトル",
+  "get_14_days_free": "14日間無料でお試し",
+  "today": "今日",
+  "this_week": "今週",
+  "this_month": "今月",
+  "all_time": "常に",
+  "review": "レビュー",
+  "reviewed": "レビュー済み",
+  "what_did_you_think": "どう思いましたか？",
+  "share_your_opinion_here": "ここにあなたの意見を共有してください",
+  "edit_review": "レビューを編集する",
+  "submit_review": "レビューを送信する",
+  "edit_image": "画像を編集",
+  "cancel": "キャンセル",
+  "apply": "適用",
+  "people": "人物",
+  "users": "ユーザー",
+  "birth": "誕生",
+  "death": "死亡",
+  "popularity": "人気",
+  "directing": "監督",
+  "acting": "演技",
+  "production": "制作",
+  "writing": "脚本",
+  "camera": "カメラ",
+  "editing": "編集",
+  "sound": "サウンド",
+  "art": "アート",
+  "costume_and_make_up": "衣装とメイク",
+  "visual_effects": "視覚効果",
+  "crew": "スタッフ",
+  "lighting": "照明",
+  "actor": "俳優",
+  "executive_producer": "エグゼクティブプロデューサー",
+  "musician": "音楽家",
+  "director": "監督",
+  "writer": "脚本家",
+  "novel": "小説家",
+  "audio_post_coordinator": "オーディオポストコーディネーター",
+  "producer": "プロデューサー",
+  "screenplay": "脚本",
+  "original_series_creator": "オリジナルシリーズ作成者",
+  "creator": "作成者",
+  "comic_book": "漫画",
+  "characters": "キャラクター",
+  "thanks": "感謝",
+  "in_memory_of": "追悼",
+  "original_film_writer": "オリジナル映画脚本家",
+  "co_executive_producer": "共同エグゼクティブプロデューサー",
+  "presenter": "プレゼンター",
+  "script_consultant": "脚本コンサルタント",
+  "consulting_producer": "コンサルティングプロデューサー",
+  "story": "物語",
+  "executive_story_editor": "エグゼクティブストーリーエディター",
+  "creative_consultant": "クリエイティブコンサルタント",
+  "supervising_producer": "スーパーバイジングプロデューサー",
+  "story_editor": "ストーリーエディター",
+  "costume_design": "衣装デザイン",
+  "production_design": "プロダクションデザイン",
+  "editor": "編集者",
+  "as": "として",
+  "marked": "マークしました",
+  "added": "追加しました",
+  "removed": "削除しました",
+  "from": "から",
+  "created_list": "リストを作成しました",
+  "liked_list": "リストが気に入りました",
+  "followed": "フォローしました",
+  "unfollowed": "フォローを解除しました",
+  "user_reviewed": "レビューしました",
+  "liked_review": "のレビューが気に入りました",
+  "watched_episodes": "視聴しました",
+  "episode": "エピソード",
+  "replied_to_review": "のレビューに返信しました",
+  "liked_reply": "の返信が気に入りました",
+  "joined_enjoytown": "Enjoytownに参加しました 🎉",
+  "dropped": "放棄された",
+  "collection": "コレクション",
+  "dropped_add": "放棄リストに追加されました。",
+  "dropped_removed": "放棄リストから削除されました。",
+  "doramas": "ドラマ",
+  "doramas_description": "お気に入りのドラマを整理し、新しいヒットを見つけて、コミュニティと情熱を共有しましょう。",
+  "be_the_first_to_leave_your_opinion": "最初に意見を残してください！",
+  "click_here_and_share_your_experience": "ここをクリックして、体験を共有してください。",
+  "save_preferences": "設定を保存",
+  "region": "地域",
+  "select_the_region": "地域を選択",
+  "clear": "クリア",
+  "watch_providers_label": "ストリーミングサービス",
+  "select_the_watch_providers": "ストリーミングサービスを選択",
+  "preferences_updated": "設定が正常に更新されました。",
+  "preferences_description": "あなたの設定は、Enjoytownの体験をカスタマイズするために使用されます。",
+  "preferences": "設定",
+  "no_results": "結果は見つかりませんでした",
+  "available_on_streaming_services": "✨ あなたの設定に基づいた結果",
+  "review_summary_generated_by_ai": "AIによるレビュー要約",
+  "reading_reviews": "レビューを読み込んでいます...",
+  "analyzing_reviews": "レビューを分析しています...",
+  "identifying_main_points": "主なポイントを特定しています...",
+  "generating_summary": "要約を生成しています...",
+  "previous_episode": "前のエピソード",
+  "next_episode": "次のエピソード",
+  "coming_soon": "近日中に",
+  "no_videos_found": "現在利用可能なビデオはありません",
+  "no_images_found": "現在利用可能な画像はありません",
+  "no_episodes_found": "現在利用可能なエピソードはありません",
+  "get_14_days_free_pro": "🎉 14日間無料でお試しいただける ",
+  "network_activity": "ネットワークアクティビティ",
+  "known_for": "知られている",
+  "credits_count": "クレジット",
+  "gender": "性別",
+  "birthdate": "誕生日",
+  "also_known_as": "別名",
+  "male": "男性",
+  "female": "女性",
+  "not_specified": "未指定",
+  "progress_completed": "進捗完了",
+  "overview": "概要",
+  "your_progress": "あなたの進捗",
+  "community_badge": "✨ 400人以上のユーザーコミュニティの一員になりましょう",
+  "perfect_place_for_watching": "すべてを見る人のための完璧な場所",
+  "everything": "すべて",
+  "manage_rate_discover": "お気に入りのコンテンツを管理、評価、発見、共有しましょう。リストを作成し、おすすめを受け取り、視聴したすべてを追跡できます。"
+}
