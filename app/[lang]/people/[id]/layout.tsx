@@ -1,7 +1,7 @@
 import { Banner } from "@/components/ui/banner";
 import { cn } from "@/lib/utils";
 import { tmdb } from "@/services/tmdb";
-import type { PageProps } from "@/types/languages";
+import type { Language, PageProps } from "@/types/languages";
 import { tmdbImage } from "@/utils/tmdb/image";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -46,23 +46,28 @@ export async function generateMetadata(
   };
 }
 
-export default async function PersonPage({
-  params,
+export default async function PeronLayout({
   children,
-}: PersonPageProps) {
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: Language | string, id: string }>;
+}) {
   const { id, lang } = await params;
-  const person = await tmdb.person.details(Number(id), lang);
+  const person = await tmdb.person.details(Number(id), lang as Language);
   const { profile_path, name, biography } = person;
 
-  const { cast, crew } = await tmdb.person.combinedCredits(Number(id), lang);
+  const { cast, crew } = await tmdb.person.combinedCredits(
+    Number(id),
+    lang as Language
+  );
 
   const mostPopularBackdrop = [...cast, ...crew]
     .sort((a, b) => b.vote_count - a.vote_count)
     .filter((credit) => credit.backdrop_path)[0]?.backdrop_path;
 
   const uniqueCredits = [...cast, ...crew].filter(
-    (credit, index, self) =>
-      index === self.findIndex((t) => t.id === credit.id),
+    (credit, index, self) => index === self.findIndex((t) => t.id === credit.id)
   );
 
   return (
@@ -76,20 +81,20 @@ export default async function PersonPage({
         className={cn(
           "mx-auto max-w-5xl px-4",
           "flex flex-col",
-          "lg:grid lg:grid-cols-3 lg:px-0 lg:gap-8",
+          "lg:grid lg:grid-cols-3 lg:px-0 lg:gap-8"
         )}
       >
         <aside className="flex flex-col space-y-4 col-span-1 relative w-full">
           <div
             className={cn(
               "flex flex-col items-center gap-4 text-center justify-center",
-              "lg:justify-start lg:flex-col lg:text-start lg:items-start ",
+              "lg:justify-start lg:flex-col lg:text-start lg:items-start "
             )}
           >
             <div
               className={cn(
                 "flex flex-col items-center justify-center gap-2 w-full",
-                "lg:block lg:flex-row",
+                "lg:block lg:flex-row"
               )}
             >
               <div className="relative z-40 flex aspect-square  items-center justify-center overflow-hidden rounded-full border bg-muted text-3xl -mt-20 w-40">
