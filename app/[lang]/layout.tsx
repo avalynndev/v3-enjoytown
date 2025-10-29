@@ -11,20 +11,20 @@ export async function generateStaticParams() {
 
 export const dynamic = "force-dynamic";
 
-type RootLayoutProps = {
+export default async function Layout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-};
-
-export default async function RootLayout(props: RootLayoutProps) {
-  const { params, children } = props;
-  const { lang: langValue } = await params;
-  const lang = langValue as Language;
-  const dictionary = await getDictionary(lang);
+  params: Promise<{ lang: Language|string }>;
+}) {
+  const { lang } = await params;
+  const Lang = lang as Language;
+  const dictionary = await getDictionary(Lang);
 
   return (
     <SonnerProvider>
-      <LanguageContextProvider language={lang} dictionary={dictionary}>
+      <LanguageContextProvider language={Lang} dictionary={dictionary}>
         {children}
       </LanguageContextProvider>
     </SonnerProvider>
