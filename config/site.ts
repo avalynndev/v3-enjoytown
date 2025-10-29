@@ -22,7 +22,7 @@ export const siteConfig = {
   navMain: [
     {
       title: "Movie",
-      url: "/movie",
+      url: "/movies",
       icon: IconDeviceTvOld,
     },
     {
