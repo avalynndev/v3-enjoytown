@@ -1,13 +1,18 @@
 import Carousel from "@/components/carousel";
-import { MovieTabs } from "../_components/tabs";
+import { MovieTabs } from "./tabs";
 import { Container } from "@/components/ui/container";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
+import { Language } from "@/tmdb";
 
-export default function RootLayout({
+export default async function MovieLayout({
   children,
+  language,
+  title,
 }: Readonly<{
   children: React.ReactNode;
+  language: Language;
+  title: string;
 }>) {
   return (
     <>
@@ -17,10 +22,11 @@ export default function RootLayout({
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <h1 className="text-sm sm:text-base font-medium truncate">Movies</h1>
+        <h1 className="text-sm sm:text-base font-medium truncate">{title}</h1>
       </header>
+
       <Container>
-        <Carousel />
+        <Carousel language={language} />
         <MovieTabs
           tabs={["Discover", "Now Playing", "Popular", "Top Rated", "Upcoming"]}
         />

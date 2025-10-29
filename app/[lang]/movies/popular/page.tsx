@@ -2,6 +2,7 @@ import { MovieList } from "@/components/movie-list";
 import type { PageProps } from "@/types/languages";
 import { getDictionary } from "@/utils/dictionaries";
 import type { Metadata } from "next";
+import MovieLayout from "../_components/layout";
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params;
@@ -32,7 +33,7 @@ const PopularMoviesPage = async (props: PageProps) => {
   const dictionary = await getDictionary(lang);
 
   return (
-    <>
+    <MovieLayout title="Popular" language={lang}>
       <div>
         <h1 className="text-2xl font-bold">
           {dictionary.movie_pages.popular.title}
@@ -42,7 +43,7 @@ const PopularMoviesPage = async (props: PageProps) => {
         </p>
       </div>
       <MovieList variant="popular" />
-    </>
+    </MovieLayout>
   );
 };
 

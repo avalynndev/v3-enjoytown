@@ -2,12 +2,13 @@ import { MovieList } from "@/components/movie-list";
 import type { PageProps } from "@/types/languages";
 import { getDictionary } from "@/utils/dictionaries";
 import type { Metadata } from "next";
+import MovieLayout from "../_components/layout";
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params;
   const {
     movie_pages: {
-      top_rated: { title, description },
+      upcoming: { title, description },
     },
   } = await getDictionary(params.lang);
 
@@ -26,24 +27,24 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   };
 }
 
-const TopRatedMoviesPage = async (props: PageProps) => {
+const UpcomingMoviesPage = async (props: PageProps) => {
   const params = await props.params;
   const { lang } = params;
   const dictionary = await getDictionary(lang);
 
   return (
-    <>
+    <MovieLayout title="Upcoming" language={lang}>
       <div>
         <h1 className="text-2xl font-bold">
-          {dictionary.movie_pages.top_rated.title}
+          {dictionary.movie_pages.upcoming.title}
         </h1>
         <p className="text-muted-foreground">
-          {dictionary.movie_pages.top_rated.description}
+          {dictionary.movie_pages.upcoming.description}
         </p>
       </div>
-      <MovieList variant="top_rated" />
-    </>
+      <MovieList variant="upcoming" />
+    </MovieLayout>
   );
 };
 
-export default TopRatedMoviesPage;
+export default UpcomingMoviesPage;

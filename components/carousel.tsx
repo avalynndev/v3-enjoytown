@@ -5,9 +5,15 @@ import {
 } from "@/components/ui/carousel";
 import CarouselCard from "@/components/card";
 import { tmdb } from "@/services/tmdb";
+import { Language } from "@/types/languages";
 
-export default async function CarouselComponent() {
-  const trending = await tmdb.movies.trending("day", "en-US");
+export default async function CarouselComponent({
+  language,
+}: {
+  language: Language;
+}) {
+  const trending = await tmdb.movies.trending("day", language);
+  console.log(language)
 
   if (!trending) return <div>None Found</div>;
 
