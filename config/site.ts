@@ -27,7 +27,7 @@ export const siteConfig = {
     },
     {
       title: "Tv Shows",
-      url: "/tv",
+      url: "/tv-series",
       icon: IconDeviceTvOld,
     },
     {

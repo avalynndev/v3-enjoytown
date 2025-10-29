@@ -107,6 +107,19 @@ const list = async (params: ListQueryParams) => {
   return data;
 };
 
+const trending = async (timeWindow: "day" | "week", language: Language) => {
+  const { data } = await axiosClient.get<ListResponse<TvSerie>>(
+    `/trending/tv/${timeWindow}`,
+    {
+      params: {
+        language,
+      },
+    }
+  );
+
+  return data;
+};
+
 /*
 |-----------------------------------------------------------------------------
 | Related
@@ -136,5 +149,5 @@ const related = async (
   return data;
 };
 
-export const tv = { details, discover, list, related };
+export const tv = { details, discover, list, related, trending };
 export type { TvSeriesListType, DiscoverTvSeriesFilters };

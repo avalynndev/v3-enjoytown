@@ -1,11 +1,11 @@
 import Carousel from "@/components/carousel";
-import { MovieTabs } from "./tabs";
+import { TvTabs } from "./tabs";
 import { Container } from "@/components/ui/container";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Language } from "@/tmdb";
 
-export default async function MovieLayout({
+export default async function TvLayout({
   children,
   language,
   title,
@@ -26,9 +26,15 @@ export default async function MovieLayout({
       </header>
 
       <Container>
-        <Carousel type="movies" language={language} />
-        <MovieTabs
-          tabs={["Discover", "Now Playing", "Popular", "Top Rated", "Upcoming"]}
+        <Carousel type="tv-series" language={language} />
+        <TvTabs
+          tabs={[
+            "Discover",
+            "On The Air",
+            "Popular",
+            "Top Rated",
+            "Airing Today",
+          ]}
         />
         {children}
       </Container>

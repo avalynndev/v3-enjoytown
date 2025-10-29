@@ -9,11 +9,16 @@ import { Language } from "@/types/languages";
 
 export default async function CarouselComponent({
   language,
+  type,
 }: {
   language: Language;
+  type: "tv-series" | "movies" | "anime";
 }) {
-  const trending = await tmdb.movies.trending("day", language);
-  console.log(language)
+  const trending =
+    type === "movies"
+      ? await tmdb.movies.trending("day", language)
+      : await tmdb.tv.trending("day", language);
+  console.log(language);
 
   if (!trending) return <div>None Found</div>;
 
@@ -23,7 +28,7 @@ export default async function CarouselComponent({
         <CarouselContent>
           {trending.results?.map((movie) => (
             <CarouselItem key={movie.id}>
-              <CarouselCard show={movie} type="movie" />
+              <CarouselCard show={movie} type={type} />
             </CarouselItem>
           ))}
         </CarouselContent>

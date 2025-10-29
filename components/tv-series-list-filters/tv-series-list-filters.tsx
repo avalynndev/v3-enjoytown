@@ -1,19 +1,12 @@
-"use client";
+'use client'
 
-import { SlidersHorizontal } from "lucide-react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { SlidersHorizontal } from 'lucide-react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+import { FormProvider, useForm } from 'react-hook-form'
 
-import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Button } from '@/components/ui/button'
+
 import {
   Sheet,
   SheetClose,
@@ -22,49 +15,63 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from '@/components/ui/sheet'
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs'
 
-import { useLanguage } from "@/context/language";
+import { useLanguage } from '@/context/language'
+import { useMediaQuery } from '@/hooks/use-media-query'
 
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { WatchProviders } from "../watch-providers";
-import { WatchRegion } from "../watch-region";
-import type { MoviesListFiltersFormValues } from "./movies-list-filters-schema";
+import { Filters, SortBy } from './tabs'
 import {
   buildQueryStringFromValues,
   getDefaultValues,
-} from "./movies-list-filters.utils";
-import { Filters, SortBy } from "./tabs";
+} from './tv-series-list-filters.utils'
 
-export const MoviesListFilters = () => {
-  const [open, setOpen] = useState(false);
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTrigger,
+} from '@/components/ui/drawer'
+import type { TvSeriesListFiltersFormValues } from '.'
+import { WatchProviders } from '../watch-providers'
+import { WatchRegion } from '../watch-region'
 
-  const { replace } = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const { dictionary, language } = useLanguage();
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+export const TvSeriesListFilters = () => {
+  const [open, setOpen] = useState(false)
+
+  const { replace } = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const { dictionary, language } = useLanguage()
+  const isDesktop = useMediaQuery('(min-width: 768px)')
 
   const defaultValues = {
     ...getDefaultValues(searchParams),
-    watch_region: language.split("-")[1],
-  };
+    watch_region: language.split('-')[1],
+  }
 
-  const methods = useForm<MoviesListFiltersFormValues>({
+  const methods = useForm<TvSeriesListFiltersFormValues>({
     defaultValues,
-  });
+  })
 
-  const onSubmit = (values: MoviesListFiltersFormValues) => {
-    const queryString = buildQueryStringFromValues(values);
+  const onSubmit = (values: TvSeriesListFiltersFormValues) => {
+    const queryString = buildQueryStringFromValues(values)
 
-    replace(`${pathname}?${queryString}`);
-    setOpen(false);
-  };
+    replace(`${pathname}?${queryString}`)
+    setOpen(false)
+  }
 
-  const hasFilters = Object.keys(defaultValues).some((key) =>
-    searchParams.get(key),
-  );
+  const hasFilters = Object.keys(defaultValues).some(key =>
+    searchParams.get(key)
+  )
 
   if (isDesktop) {
     return (
@@ -72,25 +79,27 @@ export const MoviesListFilters = () => {
         <form onSubmit={methods.handleSubmit(onSubmit)}>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant={hasFilters ? "default" : "outline"} size="icon">
+              <Button variant={hasFilters ? 'default' : 'outline'} size="icon">
                 <SlidersHorizontal size={16} />
               </Button>
             </SheetTrigger>
 
-            <SheetContent className="space-y-4 overflow-y-auto px-4">
+            <SheetContent className="space-y-4 overflow-y-auto">
               <SheetHeader>
-                <SheetTitle>{dictionary.movies_list_filters.title}</SheetTitle>
+                <SheetTitle>
+                  {dictionary.tv_series_list_filters.title}
+                </SheetTitle>
               </SheetHeader>
 
               <div>
                 <Tabs defaultValue="filters">
                   <TabsList>
                     <TabsTrigger value="filters">
-                      {dictionary.movies_list_filters.tabs.filters}
+                      {dictionary.tv_series_list_filters.tabs.filters}
                     </TabsTrigger>
 
                     <TabsTrigger value="sort-by">
-                      {dictionary.movies_list_filters.tabs.order}
+                      {dictionary.tv_series_list_filters.tabs.order}
                     </TabsTrigger>
 
                     <TabsTrigger value="where-to-watch">
@@ -109,7 +118,7 @@ export const MoviesListFilters = () => {
                   <TabsContent value="where-to-watch">
                     <div className="space-y-4">
                       <WatchRegion />
-                      <WatchProviders type="movie" />
+                      <WatchProviders type="tv" />
                     </div>
                   </TabsContent>
                 </Tabs>
@@ -130,7 +139,7 @@ export const MoviesListFilters = () => {
           </Sheet>
         </form>
       </FormProvider>
-    );
+    )
   }
 
   return (
@@ -175,7 +184,7 @@ export const MoviesListFilters = () => {
                 <TabsContent value="where-to-watch">
                   <div className="space-y-4">
                     <WatchRegion />
-                    <WatchProviders type="movie" />
+                    <WatchProviders type="tv" />
                   </div>
                 </TabsContent>
               </Tabs>
@@ -196,5 +205,5 @@ export const MoviesListFilters = () => {
         </Drawer>
       </form>
     </FormProvider>
-  );
-};
+  )
+}

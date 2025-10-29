@@ -18,7 +18,7 @@ import { PosterCard } from "@/components/ui/poster-card";
 import { tmdb } from "@/services/tmdb";
 import { tmdbImage } from "@/utils/tmdb/image";
 
-export async function MovieDetailTabs({
+export async function MovieDetailsTabs({
   lang,
   id,
 }: {

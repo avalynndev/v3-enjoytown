@@ -6,7 +6,7 @@ import { Show } from "@/types";
 
 interface CarouselCardProps {
   show: Show;
-  type?: "tv" | "movie" | "anime";
+  type?: "tv-series" | "movies" | "anime";
   id?: string;
 }
 
