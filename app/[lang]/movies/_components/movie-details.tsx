@@ -1,20 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
-import { PosterCard } from "@/components/ui/poster-card";
 import { tmdbImage } from "@/utils/tmdb/image";
 import { tmdb } from "@/services/tmdb";
 import type { MovieDetails } from "@/tmdb";
 import { Language } from "@/types/languages";
+import { MovieDetailTabs } from "./movie-tabs";
+import { Container } from "@/components/ui/container";
+
 type MovieDetailsProps = {
   id: number;
   language: Language;
@@ -29,13 +25,6 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
       movieDetails.runtime % 60
     }m`,
   };
-
-  const similar = await tmdb.movies.related(id, "similar", language);
-  const recommendations = await tmdb.movies.related(
-    id,
-    "recommendations",
-    language
-  );
 
   return (
     <>
@@ -78,11 +67,9 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
               src={tmdbImage(movieDetails.poster_path, "w500")}
             />
           )}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card backdrop-blur-xl rounded-2xl p-3">
+          <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
             <Button className="border">▶ Resume</Button>
-            <Button variant="outline" className="">
-              ℹ Info
-            </Button>
+            <Button variant="outline">ℹ Info</Button>
             <Button variant="secondary" className="items-center gap-2">
               <svg
                 width="16"
@@ -97,7 +84,7 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
             </Button>
           </div>
 
-          <div className="w-full max-w-xs sm:max-w-md flex flex-col items-center gap-2 bg-card backdrop-blur-xl rounded-2xl p-4">
+          <div className="w-full max-w-xs sm:max-w-md flex flex-col items-center gap-2 bg-card/50 backdrop-blur-xl rounded-2xl p-4">
             <div className="flex items-center gap-2 text-xs sm:text-sm">
               ⏱ Watch Progress
             </div>
@@ -117,7 +104,7 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 py-8">
+      <Container>
         <h2 className="text-2xl font-bold mb-4">About</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
           {movieDetails.overview}
@@ -163,59 +150,8 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
             ))}
           </div>
         </div>
-      </div>
-      <div className="mx-auto max-w-6xl px-4 pb-8">
-        <h1 className="mt-10 mb-6 text-xl sm:text-2xl font-bold">
-          Similar Movies
-        </h1>
-        <Carousel className="w-full">
-          <CarouselContent className="-ml-1">
-            {similar.results.map((movie) => (
-              <CarouselItem
-                key={movie.id}
-                className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
-              >
-                <a href={`/movie/${movie.id}`}>
-                  <PosterCard.Root>
-                    <PosterCard.Image
-                      src={tmdbImage(movie.poster_path, "w500")}
-                      alt={movie.title}
-                    />
-                  </PosterCard.Root>
-                </a>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-      <div className="mx-auto max-w-6xl px-4 pb-8">
-        <h1 className="mt-10 mb-6 text-xl sm:text-2xl font-bold">
-          Recommended Movies
-        </h1>
-        <Carousel className="w-full">
-          <CarouselContent className="-ml-1">
-            {recommendations.results.map((movie) => (
-              <CarouselItem
-                key={movie.id}
-                className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
-              >
-                <a href={`/movie/${movie.id}`}>
-                  <PosterCard.Root>
-                    <PosterCard.Image
-                      src={tmdbImage(movie.poster_path, "w500")}
-                      alt={movie.title}
-                    />
-                  </PosterCard.Root>
-                </a>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
+      </Container>
+      <MovieDetailTabs lang={language} id={movieDetails.id} />
     </>
   );
 }

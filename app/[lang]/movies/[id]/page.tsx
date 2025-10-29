@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: MoviePageProps
+  props: MoviePageProps,
 ): Promise<Metadata> {
   const { lang, id } = await props.params;
   const metadata = await getMovieMetadata(Number(id), lang);
