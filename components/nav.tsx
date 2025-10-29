@@ -56,14 +56,7 @@ export default function Navbar() {
   const currentLangOption = SUPPORTED_LANGUAGES.find(
     (l) => l.value === currentLang
   );
-
-  useEffect(() => {
-    const savedLang = localStorage.getItem("language") as Language | null;
-    if (savedLang && savedLang !== currentLang) {
-      replaceLanguageInPath(savedLang);
-    }
-  }, []);
-
+  
   const replaceLanguageInPath = (nextLang: Language) => {
     localStorage.setItem("language", nextLang);
     const parts = (pathname || "/").split("/");
@@ -75,6 +68,14 @@ export default function Navbar() {
       router.replace(nextPath);
     }
   };
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language") as Language | null;
+    if (savedLang && savedLang !== currentLang) {
+      replaceLanguageInPath(savedLang);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <header className="flex h-11 shrink-0 items-center justify-between gap-3 px-3 py-2 sm:px-2 pt-4">

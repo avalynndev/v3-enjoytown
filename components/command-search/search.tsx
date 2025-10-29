@@ -36,7 +36,8 @@ import { getDictionary } from "@/utils/dictionaries";
 export const CommandSearch = () => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
-  const [dictionary, setDictionary] = useState<any>(null);
+  const [dictionary, setDictionary] =
+    useState<Awaited<ReturnType<typeof getDictionary>>>();
 
   const debouncedSearch = useDebounce(search, 500);
   const { language } = useLanguage();
@@ -53,7 +54,7 @@ export const CommandSearch = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["search", debouncedSearch, language],
     queryFn: async () => await tmdb.search.multi(debouncedSearch, language),
-    enabled: !!debouncedSearch, 
+    enabled: !!debouncedSearch,
     staleTime: 1000,
   });
 
@@ -70,6 +71,7 @@ export const CommandSearch = () => {
 
   useEffect(() => {
     if (open) setOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   const [movies, tvSeries, people] = [

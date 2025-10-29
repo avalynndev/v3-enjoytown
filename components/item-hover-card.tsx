@@ -17,7 +17,7 @@ const Poster = (props: PropsWithChildren) => {
   return (
     <div className="w-1/3">
       <figure
-        className="relative -mt-12 aspect-[2/3]  overflow-hidden rounded-lg border bg-muted shadow"
+        className="relative -mt-12 aspect-poster overflow-hidden rounded-lg border bg-muted shadow"
         {...props}
       />
     </div>

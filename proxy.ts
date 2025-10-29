@@ -3,7 +3,12 @@ import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { languages as appLanguages } from "@/languages";
 
+const headers = { "accept-language": "en-US" };
+const languages = new Negotiator({ headers }).languages();
+
 const DEFAULT_LOCALE = "en-US";
+
+match(languages, appLanguages, DEFAULT_LOCALE);
 
 export async function proxy(req: NextRequest) {
   const headers = new Headers(req.headers);

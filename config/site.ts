@@ -8,6 +8,8 @@ import {
   IconAntenna,
   IconUser,
   IconDeviceTv,
+  IconDeviceTvOldFilled,
+  IconAntennaBars5,
 } from "@tabler/icons-react";
 
 export const siteConfig = {
@@ -23,16 +25,11 @@ export const siteConfig = {
     {
       title: "Movies",
       url: "/movies",
-      icon: IconDeviceTvOld,
+      icon: IconDeviceTv,
     },
     {
       title: "Tv Series",
       url: "/tv-series",
-      icon: IconDeviceTvOld,
-    },
-    {
-      title: "Doramas",
-      url: "/doramas",
       icon: IconDeviceTvOld,
     },
     {
@@ -41,9 +38,15 @@ export const siteConfig = {
       icon: IconAntenna,
     },
     {
+      title: "Doramas",
+      url: "/doramas",
+      icon: IconDeviceTvOldFilled,
+    },
+
+    {
       title: "Live TV",
       url: "/iptv",
-      icon: IconDeviceTv,
+      icon: IconAntennaBars5,
     },
   ],
   navClouds: [
