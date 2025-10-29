@@ -16,10 +16,8 @@ type RootLayoutProps = {
   params: { lang: string };
 };
 
-export default async function RootLayout({
-  params,
-  children,
-}: RootLayoutProps) {
+export default async function RootLayout(props: RootLayoutProps) {
+  const { params, children } = props;
   const lang = params.lang as Language;
   const dictionary = await getDictionary(lang);
 
