@@ -13,12 +13,13 @@ export const dynamic = "force-dynamic";
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 };
 
 export default async function RootLayout(props: RootLayoutProps) {
   const { params, children } = props;
-  const lang = params.lang as Language;
+  const { lang: langValue } = await params;
+  const lang = langValue as Language;
   const dictionary = await getDictionary(lang);
 
   return (
