@@ -100,8 +100,9 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-1 items-center justify-end gap-2">
+        <CommandSearch />
         <div className="flex items-center gap-2">
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden [@media(min-width:512px)]:flex items-center gap-2">
             <Select
               value={currentLang}
               onValueChange={(value) =>
@@ -139,13 +140,12 @@ export default function Navbar() {
                       />
                       {label}
                     </SelectItem>
-                  ),
+                  )
                 )}
               </SelectContent>
             </Select>
           </div>
         </div>
-        <CommandSearch />
         <ModeToggle />
         <UserButton
           className="rounded-sm"
