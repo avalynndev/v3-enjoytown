@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
 type CommandSearchGroupProps = {
-  heading: string
-  children: ReactNode
-}
+  heading: string;
+  children: ReactNode;
+};
 
 export const CommandSearchGroup = ({
   children,
@@ -15,5 +15,5 @@ export const CommandSearchGroup = ({
 
       <div className="flex flex-col gap-2">{children}</div>
     </div>
-  )
-}
+  );
+};

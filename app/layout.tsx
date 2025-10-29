@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Providers } from "@/components/providers";
+import { AuthProvider, SonnerProvider } from "@/components/providers";
 import "@/styles/globals.css";
 
 import { AppSidebar } from "@/components/app-sidebar";
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
   keywords: ["Next.js", "React", "Tailwind CSS", "Components", "shadcn"],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "avalynndev",
+      url: "https://github.com/avalynndev",
     },
   ],
-  creator: "shadcn",
+  creator: "avalynndev",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image.png`],
-    creator: "@shadcn",
+    creator: "@avalynndev",
   },
   icons: {
     icon: "/favicon.ico",
@@ -77,44 +77,45 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-        suppressHydrationWarning
       >
-        <Providers>
+        <AuthProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <div className="flex h-screen flex-col">
-              <div className="flex-none min-w-screen">
-                <Navbar />
-              </div>
+            <SonnerProvider>
+              <div className="flex h-screen flex-col">
+                <div className="flex-none min-w-screen">
+                  <Navbar />
+                </div>
 
-              <div className="flex flex-1 overflow-hidden">
-                <SidebarProvider
-                  defaultOpen={false}
-                  style={
-                    {
-                      "--sidebar-width": "calc(var(--spacing) * 72)",
-                      "--header-height": "calc(var(--spacing) * 12)",
-                    } as React.CSSProperties
-                  }
-                >
-                  <AppSidebar
-                    variant="floating"
-                    className="inset-y-11 h-[calc(100vh-2.75rem)] bg-background"
-                  />
-                  <SidebarInset className="m-2 rounded-xl border bg-background shadow-md flex flex-col h-[calc(100vh-3.75rem)]">
-                    <ScrollArea className="h-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                      {children}
-                    </ScrollArea>
-                  </SidebarInset>
-                </SidebarProvider>
+                <div className="flex flex-1 overflow-hidden">
+                  <SidebarProvider
+                    defaultOpen={false}
+                    style={
+                      {
+                        "--sidebar-width": "calc(var(--spacing) * 72)",
+                        "--header-height": "calc(var(--spacing) * 12)",
+                      } as React.CSSProperties
+                    }
+                  >
+                    <AppSidebar
+                      variant="floating"
+                      className="inset-y-11 h-[calc(100vh-2.75rem)] bg-background"
+                    />
+                    <SidebarInset className="m-2 rounded-xl border bg-background shadow-md flex flex-col h-[calc(100vh-3.75rem)]">
+                      <ScrollArea className="h-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                        {children}
+                      </ScrollArea>
+                    </SidebarInset>
+                  </SidebarProvider>
+                </div>
               </div>
-            </div>
+            </SonnerProvider>
           </ThemeProvider>
-        </Providers>
+        </AuthProvider>
       </body>
     </html>
   );

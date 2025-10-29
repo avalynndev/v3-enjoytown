@@ -18,7 +18,7 @@ export const APP_QUERY_CLIENT = queryClient;
 
 import type { ReactNode } from "react";
 
-export function Providers({ children }: { children: ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   return (

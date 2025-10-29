@@ -55,8 +55,8 @@ export const DoramaListContent = () => {
       data.pages
         .flatMap((page) => page.results)
         .filter((result) => result.backdrop_path)
-        .map((item) => [item.id, item])
-    ).values()
+        .map((item) => [item.id, item]),
+    ).values(),
   );
 
   const isLastPage =

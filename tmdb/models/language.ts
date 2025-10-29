@@ -3,6 +3,7 @@ export type Language =
   | "es-ES"
   | "fr-FR"
   | "de-DE"
+  | "te-IN"
   | "it-IT"
   | "pt-BR"
   | "ja-JP";

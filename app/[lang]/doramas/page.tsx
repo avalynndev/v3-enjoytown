@@ -3,6 +3,8 @@ import type { PageProps } from "@/types/languages";
 import { getDictionary } from "@/utils/dictionaries";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const { lang } = await props.params;
@@ -31,18 +33,28 @@ export default async function Doramas(props: PageProps) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <Container>
-      <div className="flex items-center justify-between gap-2">
-        <div>
-          <h1 className="text-2xl font-bold">{dictionary.doramas}</h1>
+    <>
+      <header className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b backdrop-blur rounded-t-2xl px-3 sm:px-6">
+        <SidebarTrigger className="-ml-1" />
+        <Separator
+          orientation="vertical"
+          className="mx-2 data-[orientation=vertical]:h-4"
+        />
+        <h1 className="text-sm sm:text-base font-medium truncate">Doramas</h1>
+      </header>
+      <Container>
+        <div className="flex items-center justify-between gap-2">
+          <div>
+            <h1 className="text-2xl font-bold">{dictionary.doramas}</h1>
 
-          <p className="text-muted-foreground">
-            {dictionary.doramas_description}
-          </p>
+            <p className="text-muted-foreground">
+              {dictionary.doramas_description}
+            </p>
+          </div>
         </div>
-      </div>
 
-      <DoramaListContent />
-    </Container>
+        <DoramaListContent />
+      </Container>
+    </>
   );
 }

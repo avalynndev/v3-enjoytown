@@ -16,7 +16,7 @@ export const CommandSearchIcon = () => {
   >();
 
   useEffect(() => {
-    setOs(detectOperatingSystem());
+    queueMicrotask(() => setOs(detectOperatingSystem()));
   }, []);
 
   if (!os || os === "iOS") {

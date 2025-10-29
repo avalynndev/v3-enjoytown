@@ -54,9 +54,9 @@ export default function Navbar() {
 
   const currentLang = currentLangFromPath ?? ("en-US" as Language);
   const currentLangOption = SUPPORTED_LANGUAGES.find(
-    (l) => l.value === currentLang
+    (l) => l.value === currentLang,
   );
-  
+
   const replaceLanguageInPath = (nextLang: Language) => {
     localStorage.setItem("language", nextLang);
     const parts = (pathname || "/").split("/");
@@ -139,7 +139,7 @@ export default function Navbar() {
                       />
                       {label}
                     </SelectItem>
-                  )
+                  ),
                 )}
               </SelectContent>
             </Select>

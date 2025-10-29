@@ -38,6 +38,13 @@ export const SUPPORTED_LANGUAGES: Array<SupportedLanguages> = [
     hreflang: "de-DE",
   },
   {
+    label: "Telugu",
+    value: "te-IN",
+    country: "IN",
+    enabled: true,
+    hreflang: "te-IN",
+  },
+  {
     label: "Italiano",
     value: "it-IT",
     country: "IT",
@@ -65,6 +72,7 @@ export const languages: Language[] = [
   "es-ES",
   "fr-FR",
   "de-DE",
+  "te-IN",
   "it-IT",
   "pt-BR",
   "ja-JP",

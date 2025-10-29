@@ -32,7 +32,13 @@ export const MovieList = ({ variant }: MovieListProps) => {
       </div>
     );
 
-  const flatData = data.pages.flatMap((page) => page.results);
+  const flatData = Array.from(
+    new Map(
+      data.pages
+        .flatMap((page) => page.results)
+        .map((movie) => [movie.id, movie]),
+    ).values(),
+  );
   const isLastPage =
     data.pages[data.pages.length - 1].page >=
     data.pages[data.pages.length - 1].total_pages;

@@ -33,7 +33,11 @@ export const TvSeriesList = ({ variant }: TvSeriesListProps) => {
       </div>
     );
 
-  const flatData = data.pages.flatMap((page) => page.results);
+  const flatData = Array.from(
+    new Map(
+      data.pages.flatMap((page) => page.results).map((tv) => [tv.id, tv]),
+    ).values(),
+  );
   const isLastPage =
     data.pages[data.pages.length - 1].page >=
     data.pages[data.pages.length - 1].total_pages;

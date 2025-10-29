@@ -76,13 +76,13 @@ export const CommandSearch = () => {
 
   const [movies, tvSeries, people] = [
     data?.results.filter(
-      (result) => result.media_type === "movie"
+      (result) => result.media_type === "movie",
     ) as MovieWithMediaType[],
     data?.results.filter(
-      (result) => result.media_type === "tv"
+      (result) => result.media_type === "tv",
     ) as TvSerieWithMediaType[],
     data?.results.filter(
-      (result) => result.media_type === "person"
+      (result) => result.media_type === "person",
     ) as PersonWithMediaType[],
   ];
 
