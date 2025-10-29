@@ -114,7 +114,7 @@ const trending = async (timeWindow: "day" | "week", language: Language) => {
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;

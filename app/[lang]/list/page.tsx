@@ -33,27 +33,27 @@ export default function List() {
             </p>
           </div>
           <section className="py-12">
-              <div className="flex flex-col gap-6">
-                <div className="grid gap-6 md:grid-cols-2">
-                  {featureText.map(({ title, description, href }, index) => (
-                    <Link
-                      href={`${href}`}
-                      className="flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all hover:-mt-2 hover:mb-2"
-                      key={index}
-                    >
-                      <div className="grid gap-4">
-                        <h4 className="text-primary text-xl">
-                          {title}{" "}
-                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                          </span>
-                        </h4>
-                        <p className="text-base opacity-75">{description}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+            <div className="flex flex-col gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                {featureText.map(({ title, description, href }, index) => (
+                  <Link
+                    href={`${href}`}
+                    className="flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all hover:-mt-2 hover:mb-2"
+                    key={index}
+                  >
+                    <div className="grid gap-4">
+                      <h4 className="text-primary text-xl">
+                        {title}{" "}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                          -&gt;
+                        </span>
+                      </h4>
+                      <p className="text-base opacity-75">{description}</p>
+                    </div>
+                  </Link>
+                ))}
               </div>
+            </div>
           </section>
         </div>
       </div>

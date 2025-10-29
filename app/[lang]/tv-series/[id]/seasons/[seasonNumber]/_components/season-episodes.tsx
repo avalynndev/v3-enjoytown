@@ -1,27 +1,29 @@
-'use client'
+"use client";
 
-import { useLanguage } from '@/context/language'
-import { tmdbImage } from '@/utils/tmdb/image'
-import { Badge } from '@/components/ui/badge'
-import type { Episode } from '@/tmdb'
-import Link from 'next/link'
-import Image from 'next/image'
+import { useLanguage } from "@/context/language";
+import { tmdbImage } from "@/utils/tmdb/image";
+import { Badge } from "@/components/ui/badge";
+import type { Episode } from "@/tmdb";
+import Link from "next/link";
+import Image from "next/image";
 
 type SeasonEpisodesProps = {
-  episodes: Episode[]
-  tvId: number
-}
+  episodes: Episode[];
+  tvId: number;
+};
 
 export const SeasonEpisodes = ({ episodes, tvId }: SeasonEpisodesProps) => {
-  const { dictionary, language } = useLanguage()
-  const filteredEpisodes = episodes.filter(episode => episode.runtime !== null)
+  const { dictionary, language } = useLanguage();
+  const filteredEpisodes = episodes.filter(
+    (episode) => episode.runtime !== null,
+  );
 
   if (filteredEpisodes.length === 0)
     return (
       <div className="text-center text-muted-foreground border border-dashed rounded-md p-8 text-sm">
         {dictionary.no_episodes_found}
       </div>
-    )
+    );
 
   return (
     <div className="space-y-4">
@@ -35,7 +37,7 @@ export const SeasonEpisodes = ({ episodes, tvId }: SeasonEpisodesProps) => {
           season_number,
           vote_average,
         }) => {
-          const href = `/${language}/tv-series/${tvId}/seasons/${season_number}/episodes/${episode_number}`
+          const href = `/${language}/tv-series/${tvId}/seasons/${season_number}/episodes/${episode_number}`;
 
           return (
             <div key={id} className="flex gap-4">
@@ -45,7 +47,7 @@ export const SeasonEpisodes = ({ episodes, tvId }: SeasonEpisodesProps) => {
                   href={href}
                 >
                   <Image
-                    src={tmdbImage(still_path ?? '', 'w500')}
+                    src={tmdbImage(still_path ?? "", "w500")}
                     alt={name}
                     fill
                     className="object-cover"
@@ -77,9 +79,9 @@ export const SeasonEpisodes = ({ episodes, tvId }: SeasonEpisodesProps) => {
                 </div>
               </div>
             </div>
-          )
-        }
+          );
+        },
       )}
     </div>
-  )
-}
+  );
+};

@@ -4,7 +4,7 @@ import {
   LanguageField,
   VoteAverageField,
   VoteCountField,
-} from './(fields)'
+} from "./(fields)";
 
 export const Filters = () => {
   return (
@@ -15,5 +15,5 @@ export const Filters = () => {
       <VoteAverageField />
       <VoteCountField />
     </div>
-  )
-}
+  );
+};

@@ -1,0 +1,85 @@
+"use client";
+
+import { tmdb } from "@/services/tmdb";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+import { useLanguage } from "@/context/language";
+import { tmdbImage } from "@/utils/tmdb/image";
+
+import { v4 } from "uuid";
+import { PosterCard } from "@/components/ui/poster-card";
+import Link from "next/link";
+
+export const DoramaListContent = () => {
+  const { language } = useLanguage();
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  const { data, fetchNextPage } = useInfiniteQuery({
+    queryKey: ["doramas", language],
+    queryFn: async ({ pageParam }) => {
+      const filters = {
+        language,
+        page: pageParam,
+        filters: {
+          with_genres: "18",
+          with_origin_country: "KR",
+        },
+      } as const;
+
+      return await tmdb.tv.discover(filters);
+    },
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => lastPage.page + 1,
+  });
+
+  useEffect(() => {
+    if (inView) fetchNextPage();
+  }, [fetchNextPage, inView]);
+
+  if (!data)
+    return (
+      <div className="grid w-full grid-cols-2 sm:grid-cols-3 gap-4 lg:grid-cols-4 xl:grid-cols-6">
+        {Array.from({ length: 20 }).map(() => (
+          <PosterCard.Skeleton key={v4()} />
+        ))}
+      </div>
+    );
+
+  const flatData = data.pages
+    .flatMap((page) => page.results)
+    .filter((result) => result.backdrop_path);
+
+  const isLastPage =
+    data.pages[data.pages.length - 1].page >=
+    data.pages[data.pages.length - 1].total_pages;
+
+  return (
+    <div className="grid w-full grid-cols-2 sm:grid-cols-3 gap-4 lg:grid-cols-4 xl:grid-cols-6">
+      {flatData.map((item) => {
+        return (
+          <Link href={`/${language}/tv-series/${item.id}`} key={item.id}>
+            <PosterCard.Root>
+              <PosterCard.Image
+                src={tmdbImage(item.poster_path, "w500")}
+                alt={item.name}
+              />
+            </PosterCard.Root>
+          </Link>
+        );
+      })}
+
+      {!isLastPage && (
+        <>
+          <PosterCard.Skeleton ref={ref} />
+          <PosterCard.Skeleton />
+          <PosterCard.Skeleton />
+        </>
+      )}
+    </div>
+  );
+};

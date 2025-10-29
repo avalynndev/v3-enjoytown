@@ -1,34 +1,34 @@
-import { tmdb } from '@/services/tmdb'
-import type { Language } from '@/types/languages'
-import { getDictionary } from '@/utils/dictionaries'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { tmdb } from "@/services/tmdb";
+import type { Language } from "@/types/languages";
+import { getDictionary } from "@/utils/dictionaries";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 async function getEpisodeDetails(
   tvId: number,
   seasonNumber: number,
   episodeNumber: number,
-  lang: Language
+  lang: Language,
 ) {
   try {
     const episode = await tmdb.episodes.details(
       tvId,
       seasonNumber,
       episodeNumber,
-      lang
-    )
-    return episode
-  } catch (error) {
-    return null
+      lang,
+    );
+    return episode;
+  } catch {
+    return null;
   }
 }
 
 type EpisodeNavigationProps = {
-  tvId: number
-  seasonNumber: number
-  episodeNumber: number
-  language: Language
-}
+  tvId: number;
+  seasonNumber: number;
+  episodeNumber: number;
+  language: Language;
+};
 
 export async function EpisodeNavigation({
   tvId,
@@ -36,11 +36,11 @@ export async function EpisodeNavigation({
   episodeNumber,
   language,
 }: EpisodeNavigationProps) {
-  const dictionary = await getDictionary(language)
+  const dictionary = await getDictionary(language);
   const [previousEpisode, nextEpisode] = await Promise.all([
     getEpisodeDetails(tvId, seasonNumber, episodeNumber - 1, language),
     getEpisodeDetails(tvId, seasonNumber, episodeNumber + 1, language),
-  ])
+  ]);
 
   return (
     <nav className="justify-between w-full flex items-center gap-2">
@@ -64,5 +64,5 @@ export async function EpisodeNavigation({
         </Link>
       )}
     </nav>
-  )
+  );
 }

@@ -14,7 +14,7 @@ export const Poster = ({ url, alt, className, ...props }: PosterProps) => {
     <div
       className={cn(
         "relative flex aspect-poster w-full items-center justify-center overflow-hidden rounded-lg border bg-muted text-muted shadow",
-        className
+        className,
       )}
       {...props}
     >

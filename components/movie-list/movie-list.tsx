@@ -25,7 +25,7 @@ export const MovieList = ({ variant }: MovieListProps) => {
 
   if (!data || isLoading)
     return (
-      <div className="grid w-full grid-cols-3 gap-4 md:grid-cols-6">
+      <div className="grid w-full grid-cols-2 sm:grid-cols-3 gap-4 lg:grid-cols-4 xl:grid-cols-6">
         {Array.from({ length: 20 }).map(() => (
           <PosterCard.Skeleton key={v4()} />
         ))}
@@ -39,7 +39,7 @@ export const MovieList = ({ variant }: MovieListProps) => {
 
   return (
     <div className="space-y-4">
-      <div className="grid w-full grid-cols-3 gap-4 md:grid-cols-6">
+      <div className="grid w-full grid-cols-2 sm:grid-cols-3 gap-4 lg:grid-cols-4 xl:grid-cols-6">
         {flatData.map((movie) => (
           <Link href={`/${language}/movies/${movie.id}`} key={movie.id}>
             <PosterCard.Root>

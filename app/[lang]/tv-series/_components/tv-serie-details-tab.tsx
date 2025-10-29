@@ -22,20 +22,16 @@ import { TvSerieSeasons } from "./tv-serie-seasons";
 export async function TvDetailsTabs({
   lang,
   id,
-  seasons
+  seasons,
 }: {
   lang: Language;
   id: number;
-  seasons: Season[]
+  seasons: Season[];
 }) {
   const dictionary = await getDictionary(lang);
   const similar = await tmdb.tv.related(id, "similar", lang);
 
-  const recommendations = await tmdb.tv.related(
-    id,
-    "recommendations",
-    lang
-  );
+  const recommendations = await tmdb.tv.related(id, "recommendations", lang);
 
   return (
     <Container>
@@ -54,7 +50,7 @@ export async function TvDetailsTabs({
         </div>
         <TabsContent value="seasons" className="mt-4">
           <Suspense>
-            <TvSerieSeasons id={Number(id)} language={lang} seasons={seasons}/>
+            <TvSerieSeasons id={Number(id)} language={lang} seasons={seasons} />
           </Suspense>
         </TabsContent>
         <TabsContent value="credits" className="mt-4">

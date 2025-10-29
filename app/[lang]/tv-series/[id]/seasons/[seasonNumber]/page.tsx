@@ -21,7 +21,7 @@ export async function generateMetadata({
   const season = await tmdb.season.details(
     Number(id),
     Number(seasonNumber),
-    lang
+    lang,
   );
   const tvShow = await tmdb.tv.details(Number(id), lang);
 
@@ -53,7 +53,7 @@ export default async function SeasonPage({ params }: SeasonPageProps) {
   const currentSeason = await tmdb.season.details(
     Number(id),
     Number(seasonNumber),
-    lang
+    lang,
   );
 
   return (

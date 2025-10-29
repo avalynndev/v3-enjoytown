@@ -1,36 +1,36 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight } from "lucide-react";
 
-import { tmdb } from '@/services/tmdb'
-import type { Language } from '@/types/languages'
-import { ChevronLeft } from 'lucide-react'
-import Link from 'next/link'
+import { tmdb } from "@/services/tmdb";
+import type { Language } from "@/types/languages";
+import { ChevronLeft } from "lucide-react";
+import Link from "next/link";
 
 async function getSeasonDetails(
   tvId: number,
   seasonNumber: number,
-  lang: Language
+  lang: Language,
 ) {
   try {
-    const season = await tmdb.season.details(tvId, seasonNumber, lang)
+    const season = await tmdb.season.details(tvId, seasonNumber, lang);
 
     if (
       season.season_number === 0 ||
       season.episodes.length === 0 ||
       season.air_date === null
     )
-      return null
+      return null;
 
-    return season
-  } catch (error) {
-    return null
+    return season;
+  } catch {
+    return null;
   }
 }
 
 type SeasonNavigationProps = {
-  id: number
-  seasonNumber: number
-  language: Language
-}
+  id: number;
+  seasonNumber: number;
+  language: Language;
+};
 
 export async function SeasonNavigation({
   id,
@@ -40,7 +40,7 @@ export async function SeasonNavigation({
   const [previousSeason, nextSeason] = await Promise.all([
     getSeasonDetails(Number(id), Number(seasonNumber) - 1, language),
     getSeasonDetails(Number(id), Number(seasonNumber) + 1, language),
-  ])
+  ]);
 
   return (
     <nav className="justify-between w-full flex items-center gap-2">
@@ -64,5 +64,5 @@ export async function SeasonNavigation({
         </Link>
       )}
     </nav>
-  )
+  );
 }

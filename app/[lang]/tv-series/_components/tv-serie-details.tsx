@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import { tmdbImage } from "@/utils/tmdb/image";
@@ -9,11 +8,13 @@ import type { TvSerieDetails } from "@/tmdb";
 import { Language } from "@/types/languages";
 import { Container } from "@/components/ui/container";
 import { TvDetailsTabs } from "./tv-serie-details-tab";
+import Image from "next/image";
 
 type TvDetailsProps = {
   id: number;
   language: Language;
 };
+
 export async function TvSerieDetails({ id, language }: TvDetailsProps) {
   const TvDetails = await tmdb.tv.details(id, language);
 
@@ -29,35 +30,40 @@ export async function TvSerieDetails({ id, language }: TvDetailsProps) {
           {TvDetails.name}
         </h1>
       </header>
-      <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[774px]">
-        <div className="relative w-full h-[774px]">
-          <div
-            style={{
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              maskImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
-              WebkitMaskImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
-            }}
-            className="blur-xs"
-          >
-            <img
-              className="w-full h-full object-cover rounded-t-2xl"
-              alt={TvDetails.name}
-              src={tmdbImage(TvDetails.backdrop_path, "original")}
-            />
-          </div>
+
+      <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[774px] rounded-t-2xl overflow-hidden">
+        <div
+          className="absolute inset-0 blur-xs"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            maskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
+            WebkitMaskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
+          }}
+        >
+          <Image
+            src={tmdbImage(TvDetails.backdrop_path, "original")}
+            alt={TvDetails.name}
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
           {TvDetails.poster_path && (
-            <img
-              className="mb-4 w-[140px] sm:w-[180px] lg:w-[220px] rounded-md shadow-lg"
-              alt={`${TvDetails.name} title`}
-              src={tmdbImage(TvDetails.poster_path, "w500")}
-            />
+            <div className="relative mb-4 w-[140px] sm:w-[180px] lg:w-[220px] aspect-poster rounded-md shadow-lg overflow-hidden">
+              <Image
+                src={tmdbImage(TvDetails.poster_path, "w500")}
+                alt={`${TvDetails.name} poster`}
+                fill
+                className="object-cover"
+              />
+            </div>
           )}
+
           <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
             <Button className="border">▶ Resume</Button>
             <Button variant="outline">ℹ Info</Button>
@@ -111,7 +117,12 @@ export async function TvSerieDetails({ id, language }: TvDetailsProps) {
           </div>
         </div>
       </Container>
-      <TvDetailsTabs seasons={TvDetails.seasons} lang={language} id={TvDetails.id}/>
+
+      <TvDetailsTabs
+        seasons={TvDetails.seasons}
+        lang={language}
+        id={TvDetails.id}
+      />
     </>
   );
 }

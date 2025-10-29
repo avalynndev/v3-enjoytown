@@ -29,7 +29,7 @@ export const TvSerieSeasons = ({
   const [variant, setVariant] = useState<"grid" | "overview">("grid");
 
   const filteredSeasons = seasons.filter(
-    (season) => season.season_number !== 0 && season.episode_count > 0
+    (season) => season.season_number !== 0 && season.episode_count > 0,
   );
 
   const renderContent = () => {
@@ -44,7 +44,7 @@ export const TvSerieSeasons = ({
               >
                 <Poster url={poster} alt={name} />
               </Link>
-            )
+            ),
           )}
         </div>
       );

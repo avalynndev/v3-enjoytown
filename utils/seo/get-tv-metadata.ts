@@ -6,7 +6,7 @@ import { SUPPORTED_LANGUAGES } from "@/languages";
 
 export async function getTvMetadata(
   id: number,
-  lang: Language
+  lang: Language,
 ): Promise<Metadata> {
   const {
     name,
@@ -24,7 +24,7 @@ export async function getTvMetadata(
       }
       return acc;
     },
-    {} as Record<string, string>
+    {} as Record<string, string>,
   );
 
   return {

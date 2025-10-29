@@ -10,7 +10,7 @@ export const Banner = ({ url, className, ...props }: BannerProps) => {
     <div
       {...props}
       className={cn(
-        "w-full overflow-hidden md:rounded-lg aspect-banner border-b lg:border max-h-[55dvh]",
+        "w-full overflow-hidden md:rounded-lg aspect-16/7 border-b lg:border max-h-[55dvh]",
         !url && "border-dashed bg-background",
         className,
       )}

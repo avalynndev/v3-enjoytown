@@ -1,26 +1,26 @@
-import { tmdb } from '@/services/tmdb'
-import type { Language } from '@/types/languages'
-import { locale } from '@/utils/date/locale'
-import { getDictionary } from '@/utils/dictionaries'
-import { tmdbImage } from '@/utils/tmdb/image'
-import { Badge } from '@/components/ui/badge'
+import { tmdb } from "@/services/tmdb";
+import type { Language } from "@/types/languages";
+import { locale } from "@/utils/date/locale";
+import { getDictionary } from "@/utils/dictionaries";
+import { tmdbImage } from "@/utils/tmdb/image";
+import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
-import type { EpisodeDetails as EpisodeDetailsType } from '@/tmdb'
-import { format } from 'date-fns'
-import Link from 'next/link'
-import Image from 'next/image'
+} from "@/components/ui/breadcrumb";
+import type { EpisodeDetails as EpisodeDetailsType } from "@/tmdb";
+import { format } from "date-fns";
+import Link from "next/link";
+import Image from "next/image";
 
 type EpisodeDetailsProps = {
-  episode: EpisodeDetailsType
-  language: Language
-  tvId: number
-  seasonNumber: number
-}
+  episode: EpisodeDetailsType;
+  language: Language;
+  tvId: number;
+  seasonNumber: number;
+};
 
 export async function EpisodeDetails({
   episode,
@@ -28,12 +28,12 @@ export async function EpisodeDetails({
   tvId,
   seasonNumber,
 }: EpisodeDetailsProps) {
-  const { name, overview, air_date, vote_average, episode_number } = episode
+  const { name, overview, air_date, vote_average, episode_number } = episode;
   const [series, season] = await Promise.all([
     tmdb.tv.details(tvId, language),
     tmdb.season.details(tvId, seasonNumber, language),
-  ])
-  const dictionary = await getDictionary(language)
+  ]);
+  const dictionary = await getDictionary(language);
 
   return (
     <div className="space-y-4">
@@ -65,7 +65,7 @@ export async function EpisodeDetails({
       <div className="flex items-end gap-4">
         <div className="w-1/3 md:w-[200px] relative aspect-poster rounded-md overflow-hidden shadow border">
           <Image
-            src={tmdbImage(season.poster_path ?? '', 'w500')}
+            src={tmdbImage(season.poster_path ?? "", "w500")}
             alt={name}
             fill
             className="object-cover"
@@ -74,7 +74,7 @@ export async function EpisodeDetails({
 
         <div className="flex flex-col gap-2 flex-1">
           <span className="text-xs text-muted-foreground">
-            {format(new Date(air_date), 'PPP', {
+            {format(new Date(air_date), "PPP", {
               locale: locale[language],
             })}
           </span>
@@ -84,9 +84,7 @@ export async function EpisodeDetails({
           </h1>
 
           <div className="flex">
-            <Badge variant="outline">
-              {vote_average.toFixed(1)}
-            </Badge>
+            <Badge variant="outline">{vote_average.toFixed(1)}</Badge>
           </div>
         </div>
       </div>
@@ -95,5 +93,5 @@ export async function EpisodeDetails({
         <p className="text-sm/6 text-muted-foreground">{overview}</p>
       </div>
     </div>
-  )
+  );
 }

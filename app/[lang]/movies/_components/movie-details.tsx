@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import { tmdbImage } from "@/utils/tmdb/image";
@@ -10,11 +9,13 @@ import type { MovieDetails } from "@/tmdb";
 import { Language } from "@/types/languages";
 import { MovieDetailsTabs } from "./movie-details-tabs";
 import { Container } from "@/components/ui/container";
+import Image from "next/image";
 
 type MovieDetailsProps = {
   id: number;
   language: Language;
 };
+
 export async function MovieDetails({ id, language }: MovieDetailsProps) {
   const movieDetails = await tmdb.movies.details(id, language);
 
@@ -38,35 +39,40 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
           {movieDetails.title}
         </h1>
       </header>
-      <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[774px]">
-        <div className="relative w-full h-[774px]">
-          <div
-            style={{
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              maskImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
-              WebkitMaskImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
-            }}
-            className="blur-xs"
-          >
-            <img
-              className="w-full h-full object-cover rounded-t-2xl"
-              alt={movieDetails.title}
-              src={tmdbImage(movieDetails.backdrop_path, "original")}
-            />
-          </div>
+
+      <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[774px] rounded-t-2xl overflow-hidden">
+        <div
+          className="absolute inset-0 blur-xs"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            maskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
+            WebkitMaskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0) 700px)",
+          }}
+        >
+          <Image
+            src={tmdbImage(movieDetails.backdrop_path, "original")}
+            alt={movieDetails.title}
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
           {movieDetails.poster_path && (
-            <img
-              className="mb-4 w-[140px] sm:w-[180px] lg:w-[220px] rounded-md shadow-lg"
-              alt={`${movieDetails.title} title`}
-              src={tmdbImage(movieDetails.poster_path, "w500")}
-            />
+            <div className="relative mb-4 w-[140px] sm:w-[180px] lg:w-[220px] aspect-poster rounded-md shadow-lg overflow-hidden">
+              <Image
+                src={tmdbImage(movieDetails.poster_path, "w500")}
+                alt={`${movieDetails.title} poster`}
+                fill
+                className="object-cover"
+              />
+            </div>
           )}
+
           <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
             <Button className="border">▶ Resume</Button>
             <Button variant="outline">ℹ Info</Button>
@@ -151,6 +157,7 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
           </div>
         </div>
       </Container>
+
       <MovieDetailsTabs lang={language} id={movieDetails.id} />
     </>
   );

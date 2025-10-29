@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { SlidersHorizontal } from 'lucide-react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
-import { FormProvider, useForm } from 'react-hook-form'
+import { SlidersHorizontal } from "lucide-react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 
 import {
   Sheet,
@@ -15,22 +15,17 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet'
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from '@/components/ui/tabs'
+} from "@/components/ui/sheet";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { useLanguage } from '@/context/language'
-import { useMediaQuery } from '@/hooks/use-media-query'
+import { useLanguage } from "@/context/language";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
-import { Filters, SortBy } from './tabs'
+import { Filters, SortBy } from "./tabs";
 import {
   buildQueryStringFromValues,
   getDefaultValues,
-} from './tv-series-list-filters.utils'
+} from "./tv-series-list-filters.utils";
 
 import {
   Drawer,
@@ -39,39 +34,39 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTrigger,
-} from '@/components/ui/drawer'
-import type { TvSeriesListFiltersFormValues } from '.'
-import { WatchProviders } from '../watch-providers'
-import { WatchRegion } from '../watch-region'
+} from "@/components/ui/drawer";
+import type { TvSeriesListFiltersFormValues } from ".";
+import { WatchProviders } from "../watch-providers";
+import { WatchRegion } from "../watch-region";
 
 export const TvSeriesListFilters = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
-  const { replace } = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const { dictionary, language } = useLanguage()
-  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { dictionary, language } = useLanguage();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const defaultValues = {
     ...getDefaultValues(searchParams),
-    watch_region: language.split('-')[1],
-  }
+    watch_region: language.split("-")[1],
+  };
 
   const methods = useForm<TvSeriesListFiltersFormValues>({
     defaultValues,
-  })
+  });
 
   const onSubmit = (values: TvSeriesListFiltersFormValues) => {
-    const queryString = buildQueryStringFromValues(values)
+    const queryString = buildQueryStringFromValues(values);
 
-    replace(`${pathname}?${queryString}`)
-    setOpen(false)
-  }
+    replace(`${pathname}?${queryString}`);
+    setOpen(false);
+  };
 
-  const hasFilters = Object.keys(defaultValues).some(key =>
-    searchParams.get(key)
-  )
+  const hasFilters = Object.keys(defaultValues).some((key) =>
+    searchParams.get(key),
+  );
 
   if (isDesktop) {
     return (
@@ -79,7 +74,7 @@ export const TvSeriesListFilters = () => {
         <form onSubmit={methods.handleSubmit(onSubmit)}>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant={hasFilters ? 'default' : 'outline'} size="icon">
+              <Button variant={hasFilters ? "default" : "outline"} size="icon">
                 <SlidersHorizontal size={16} />
               </Button>
             </SheetTrigger>
@@ -139,7 +134,7 @@ export const TvSeriesListFilters = () => {
           </Sheet>
         </form>
       </FormProvider>
-    )
+    );
   }
 
   return (
@@ -205,5 +200,5 @@ export const TvSeriesListFilters = () => {
         </Drawer>
       </form>
     </FormProvider>
-  )
-}
+  );
+};

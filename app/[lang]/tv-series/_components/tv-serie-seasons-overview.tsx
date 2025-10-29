@@ -27,13 +27,13 @@ type TvSerieSeasonsOverviewProps = {
 async function getSeasonDetails(
   tvSerieId: number,
   seasons: Season[],
-  language: Language
+  language: Language,
 ) {
   const seasonsDetails = await Promise.all(
     seasons.map(
       async (season) =>
-        await tmdb.season.details(tvSerieId, season.season_number, language)
-    )
+        await tmdb.season.details(tvSerieId, season.season_number, language),
+    ),
   );
 
   const formattedSeasonsDetails = seasonsDetails.map((season) => {
@@ -71,7 +71,7 @@ export function TvSerieSeasonsOverview({
             <TableHead
               className={cn(
                 "p-2 text-center sticky top-0 left-0 bg-background",
-                "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border"
+                "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border",
               )}
             >
               EP
@@ -91,7 +91,7 @@ export function TvSerieSeasonsOverview({
               <TableCell
                 className={cn(
                   "p-2 text-center font-medium sticky left-0 bg-background text-muted-foreground text-xs",
-                  "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border"
+                  "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border",
                 )}
               >
                 {episodeIndex + 1}
@@ -100,11 +100,11 @@ export function TvSerieSeasonsOverview({
               {seasons.map((season) => {
                 const seasonDetails = data.find(
                   (seasonDetail) =>
-                    seasonDetail.season_number === season.season_number
+                    seasonDetail.season_number === season.season_number,
                 );
 
                 const episode = seasonDetails?.episodes.find(
-                  (episode) => episode.episode_number === episodeIndex + 1
+                  (episode) => episode.episode_number === episodeIndex + 1,
                 );
 
                 if (!episode || episode.vote_average === 0) {
@@ -135,7 +135,7 @@ export function TvSerieSeasonsOverview({
                         episode.vote_average > 6 &&
                           "bg-lime-200 text-lime-900 hover:bg-lime-300 dark:bg-lime-700/50 dark:text-lime-100 dark:hover:bg-lime-700",
                         episode.vote_average > 8 &&
-                          "bg-green-200 text-green-900 hover:bg-green-300 dark:bg-green-700/50 dark:text-green-100 dark:hover:bg-green-700"
+                          "bg-green-200 text-green-900 hover:bg-green-300 dark:bg-green-700/50 dark:text-green-100 dark:hover:bg-green-700",
                       )}
                     >
                       {episode?.vote_average.toFixed(1)}
@@ -159,7 +159,7 @@ export function TvSerieSeasonsOverviewSkeleton({
   seasons,
 }: TvSerieSeasonsOverviewSkeletonProps) {
   const maxEpisodes = Math.max(
-    ...seasons.map((season) => season.episode_count)
+    ...seasons.map((season) => season.episode_count),
   );
 
   return (
@@ -170,7 +170,7 @@ export function TvSerieSeasonsOverviewSkeleton({
             <TableHead
               className={cn(
                 "p-2 text-center sticky top-0 left-0 bg-background",
-                "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border"
+                "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border",
               )}
             >
               EP
@@ -190,7 +190,7 @@ export function TvSerieSeasonsOverviewSkeleton({
               <TableCell
                 className={cn(
                   "p-2 text-center font-medium sticky left-0 bg-background text-muted-foreground text-xs",
-                  "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border"
+                  "after:absolute after:right-0 after:w-px after:h-[120%] after:top-0 after:bg-border",
                 )}
               >
                 {episodeIndex + 1}

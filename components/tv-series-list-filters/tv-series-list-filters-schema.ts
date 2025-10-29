@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from "zod";
 
 export const tvSeriesListFiltersSchema = z.object({
   genres: z.array(z.number()),
@@ -17,8 +17,8 @@ export const tvSeriesListFiltersSchema = z.object({
   watch_region: z.string().optional(),
   with_watch_providers: z.array(z.number()),
   with_original_language: z.string().optional(),
-})
+});
 
 export type TvSeriesListFiltersFormValues = z.infer<
   typeof tvSeriesListFiltersSchema
->
+>;

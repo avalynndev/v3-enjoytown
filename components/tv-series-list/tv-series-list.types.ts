@@ -1,6 +1,6 @@
-import type { TvSeriesListType } from '@/services/tmdb'
+import type { TvSeriesListType } from "@/services/tmdb";
 
-export type TvSeriesListVariant = TvSeriesListType | 'discover'
+export type TvSeriesListVariant = TvSeriesListType | "discover";
 export type TvSeriesListProps = {
-  variant: TvSeriesListVariant
-}
+  variant: TvSeriesListVariant;
+};

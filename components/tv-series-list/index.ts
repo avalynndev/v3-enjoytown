@@ -1,1 +1,1 @@
-export * from './tv-series-list'
+export * from "./tv-series-list";

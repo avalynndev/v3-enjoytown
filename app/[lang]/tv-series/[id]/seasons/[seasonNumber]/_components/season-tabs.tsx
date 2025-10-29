@@ -1,31 +1,26 @@
-import { Credits } from '@/components/credits'
-import { Images } from '@/components/images'
-import { Videos } from '@/components/videos'
-import type { Language } from '@/types/languages'
-import { getDictionary } from '@/utils/dictionaries'
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from '@/components/ui/tabs'
-import type { SeasonDetails } from '@/tmdb'
-import { Suspense } from 'react'
-import { SeasonEpisodes } from './season-episodes'
+import { Credits } from "@/components/credits";
+import { Images } from "@/components/images";
+import { Videos } from "@/components/videos";
+import type { Language } from "@/types/languages";
+import { getDictionary } from "@/utils/dictionaries";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { SeasonDetails } from "@/tmdb";
+import { Suspense } from "react";
+import { SeasonEpisodes } from "./season-episodes";
 
 type SeasonTabsProps = {
-  seasonDetails: SeasonDetails
-  language: Language
-  id: number
-}
+  seasonDetails: SeasonDetails;
+  language: Language;
+  id: number;
+};
 
 export async function SeasonTabs({
   seasonDetails,
   language,
   id,
 }: SeasonTabsProps) {
-  const { episodes, season_number } = seasonDetails
-  const dictionary = await getDictionary(language)
+  const { episodes, season_number } = seasonDetails;
+  const dictionary = await getDictionary(language);
 
   return (
     <Tabs defaultValue="episodes" className="space-y-4">
@@ -70,5 +65,5 @@ export async function SeasonTabs({
         </Suspense>
       </TabsContent>
     </Tabs>
-  )
+  );
 }

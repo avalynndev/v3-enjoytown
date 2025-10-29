@@ -1,20 +1,15 @@
-import { Credits } from '@/components/credits'
-import { Images } from '@/components/images'
-import type { Language } from '@/types/languages'
-import { getDictionary } from '@/utils/dictionaries'
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from '@/components/ui/tabs'
+import { Credits } from "@/components/credits";
+import { Images } from "@/components/images";
+import type { Language } from "@/types/languages";
+import { getDictionary } from "@/utils/dictionaries";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type EpisodeTabsProps = {
-  language: Language
-  id: number
-  seasonNumber: number
-  episodeNumber: number
-}
+  language: Language;
+  id: number;
+  seasonNumber: number;
+  episodeNumber: number;
+};
 
 export async function EpisodeTabs({
   language,
@@ -22,7 +17,7 @@ export async function EpisodeTabs({
   seasonNumber,
   episodeNumber,
 }: EpisodeTabsProps) {
-  const dictionary = await getDictionary(language)
+  const dictionary = await getDictionary(language);
 
   return (
     <Tabs defaultValue="credits" className="space-y-4">
@@ -51,5 +46,5 @@ export async function EpisodeTabs({
         />
       </TabsContent>
     </Tabs>
-  )
+  );
 }

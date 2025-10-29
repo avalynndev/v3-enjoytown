@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: TvSeriePageProps
+  props: TvSeriePageProps,
 ): Promise<Metadata> {
   const { lang, id } = await props.params;
   const metadata = await getTvMetadata(Number(id), lang);

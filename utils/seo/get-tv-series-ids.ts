@@ -15,10 +15,10 @@ export const getTvSeriesIds = async (pages: number = DEFAULT_PAGES) => {
                 language: "en-US",
                 list: type,
                 page: index + 1,
-              })
-          )
-        )
-    )
+              }),
+          ),
+        ),
+    ),
   );
   const results = lists.flatMap((list) => list.map((list) => list.results));
   const ids = results.flatMap((result) => result.map((tv) => tv.id));
