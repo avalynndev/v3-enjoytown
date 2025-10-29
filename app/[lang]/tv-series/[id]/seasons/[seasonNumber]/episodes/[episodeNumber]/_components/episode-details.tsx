@@ -84,14 +84,7 @@ export async function EpisodeDetails({
           </h1>
 
           <div className="flex">
-            <Badge>
-              <Image
-                src="/assets/tmdb.svg"
-                width={55}
-                height={1}
-                alt="TMDB"
-                className="mr-2"
-              />
+            <Badge variant="outline">
               {vote_average.toFixed(1)}
             </Badge>
           </div>

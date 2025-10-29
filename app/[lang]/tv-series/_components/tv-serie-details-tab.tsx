@@ -39,7 +39,7 @@ export async function TvDetailsTabs({
 
   return (
     <Container>
-      <Tabs defaultValue="credits" className="w-full p-4 lg:p-0">
+      <Tabs defaultValue="seasons" className="w-full p-4 lg:p-0">
         <div className="md:m-none p-none -mx-4 max-w-[100vw] overflow-x-scroll px-4 scrollbar-hide">
           <TabsList>
             <TabsTrigger value="seasons">{dictionary.tabs.seasons}</TabsTrigger>

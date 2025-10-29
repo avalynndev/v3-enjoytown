@@ -1,24 +1,23 @@
-import { Poster } from '@/components/poster'
-import { tmdb } from '@/services/tmdb'
-import type { Language } from '@/types/languages'
-import { locale } from '@/utils/date/locale'
-import { Badge } from '@/components/ui/badge'
+import { Poster } from "@/components/poster";
+import { tmdb } from "@/services/tmdb";
+import type { Language } from "@/types/languages";
+import { locale } from "@/utils/date/locale";
+import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
-import type { SeasonDetails as TMDBSeasonDetails } from '@/tmdb'
-import { format } from 'date-fns'
-import Link from 'next/link'
-import Image from 'next/image'
+} from "@/components/ui/breadcrumb";
+import type { SeasonDetails as TMDBSeasonDetails } from "@/tmdb";
+import { format } from "date-fns";
+import Link from "next/link";
 
 type SeasonDetailsProps = {
-  season: TMDBSeasonDetails
-  language: Language
-  id: number
-}
+  season: TMDBSeasonDetails;
+  language: Language;
+  id: number;
+};
 
 export async function SeasonDetails({
   season,
@@ -26,8 +25,8 @@ export async function SeasonDetails({
   id,
 }: SeasonDetailsProps) {
   const { poster_path, name, overview, air_date, vote_average, season_number } =
-    season
-  const series = await tmdb.tv.details(id, language)
+    season;
+  const series = await tmdb.tv.details(id, language);
 
   return (
     <div className="space-y-4">
@@ -53,7 +52,7 @@ export async function SeasonDetails({
 
         <div className="flex flex-col gap-2 flex-1">
           <span className="text-xs text-muted-foreground">
-            {format(new Date(air_date), 'PPP', {
+            {format(new Date(air_date), "PPP", {
               locale: locale[language],
             })}
           </span>
@@ -61,15 +60,7 @@ export async function SeasonDetails({
           <h1 className="text-lg font-bold md:text-4xl">{name}</h1>
 
           <div>
-            <Badge className="shrink-0">
-              <Image
-                src="/assets/tmdb.svg"
-                width={55}
-                height={1}
-                alt="TMDB"
-                className="mr-2"
-              />
-
+            <Badge className="shrink-0" variant="outline">
               {vote_average.toFixed(1)}
             </Badge>
           </div>
@@ -78,8 +69,7 @@ export async function SeasonDetails({
 
       <div className="flex flex-col gap-2">
         <p className="text-sm/6 text-muted-foreground">{overview}</p>
-
       </div>
     </div>
-  )
+  );
 }

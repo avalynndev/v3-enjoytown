@@ -25,7 +25,7 @@ export async function EpisodeTabs({
   const dictionary = await getDictionary(language)
 
   return (
-    <Tabs defaultValue="reviews" className="space-y-4">
+    <Tabs defaultValue="credits" className="space-y-4">
       <TabsList>
         <TabsTrigger value="credits">{dictionary.tabs.credits}</TabsTrigger>
         <TabsTrigger value="images">{dictionary.tabs.images}</TabsTrigger>

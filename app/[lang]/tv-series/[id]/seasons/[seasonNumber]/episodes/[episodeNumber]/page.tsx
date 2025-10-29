@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 import { EpisodeDetails } from './_components/episode-details'
 import { EpisodeNavigation } from './_components/episode-navigation'
 import { EpisodeTabs } from './_components/episode-tabs'
+import { SidebarTrigger } from '@/components/ui/sidebar'
+import { Separator } from '@/components/ui/separator'
 
 type EpisodePageProps = PageProps<{
   id: string
@@ -63,7 +65,18 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
   )
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-0">
+     <>
+      <header className="sticky top-0 z-50 flex h-14 items-center gap-2 border-b backdrop-blur px-3 sm:px-6 rounded-t-2xl overflow-hidden">
+        <SidebarTrigger className="-ml-1" />
+        <Separator
+          orientation="vertical"
+          className="mx-2 data-[orientation=vertical]:h-4"
+        />
+        <h1 className="text-sm sm:text-base font-medium truncate">
+          {episode.name}
+        </h1>
+      </header>
+    <div className="max-w-3xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
       <EpisodeDetails
         episode={episode}
         language={lang}
@@ -85,5 +98,6 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
         language={lang}
       />
     </div>
+    </>
   )
 }

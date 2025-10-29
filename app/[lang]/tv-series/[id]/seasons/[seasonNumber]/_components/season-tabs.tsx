@@ -28,7 +28,7 @@ export async function SeasonTabs({
   const dictionary = await getDictionary(language)
 
   return (
-    <Tabs defaultValue="reviews" className="space-y-4">
+    <Tabs defaultValue="episodes" className="space-y-4">
       <div className="md:m-none -mx-4 max-w-[100vw] overflow-x-scroll px-4 scrollbar-hide">
         <TabsList>
           <TabsTrigger value="episodes">{dictionary.episodes}</TabsTrigger>
