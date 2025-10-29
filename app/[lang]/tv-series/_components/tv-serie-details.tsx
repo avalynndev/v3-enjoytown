@@ -9,6 +9,7 @@ import { tmdb } from "@/services/tmdb";
 import type { TvSerieDetails } from "@/tmdb";
 import { Language } from "@/types/languages";
 import { Container } from "@/components/ui/container";
+import { TvDetailsTabs } from "./tv-serie-details-tab";
 
 type TvDetailsProps = {
   id: number;
@@ -111,6 +112,7 @@ export async function TvSerieDetails({ id, language }: TvDetailsProps) {
           </div>
         </div>
       </Container>
+      <TvDetailsTabs seasons={TvDetails.seasons} lang={language} id={TvDetails.id}/>
     </>
   );
 }

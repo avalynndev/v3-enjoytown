@@ -33,7 +33,7 @@ const NowPlayingMoviesPage = async (props: PageProps) => {
   const dictionary = await getDictionary(lang);
 
   return (
-    <MovieLayout title="now-playing" language={lang}>
+    <MovieLayout title="Now Playing" language={lang}>
       <div>
         <h1 className="text-2xl font-bold">
           {dictionary.movie_pages.now_playing.title}

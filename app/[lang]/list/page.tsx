@@ -1,0 +1,62 @@
+import Link from "next/link";
+
+type FeatureText = {
+  title: string;
+  description: string;
+  href?: string;
+};
+
+const featureText: FeatureText[] = [
+  {
+    title: "Movie/TV",
+    href: "/list/mtv",
+    description: "Explore Movie And Tv Shows: Spectacles Await You!",
+  },
+  {
+    title: "Anime",
+    href: "/list/anime",
+    description: "Dive into Anime Worlds: Adventures Await!",
+  },
+];
+
+export default function List() {
+  return (
+    <div className="bg-background flex h-[80vh] items-center justify-center">
+      <div className="w-full max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <div>
+          <div className="text-center">
+            <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl">
+              List
+            </h1>
+            <p className="text-muted-foreground mt-4 text-xl">
+              Discover and enjoy free streaming content across various genres.
+            </p>
+          </div>
+          <section className="py-12">
+              <div className="flex flex-col gap-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  {featureText.map(({ title, description, href }, index) => (
+                    <Link
+                      href={`${href}`}
+                      className="flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all hover:-mt-2 hover:mb-2"
+                      key={index}
+                    >
+                      <div className="grid gap-4">
+                        <h4 className="text-primary text-xl">
+                          {title}{" "}
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                            -&gt;
+                          </span>
+                        </h4>
+                        <p className="text-base opacity-75">{description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
