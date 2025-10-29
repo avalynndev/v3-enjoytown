@@ -34,10 +34,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton
               asChild
               tooltip={"Home"}
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:p-1.5!"
             >
               <Link href="/">
-                <IconInnerShadowTop className="!size-5" />
+                <IconInnerShadowTop className="size-5!" />
                 <span className="text-base font-semibold">Home</span>
               </Link>
             </SidebarMenuButton>
@@ -51,7 +51,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton asChild tooltip={item.title}>
                   <Link href={item.url}>
-                    <item.icon className="!size-4" />
+                    <item.icon className="size-4!" />
                     <span>{item.title}</span>
                   </Link>
                 </SidebarMenuButton>

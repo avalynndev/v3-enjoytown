@@ -41,7 +41,7 @@ export function MovieTabs({ tabs }: { tabs: string[] }) {
           })}
         </TabsList>
       </Tabs>
-      <div className="overflow-hidden md:hidden transition-all duration-500 border rounded-xl ease-[cubic-bezier(0.4,0,0.2,1)] max-h-80 opacity-100 mt-2 mb-4">
+      <div className="overflow-hidden md:hidden border rounded-xl max-h-80 mt-2 mb-4">
         <div className="flex flex-col gap-3 rounded-xl bg-white/50 backdrop-blur-md shadow-md p-4 text-center dark:bg-background">
           {[
             { href: "/movies", label: "Discover" },

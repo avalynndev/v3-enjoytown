@@ -39,7 +39,7 @@ export const VoteAverageField = () => {
                 className="relative flex translate-x-[3px] flex-col items-center"
                 key={v4()}
               >
-                <div className="h-[4px] w-[1px] bg-muted" />
+                <div className="h-[4px] w-px bg-muted" />
                 <div className="text-xs">{index}</div>
               </div>
             ))}
