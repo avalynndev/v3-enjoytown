@@ -37,19 +37,19 @@ export async function generateMetadata({
       title,
       description,
       images: episode.still_path
-        ? [tmdbImage(episode.still_path, 'w500')]
+        ? [tmdbImage(episode.still_path, "w500")]
         : undefined,
-      siteName: 'Plotwist',
+      siteName: "Enjoytown",
     },
     twitter: {
       title,
       description,
       images: episode.still_path
-        ? [tmdbImage(episode.still_path, 'w500')]
+        ? [tmdbImage(episode.still_path, "w500")]
         : undefined,
-      card: 'summary_large_image',
+      card: "summary_large_image",
     },
-  }
+  };
 }
 
 export default async function EpisodePage({ params }: EpisodePageProps) {
