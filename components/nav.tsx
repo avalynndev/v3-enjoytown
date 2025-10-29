@@ -17,9 +17,14 @@ import type { Language } from "@/types/languages";
 import ReactCountryFlag from "react-country-flag";
 import { useSession } from "@/lib/auth-client";
 import { UserButton } from "@daveyplate/better-auth-ui";
+import { CommandSearch } from "./command-search/search";
+import { useEffect } from "react";
 
 export default function Navbar() {
   const { data: session } = useSession();
+  const pathname = usePathname();
+  const router = useRouter();
+
   const additionalLinks = session?.user
     ? [
         {
@@ -39,9 +44,6 @@ export default function Navbar() {
       ]
     : [];
 
-  const pathname = usePathname();
-  const router = useRouter();
-
   const currentLangFromPath = (() => {
     const parts = (pathname || "/").split("/");
     const candidate = parts[1] as Language | undefined;
@@ -52,10 +54,18 @@ export default function Navbar() {
 
   const currentLang = currentLangFromPath ?? ("en-US" as Language);
   const currentLangOption = SUPPORTED_LANGUAGES.find(
-    (l) => l.value === currentLang,
+    (l) => l.value === currentLang
   );
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language") as Language | null;
+    if (savedLang && savedLang !== currentLang) {
+      replaceLanguageInPath(savedLang);
+    }
+  }, []);
+
   const replaceLanguageInPath = (nextLang: Language) => {
+    localStorage.setItem("language", nextLang);
     const parts = (pathname || "/").split("/");
     if (supportedLanguageValues.includes(parts[1] as Language)) {
       parts[1] = nextLang;
@@ -87,6 +97,7 @@ export default function Navbar() {
           <div className="max-w-64 truncate pr-2">Enjoytown</div>
         </div>
       </div>
+
       <div className="flex flex-1 items-center justify-end gap-2">
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-2">
@@ -127,12 +138,13 @@ export default function Navbar() {
                       />
                       {label}
                     </SelectItem>
-                  ),
+                  )
                 )}
               </SelectContent>
             </Select>
           </div>
         </div>
+        <CommandSearch />
         <ModeToggle />
         <UserButton
           className="rounded-sm"
