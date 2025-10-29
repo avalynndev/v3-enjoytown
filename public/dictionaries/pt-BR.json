@@ -2,39 +2,6 @@
   "home": {
     "keywords": "organizar filmes, organizar séries, app de filmes e séries, recomendações personalizadas, criar listas de filmes, controle de séries, melhores apps de filmes, app para maratonas de séries, organizar maratonas, avaliações de séries, listas de filmes online, interface elegante para séries, sugestões de filmes, controle de filmes assistidos"
   },
-  "home_prices": {
-    "title": "Comece sua jornada hoje!",
-    "description": "Inicie sua jornada  hoje e torne-se parte de uma comunidade crescente de entusiastas do cinema!",
-    "monthly": "Mensal",
-    "yearly": "Anual",
-    "free_plan": {
-      "title": "Grátis",
-      "price": "R$0/mês",
-      "description": "Explore filmes e séries e gerencie seus conteúdos.",
-      "benefits": [
-        "Acesso total à plataforma",
-        "Avaliações ilimitadas",
-        "Listas sem limites.",
-        "Ferramentas para gerenciar seus conteúdos assistidos, em andamento ou planejados.",
-        "Listas colaborativas",
-        "Recomendar conteúdos a amigos"
-      ],
-      "start_now": "Comece agora!"
-    },
-    "pro_plan": {
-      "title": "Pro",
-      "price": "R$5/mês",
-      "recommended": "Recomendado",
-      "description": "Tudo no plano gratuito e muito mais!",
-      "benefits": [
-        "Recomendações pessoais baseadas no histórico",
-        "Distintivos e conquistas",
-        "Estatísticas pessoais detalhada",
-        "Acesso prioritário a novas funcionalidades da plataforma"
-      ],
-      "subscribe": "Assine"
-    }
-  },
   "movies_list": {
     "now_playing": "Filmes em exibição",
     "popular": "Filmes populares",

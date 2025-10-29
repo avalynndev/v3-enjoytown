@@ -1,5 +1,5 @@
 import Carousel from "@/components/carousel";
-import { MovieTabs } from "./_components/tabs";
+import { MovieTabs } from "../_components/tabs";
 import { Container } from "@/components/ui/container";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";

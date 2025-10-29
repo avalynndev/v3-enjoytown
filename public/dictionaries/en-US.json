@@ -2,39 +2,6 @@
   "home": {
     "keywords": "organize movies, organize series, movie and series app, personalized recommendations, create movie lists, series control, best movie apps, app for series marathons, organize marathons, series reviews, online movie lists, elegant interface for series, movie suggestions, track watched movies"
   },
-  "home_prices": {
-    "title": "Start Your Journey Today",
-    "description": "Discover the world of movies and TV Series like never before. Start your Enjoytown journey today and become part of a growing community of cinema enthusiasts!",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "free_plan": {
-      "title": "Free",
-      "price": "$0/month",
-      "description": "Explore movies and series and manage your content.",
-      "benefits": [
-        "Full access to the platform",
-        "Unlimited ratings",
-        "Unlimited lists",
-        "Tools to manage your watched, watching, or planned content",
-        "Collaborative lists",
-        "Recommend content to friends"
-      ],
-      "start_now": "Start Now!"
-    },
-    "pro_plan": {
-      "title": "Pro",
-      "price": "$5/month",
-      "recommended": "Recommended",
-      "description": "Everything in the free plan and much more!",
-      "benefits": [
-        "Personalized recommendations based on your history",
-        "Badges and achievements",
-        "Detailed personal statistics",
-        "Priority access to new platform features"
-      ],
-      "subscribe": "Subscribe"
-    }
-  },
   "movies_list": {
     "now_playing": "Now playing movies",
     "popular": "Popular movies",

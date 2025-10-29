@@ -2,39 +2,6 @@
   "home": {
     "keywords": "organizar películas, organizar series, app de películas y series, recomendaciones personalizadas, crear listas de películas, control de series, mejores apps de películas, app para maratones de series, organizar maratones, reseñas de series, listas de películas online, interfaz elegante para series, sugerencias de películas, controlar películas vistas"
   },
-  "home_prices": {
-    "title": "Comienza tu viaje hoy",
-    "description": "Descubre el mundo de las películas y series como nunca antes. ¡Inicia tu viaje en Enjoytown hoy y sé parte de una comunidad creciente de aficionados al cine!",
-    "monthly": "Mensual",
-    "yearly": "Anual",
-    "free_plan": {
-      "title": "Gratis",
-      "price": "0 €/mes",
-      "description": "Explora películas y series y gestiona tus contenidos.",
-      "benefits": [
-        "Acceso completo a la plataforma",
-        "Valoraciones ilimitadas",
-        "Listas sin límites",
-        "Herramientas para gestionar tus contenidos vistos, en progreso o planeados",
-        "Listas colaborativas",
-        "Recomendar contenido a amigos"
-      ],
-      "start_now": "¡Empieza ahora!"
-    },
-    "pro_plan": {
-      "title": "Pro",
-      "price": "5 €/mes",
-      "recommended": "Recomendado",
-      "description": "¡Todo en el plan gratuito y mucho más!",
-      "benefits": [
-        "Recomendaciones personalizadas basadas en tu historial",
-        "Distintivos y logros",
-        "Estadísticas personales detalladas",
-        "Acceso prioritario a nuevas funciones de la plataforma"
-      ],
-      "subscribe": "Suscríbete"
-    }
-  },
   "movies_list": {
     "now_playing": "Películas en cartelera",
     "popular": "Películas populares",

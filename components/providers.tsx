@@ -1,10 +1,20 @@
 "use client";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
+import NextTopLoader from "nextjs-toploader";
+import nProgress from "nprogress";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { useEffect } from "react";
+import { Toaster } from "sonner";
 import { AuthUIProvider } from "@daveyplate/better-auth-ui";
 import { useRouter } from "next/navigation";
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+
+const queryClient = new QueryClient();
+export const APP_QUERY_CLIENT = queryClient;
 
 import type { ReactNode } from "react";
 
@@ -35,18 +45,6 @@ export function Providers({ children }: { children: ReactNode }) {
   );
 }
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
-import { usePathname } from "next/navigation";
-import NextTopLoader from "nextjs-toploader";
-import nProgress from "nprogress";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
-import { useEffect } from "react";
-import { Toaster } from "sonner";
-
-const queryClient = new QueryClient();
-export const APP_QUERY_CLIENT = queryClient;
-
 export function ThemeProvider({
   children,
   ...props
@@ -54,7 +52,6 @@ export function ThemeProvider({
   const pathname = usePathname();
   const router = useRouter();
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     nProgress.done();
   }, [pathname, router]);
