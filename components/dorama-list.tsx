@@ -50,9 +50,14 @@ export const DoramaListContent = () => {
       </div>
     );
 
-  const flatData = data.pages
-    .flatMap((page) => page.results)
-    .filter((result) => result.backdrop_path);
+  const flatData = Array.from(
+    new Map(
+      data.pages
+        .flatMap((page) => page.results)
+        .filter((result) => result.backdrop_path)
+        .map((item) => [item.id, item])
+    ).values()
+  );
 
   const isLastPage =
     data.pages[data.pages.length - 1].page >=

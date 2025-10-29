@@ -74,7 +74,7 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
-            <Button className="border">▶ Resume</Button>
+            <Button className="border">▶ Play</Button>
             <Button variant="outline">ℹ Info</Button>
             <Button variant="secondary" className="items-center gap-2">
               <svg
@@ -101,7 +101,7 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
             <div className="flex justify-between w-full text-xs">
               <span>{progress.formatted}</span>
               <div className="flex items-center gap-2">
-                <Badge variant="outline" className="border-none">
+                <Badge variant="outline">
                   {movieDetails.vote_average.toFixed(1)}
                 </Badge>
               </div>

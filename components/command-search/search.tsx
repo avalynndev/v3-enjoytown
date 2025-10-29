@@ -42,7 +42,6 @@ export const CommandSearch = () => {
   const { language } = useLanguage();
   const pathname = usePathname();
 
-  // ✅ Load dictionary safely on client side
   useEffect(() => {
     const loadDict = async () => {
       const dict = await getDictionary(language);
@@ -54,11 +53,10 @@ export const CommandSearch = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["search", debouncedSearch, language],
     queryFn: async () => await tmdb.search.multi(debouncedSearch, language),
-    enabled: !!debouncedSearch, // ✅ only run when user types something
+    enabled: !!debouncedSearch, 
     staleTime: 1000,
   });
 
-  // Shortcut handler (Ctrl/Cmd + K)
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {

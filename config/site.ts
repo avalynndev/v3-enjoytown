@@ -21,13 +21,18 @@ export const siteConfig = {
   },
   navMain: [
     {
-      title: "Movie",
+      title: "Movies",
       url: "/movies",
       icon: IconDeviceTvOld,
     },
     {
-      title: "Tv Shows",
+      title: "Tv Series",
       url: "/tv-series",
+      icon: IconDeviceTvOld,
+    },
+    {
+      title: "Doramas",
+      url: "/doramas",
       icon: IconDeviceTvOld,
     },
     {
