@@ -20,7 +20,7 @@ export default async function RootLayout({
   params,
   children,
 }: RootLayoutProps) {
-  const { lang } = await params;
+  const { lang } = params;
   const dictionary = await getDictionary(lang);
   return (
     <SonnerProvider>
