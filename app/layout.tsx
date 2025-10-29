@@ -106,7 +106,9 @@ export default function RootLayout({
                     className="inset-y-11 h-[calc(100vh-2.75rem)] bg-background"
                   />
                   <SidebarInset className="m-2 rounded-xl border bg-background shadow-md flex flex-col h-[calc(100vh-3.75rem)]">
-                    <ScrollArea className="h-full">{children}</ScrollArea>
+                    <ScrollArea className="h-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                      {children}
+                    </ScrollArea>
                   </SidebarInset>
                 </SidebarProvider>
               </div>
