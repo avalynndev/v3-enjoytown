@@ -28,19 +28,19 @@ interface MoviePageProps {
 }
 
 export default function MovieDetailPage({ params }: MoviePageProps) {
-const [movieData, setMovieData] = useState<
-  MovieDetails & {
-    similar?: MovieWithMediaType[];
-    recommendations?: MovieWithMediaType[];
-    videos?: {
-      id: string;
-      key: string;
-      name: string;
-      site: string;
-      type: string;
-    }[];
-  }
->();
+  const [movieData, setMovieData] = useState<
+    MovieDetails & {
+      similar?: MovieWithMediaType[];
+      recommendations?: MovieWithMediaType[];
+      videos?: {
+        id: string;
+        key: string;
+        name: string;
+        site: string;
+        type: string;
+      }[];
+    }
+  >();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -52,7 +52,7 @@ const [movieData, setMovieData] = useState<
         const resolvedParams = await params;
         const response = await tmdb.movies.details(
           resolvedParams.id,
-          resolvedParams.language
+          resolvedParams.language,
         );
         setMovieData(response);
       } catch (err) {
@@ -93,7 +93,7 @@ const [movieData, setMovieData] = useState<
   };
 
   const trailer = movieData.videos?.find(
-    (video) => video.type === "Trailer" && video.site === "YouTube"
+    (video) => video.type === "Trailer" && video.site === "YouTube",
   );
 
   return (
@@ -180,7 +180,7 @@ const [movieData, setMovieData] = useState<
                 onClick={() =>
                   window.open(
                     `https://www.youtube.com/watch?v=${trailer.key}`,
-                    "_blank"
+                    "_blank",
                   )
                 }
               >

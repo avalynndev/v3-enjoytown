@@ -17,9 +17,7 @@ export default function RootLayout({
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <h1 className="text-sm sm:text-base font-medium truncate">
-         Movies
-        </h1>
+        <h1 className="text-sm sm:text-base font-medium truncate">Movies</h1>
       </header>
       <Container>
         <Carousel />
