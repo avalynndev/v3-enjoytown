@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "proxy.ts": {
+      "runtime": "edge"
+    }
+  }
+}
