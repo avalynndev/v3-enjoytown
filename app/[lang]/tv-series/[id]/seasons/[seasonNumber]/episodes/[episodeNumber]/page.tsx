@@ -76,7 +76,10 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
           {episode.name}
         </h1>
       </header>
-      <div className="max-w-3xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
+      <div className="max-w-5xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
+        <div className="w-full aspect-video rounded-xl bg-muted/30 border border-border shadow-sm flex items-center justify-center text-sm text-muted-foreground">
+          Video player area — Coming soon!
+        </div>
         <EpisodeDetails
           episode={episode}
           language={lang}

@@ -68,7 +68,7 @@ export default async function SeasonPage({ params }: SeasonPageProps) {
           {currentSeason.name}
         </h1>
       </header>
-      <div className="max-w-3xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
+      <div className="max-w-5xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
         <SeasonDetails season={currentSeason} language={lang} id={Number(id)} />
         <SeasonTabs
           seasonDetails={currentSeason}

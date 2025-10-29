@@ -65,7 +65,7 @@ export async function TvSerieDetails({ id, language }: TvDetailsProps) {
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
-            <Button className="border">▶ Resume</Button>
+            <Button className="border">▶ Play</Button>
             <Button variant="outline">ℹ Info</Button>
             <Button variant="secondary" className="items-center gap-2">
               <svg
