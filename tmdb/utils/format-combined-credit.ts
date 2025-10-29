@@ -5,7 +5,7 @@ import type {
 } from "../models";
 
 export const formatCombinedCredit = (
-  credit: RawMovieCredit | RawTvSerieCredit
+  credit: RawMovieCredit | RawTvSerieCredit,
 ): CombinedCredit => {
   if ((credit as RawTvSerieCredit).name) {
     const {

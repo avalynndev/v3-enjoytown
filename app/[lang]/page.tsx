@@ -22,7 +22,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
       }
       return acc;
     },
-    {} as Record<string, string>
+    {} as Record<string, string>,
   );
 
   const title = `${dictionary.perfect_place_for_watching} ${dictionary.everything}`;

@@ -90,12 +90,11 @@ const discover = async (options: DiscoverOptions) => {
         language,
         ...filters,
       },
-    }
+    },
   );
 
   return data;
 };
-
 
 const trending = async (timeWindow: "day" | "week", language: Language) => {
   try {
@@ -103,7 +102,7 @@ const trending = async (timeWindow: "day" | "week", language: Language) => {
       `/trending/movie/${timeWindow}`,
       {
         params: { language },
-      }
+      },
     );
     return data;
   } catch (error) {
@@ -142,7 +141,7 @@ const list = async (options: ListOptions) => {
         language,
         page,
       },
-    }
+    },
   );
 
   return data;
@@ -165,7 +164,7 @@ type RelatedResponse = ListResponse<Movie>;
 const related = async (
   id: number,
   type: MovieRelatedType,
-  language: Language
+  language: Language,
 ) => {
   const { data } = await axiosClient.get<RelatedResponse>(
     `/movie/${id}/${type}`,
@@ -174,7 +173,7 @@ const related = async (
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;

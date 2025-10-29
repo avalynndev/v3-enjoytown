@@ -24,13 +24,13 @@ type WatchProvidersQueryParams = {
 
 const list = async (
   type: "tv" | "movie",
-  params: WatchProvidersQueryParams
+  params: WatchProvidersQueryParams,
 ) => {
   const { data } = await axiosClient.get<GetWatchProvidersResponse>(
     `/watch/providers/${type}`,
     {
       params,
-    }
+    },
   );
 
   return data.results;
@@ -55,7 +55,7 @@ const regions = async (params: AvailableRegionsQueryParams) => {
     "/watch/providers/regions",
     {
       params,
-    }
+    },
   );
 
   return data.results;
@@ -74,7 +74,7 @@ const regions = async (params: AvailableRegionsQueryParams) => {
 
 const item = async (type: "tv" | "movie", id: number) => {
   const { data } = await axiosClient.get<WatchProviders>(
-    `/${type}/${id}/watch/providers`
+    `/${type}/${id}/watch/providers`,
   );
 
   return data;

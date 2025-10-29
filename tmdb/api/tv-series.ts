@@ -67,7 +67,7 @@ export const discover = async (options: DiscoverTvSeriesOptions) => {
         language,
         ...filters,
       },
-    }
+    },
   );
 
   return data;
@@ -121,7 +121,7 @@ const list = async (params: ListQueryParams) => {
 const related = async (
   id: number,
   type: "recommendations" | "similar",
-  language: Language
+  language: Language,
 ) => {
   const { data } = await axiosClient.get<ListResponse<TvSerie>>(
     `/tv/${id}/${type}`,
@@ -130,7 +130,7 @@ const related = async (
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;

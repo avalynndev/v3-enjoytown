@@ -49,7 +49,7 @@ export const WatchRegion = () => {
             value: region.iso_3166_1,
           }))
         : [],
-    [regions]
+    [regions],
   );
 
   return (

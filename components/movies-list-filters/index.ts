@@ -1,2 +1,2 @@
-export * from './movies-list-filters'
-export * from './movies-list-filters-schema'
+export * from "./movies-list-filters";
+export * from "./movies-list-filters-schema";

@@ -33,7 +33,7 @@ const popular = async (queryParams: PopularPeopleQueryParams) => {
       params: {
         ...queryParams,
       },
-    }
+    },
   );
 
   return data;
@@ -76,7 +76,7 @@ const combinedCredits = async (personId: number, language: Language) => {
       params: {
         language,
       },
-    }
+    },
   );
 
   const formattedResponse: CombinedCredits = {
@@ -104,7 +104,7 @@ const movieCredits = async (personId: number, language: Language) => {
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;
@@ -127,7 +127,7 @@ const tvCredits = async (personId: number, language: Language) => {
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;

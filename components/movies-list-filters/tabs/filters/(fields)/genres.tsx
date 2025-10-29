@@ -57,18 +57,18 @@ export const GenresField = () => {
             value: genre.id,
           }))
         : [],
-    [data]
+    [data],
   );
 
   const handleUnselect = useCallback(
     (option: Option) => {
       const newSelectedGenres = watch("genres").filter(
-        (genre) => genre !== option.value
+        (genre) => genre !== option.value,
       );
 
       setValue("genres", newSelectedGenres);
     },
-    [setValue, watch]
+    [setValue, watch],
   );
 
   const handleSelect = useCallback(
@@ -81,7 +81,7 @@ export const GenresField = () => {
 
       setValue("genres", newSelectedGenres);
     },
-    [setValue, watch]
+    [setValue, watch],
   );
 
   const handleKeyDown = useCallback(
@@ -103,16 +103,16 @@ export const GenresField = () => {
         }
       }
     },
-    [setValue, watch]
+    [setValue, watch],
   );
 
   const selectedGenres = genresOptions.filter((genreOption) =>
-    watch("genres")?.includes(genreOption.value)
+    watch("genres")?.includes(genreOption.value),
   );
 
   const selectableGenres = genresOptions.filter(
     (option) =>
-      !selectedGenres.map((option) => option.value).includes(option.value)
+      !selectedGenres.map((option) => option.value).includes(option.value),
   );
 
   return (

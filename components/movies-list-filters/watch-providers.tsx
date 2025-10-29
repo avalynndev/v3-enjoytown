@@ -103,18 +103,18 @@ export const WatchProviders = ({ type }: WatchProvidersProps) => {
             logo: watchProvider.logo_path,
           }))
         : [],
-    [watchProviders]
+    [watchProviders],
   );
 
   const handleUnselect = useCallback(
     (option: Option) => {
       const newSelectedWatchProviders = watch("with_watch_providers").filter(
-        (genre) => genre !== option.value
+        (genre) => genre !== option.value,
       );
 
       setValue("with_watch_providers", newSelectedWatchProviders);
     },
-    [setValue, watch]
+    [setValue, watch],
   );
 
   const handleSelect = useCallback(
@@ -127,7 +127,7 @@ export const WatchProviders = ({ type }: WatchProvidersProps) => {
 
       setValue("with_watch_providers", newSelectedWatchProviders);
     },
-    [setValue, watch]
+    [setValue, watch],
   );
 
   const handleKeyDown = useCallback(
@@ -152,18 +152,18 @@ export const WatchProviders = ({ type }: WatchProvidersProps) => {
         }
       }
     },
-    [setValue, watch, inputRef]
+    [setValue, watch, inputRef],
   );
 
   const selectedWatchProviders = watchProvidersOptions.filter((genreOption) =>
-    watch("with_watch_providers")?.includes(genreOption.value)
+    watch("with_watch_providers")?.includes(genreOption.value),
   );
 
   const selectableWatchProviders = watchProvidersOptions.filter(
     (option) =>
       !selectedWatchProviders
         .map((option) => option.value)
-        .includes(option.value)
+        .includes(option.value),
   );
 
   return (
@@ -266,7 +266,7 @@ export const WatchProviders = ({ type }: WatchProvidersProps) => {
                                 <div className="relative h-5 w-5 overflow-hidden rounded-md">
                                   <Image
                                     src={tmdbImage(
-                                      selectableWatchProvider.logo
+                                      selectableWatchProvider.logo,
                                     )}
                                     alt={selectableWatchProvider.label}
                                     fill
@@ -277,7 +277,7 @@ export const WatchProviders = ({ type }: WatchProvidersProps) => {
                                 {selectableWatchProvider.label}
                               </CommandItem>
                             );
-                          }
+                          },
                         )}
                       </CommandGroup>
                     </CommandList>

@@ -1,6 +1,6 @@
-import type { MovieListType } from '@/services/tmdb'
+import type { MovieListType } from "@/services/tmdb";
 
-export type MovieListVariant = MovieListType | 'discover'
+export type MovieListVariant = MovieListType | "discover";
 export type MovieListProps = {
-  variant: MovieListVariant
-}
+  variant: MovieListVariant;
+};

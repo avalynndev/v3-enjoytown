@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from "zod";
 
 export const moviesListFiltersSchema = z.object({
   release_date: z.object({
@@ -20,8 +20,8 @@ export const moviesListFiltersSchema = z.object({
   vote_count: z.object({
     gte: z.number().min(0).max(500),
   }),
-})
+});
 
 export type MoviesListFiltersFormValues = z.infer<
   typeof moviesListFiltersSchema
->
+>;

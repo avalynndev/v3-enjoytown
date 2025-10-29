@@ -11,12 +11,7 @@ export default function RootLayout({
     <Container>
       <Carousel />
       <MovieTabs
-        tabs={[
-          "Discover", 
-          "Now Playing", 
-          "Popular", 
-          "Top Rated", 
-          "Upcoming"]}
+        tabs={["Discover", "Now Playing", "Popular", "Top Rated", "Upcoming"]}
       />
       {children}
     </Container>

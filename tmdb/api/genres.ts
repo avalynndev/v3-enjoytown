@@ -9,7 +9,7 @@ export const genres = async (type: "movie" | "tv", language: Language) => {
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;

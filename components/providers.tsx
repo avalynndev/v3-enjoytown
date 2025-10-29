@@ -30,11 +30,10 @@ export function Providers({ children }: { children: ReactNode }) {
       Link={Link}
       deleteUser
     >
-        {children}
- </AuthUIProvider>
+      {children}
+    </AuthUIProvider>
   );
 }
-
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";

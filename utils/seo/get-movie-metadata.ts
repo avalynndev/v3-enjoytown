@@ -9,7 +9,7 @@ import { SUPPORTED_LANGUAGES } from "@/languages";
 
 export async function getMovieMetadata(
   id: number,
-  language: Language
+  language: Language,
 ): Promise<Metadata> {
   const {
     title,
@@ -30,7 +30,7 @@ export async function getMovieMetadata(
 
       return acc;
     },
-    {} as Record<string, string>
+    {} as Record<string, string>,
   );
 
   return {

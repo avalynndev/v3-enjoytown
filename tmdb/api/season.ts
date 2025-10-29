@@ -11,7 +11,7 @@ import type { SeasonDetails } from "../models/season";
 const details = async (
   seriesId: number,
   seasonNumber: number,
-  language: Language
+  language: Language,
 ) => {
   const { data } = await axiosClient.get<SeasonDetails>(
     `/tv/${seriesId}/season/${seasonNumber}`,
@@ -19,7 +19,7 @@ const details = async (
       params: {
         language,
       },
-    }
+    },
   );
 
   return data;
@@ -27,7 +27,7 @@ const details = async (
 
 const videos = async (seriesId: number, seasonNumber: number) => {
   const { data } = await axiosClient.get<GetVideosResponse>(
-    `/tv/${seriesId}/season/${seasonNumber}/videos`
+    `/tv/${seriesId}/season/${seasonNumber}/videos`,
   );
 
   return data;
@@ -35,7 +35,7 @@ const videos = async (seriesId: number, seasonNumber: number) => {
 
 const images = async (seriesId: number, seasonNumber: number) => {
   const { data } = await axiosClient.get<GetImagesResponse>(
-    `/tv/${seriesId}/season/${seasonNumber}/images`
+    `/tv/${seriesId}/season/${seasonNumber}/images`,
   );
 
   return data;
@@ -43,7 +43,7 @@ const images = async (seriesId: number, seasonNumber: number) => {
 
 const credits = async (seriesId: number, seasonNumber: number) => {
   const { data } = await axiosClient.get<Credits>(
-    `/tv/${seriesId}/season/${seasonNumber}/credits`
+    `/tv/${seriesId}/season/${seasonNumber}/credits`,
   );
 
   return data;
@@ -51,7 +51,7 @@ const credits = async (seriesId: number, seasonNumber: number) => {
 
 const watchProviders = async (seriesId: number, seasonNumber: number) => {
   const { data } = await axiosClient.get<WatchProviders>(
-    `/tv/${seriesId}/season/${seasonNumber}/watch/providers`
+    `/tv/${seriesId}/season/${seasonNumber}/watch/providers`,
   );
 
   return data;

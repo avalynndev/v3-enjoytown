@@ -63,7 +63,7 @@ export const MoviesListFilters = () => {
   };
 
   const hasFilters = Object.keys(defaultValues).some((key) =>
-    searchParams.get(key)
+    searchParams.get(key),
   );
 
   if (isDesktop) {
