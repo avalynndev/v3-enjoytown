@@ -10,6 +10,7 @@ import { Language } from "@/types/languages";
 import { MovieDetailsTabs } from "./movie-details-tabs";
 import { Container } from "@/components/ui/container";
 import Image from "next/image";
+import Link from "next/link";
 
 type MovieDetailsProps = {
   id: number;
@@ -74,7 +75,9 @@ export async function MovieDetails({ id, language }: MovieDetailsProps) {
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6 mx-auto bg-card/50 backdrop-blur-2xl rounded-2xl p-3">
-            <Button className="border">▶ Play</Button>
+            <Link href={`/movies/watch/${movieDetails.id}`}>
+              <Button className="border">▶ Play</Button>
+            </Link>
             <Button variant="outline">ℹ Info</Button>
             <Button variant="secondary" className="items-center gap-2">
               <svg
