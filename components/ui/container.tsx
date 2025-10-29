@@ -1,5 +1,18 @@
-import type { PropsWithChildren } from "react";
+import { cn } from "@/lib/utils";
+import type { PropsWithChildren, HTMLAttributes } from "react";
 
-export const Container = (props: PropsWithChildren) => {
-  return <div className="mx-auto max-w-7xl space-y-4 px-4 py-4" {...props} />;
+interface ContainerProps
+  extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
+  className?: string;
+}
+
+export const Container = ({ children, className, ...rest }: ContainerProps) => {
+  return (
+    <div
+      className={cn("mx-auto max-w-7xl space-y-4 px-4 py-4", className)}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
 };
