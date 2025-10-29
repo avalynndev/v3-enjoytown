@@ -1,7 +1,7 @@
 {
   "functions": {
     "proxy.ts": {
-      "runtime": "edge"
+      "runtime": "edge@2.0.0"
     }
   }
 }
