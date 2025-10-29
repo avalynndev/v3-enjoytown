@@ -140,7 +140,7 @@ export default function Navbar() {
                       />
                       {label}
                     </SelectItem>
-                  )
+                  ),
                 )}
               </SelectContent>
             </Select>
