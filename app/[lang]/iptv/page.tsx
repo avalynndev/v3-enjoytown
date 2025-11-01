@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { PageProps } from "@/types/languages";
-import { getDictionary } from "@/utils/dictionaries";
 import { fetchPlaylist } from "@/utils/iptv/parse-playlist";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
@@ -9,7 +8,6 @@ import { Container } from "@/components/ui/container";
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const { lang } = await props.params;
-  const dictionary = await getDictionary(lang);
 
   const title = "Live TV";
   const description = "Explore and watch live TV channels from around the world.";
@@ -31,11 +29,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 
 export default async function IPTVPage(props: PageProps) {
   const { lang } = await props.params;
-  const dictionary = await getDictionary(lang);
   
   const channels = await fetchPlaylist();
   
-  // Group channels by category
   const groupedChannels = channels.reduce((acc, channel) => {
     const group = channel.group || "Other";
     if (!acc[group]) {

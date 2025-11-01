@@ -3,19 +3,17 @@ import { APP_URL } from "@/constants";
 
 const SOURCE_URL = "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8";
 
-// Simple hash function for generating stable IDs
 function hashString(str: string): string {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
     hash = ((hash << 5) - hash) + char;
-    hash = hash & hash; // Convert to 32bit integer
+    hash = hash & hash;
   }
   return Math.abs(hash).toString(36);
 }
 
 export async function fetchPlaylist(): Promise<IPTVChannel[]> {
-  // Prefer local proxy to avoid CORS/rate limits; fallback to env proxy; then direct
   const envProxy = process.env.PROXY_M3U8 ?? "";
   const localProxy = `${APP_URL}/api/proxy?url=`;
   const tryUrls = [
@@ -52,21 +50,17 @@ export async function fetchPlaylist(): Promise<IPTVChannel[]> {
     const next = lines[i + 1] ?? "";
     const nameMatch = line.split(",").pop() ?? "Channel";
     
-    // Extract metadata from EXTINF line
     const logoMatch = /tvg-logo="([^"]+)"/.exec(line)?.[1];
     const groupMatch = /group-title="([^"]+)"/.exec(line)?.[1];
     const countryMatch = /tvg-country="([^"]+)"/.exec(line)?.[1];
     const languageMatch = /tvg-language="([^"]+)"/.exec(line)?.[1];
     const idMatch = /tvg-id="([^"]+)"/.exec(line)?.[1];
     
-    // Check if HD
     const isHD = /\[HD\]|HD/i.test(line);
     
-    // Get URL from next line
     const url = next.startsWith("http") ? next.trim() : "";
     if (!url) continue;
     
-    // Generate unique ID (prefer stream URL hash to avoid duplicate tvg-id collisions)
     const channelId = hashString(url);
     
     channels.push({

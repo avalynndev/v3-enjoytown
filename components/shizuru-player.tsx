@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { APP_URL } from "@/constants";
 import { Loader2 } from "lucide-react";
 
@@ -17,13 +17,11 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
   const [isLoading, setIsLoading] = useState(false);
   const [usedProxy, setUsedProxy] = useState(false);
 
-  // No-op logger (previously used for debugging)
   const log = {
     info: (_msg: string, _data?: unknown) => {},
     error: (_msg: string, _data?: unknown) => {},
   };
 
-  // Build a proxy base that can handle both playlists and media segments
   const getProxyBase = () => {
     const envProxy = process.env.PROXY_M3U8 ?? "";
     const localProxy = `${APP_URL}/api/proxy?url=`;
@@ -47,12 +45,10 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
     const ensureHls = async () => {
       if (typeof window === "undefined") return null;
       
-      // Check if hls.js is already loaded
       if ((window as any).Hls) {
         return (window as any).Hls as any;
       }
 
-      // Load hls.js from CDN
       return new Promise<any>((resolve, reject) => {
         const script = document.createElement("script");
         script.src = "https://cdn.jsdelivr.net/npm/hls.js@1.5.14/dist/hls.min.js";
@@ -76,11 +72,9 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
         
         if (destroyed || !video) return;
 
-        // Check if browser supports native HLS (Safari)
         const canUseNative = video.canPlayType("application/vnd.apple.mpegurl") !== "";
         
         if (canUseNative) {
-          // Try direct first; if it errors, retry with proxy once
           const proxyBase = getProxyBase();
           const directUrl = src;
           const proxied = src.startsWith("http") ? `${proxyBase}${encodeURIComponent(src)}` : src;
@@ -122,7 +116,6 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
               }
             }
           });
-          // Fire initial play for direct attempt
           video.play().catch(() => {});
         } else if (HlsCtor && HlsCtor.isSupported()) {
           const proxyBase = getProxyBase();
@@ -130,7 +123,6 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
             enableWorker: true,
             lowLatencyMode: false,
             backBufferLength: 90,
-            // Start without proxy; we may inject proxy on failure
           });
 
           hls.on(HlsCtor.Events.MANIFEST_PARSED, () => {
@@ -150,11 +142,9 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
               if (data.fatal) {
                 switch (data.type) {
                   case HlsCtor.Events.ErrorTypes.NETWORK_ERROR:
-                    // On first fatal network error, retry once with proxy
                     if (!usedProxy) {
                       setUsedProxy(true);
                       try {
-                        // Inject proxying for all subsequent requests
                         (hls as any).config.fetchSetup = (context: any, init: any) => {
                           const originalUrl: string = context.url;
                           const proxiedUrl = originalUrl.startsWith("http")
@@ -216,7 +206,6 @@ export function ShizuruPlayer({ src, className, autoPlay = true }: ShizuruPlayer
         try {
           hls.destroy();
         } catch {
-          // Ignore cleanup errors
         }
       }
       if (video) {
