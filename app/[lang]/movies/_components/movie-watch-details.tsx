@@ -12,6 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
+import { MoviePlayer } from "./movie-watch";
 
 type MovieDetailsProps = {
   id: number;
@@ -45,11 +46,8 @@ export async function MovieWatchDetails({ id, language }: MovieDetailsProps) {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-
       <div className="max-w-5xl mx-auto space-y-6 pt-4 px-4 pb-6 lg:px-0 lg:pt-4">
-        <div className="w-full aspect-video rounded-xl bg-muted/30 border border-border shadow-sm flex items-center justify-center text-sm text-muted-foreground">
-          Video player area — Coming soon!
-        </div>
+        <MoviePlayer id={movieDetails.id} /> 
       </div>
 
       <Container>
