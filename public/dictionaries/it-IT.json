@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "organizzare film, organizzare serie, app per film e serie, raccomandazioni personalizzate, creare liste di film, gestione delle serie, migliori app per film, app per maratone di serie, organizzare maratone, recensioni di serie, liste di film online, interfaccia elegante per serie, suggerimenti di film, gestione dei film visti"
+    "keywords": "film gratis, serie tv gratis, guardare film online gratis, trasmettere serie tv gratis, streaming film gratis, guardare film gratis, serie tv gratis, streaming film online, intrattenimento gratis, guardare film gratuitamente, trasmettere serie tv gratuitamente"
   },
   "movies_list": {
     "now_playing": "Film in sala",
@@ -304,8 +304,8 @@
     "release_date_field": {
       "from_label": "Da",
       "to_label": "A",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Seleziona una data"
     },
     "sort_by": {
@@ -361,8 +361,8 @@
     "air_date": {
       "from_label": "Da",
       "to_label": "A",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Seleziona una data"
     },
     "sort_by": {
@@ -593,7 +593,7 @@
   "explore": "Esplorare",
   "save_order": "Salva ordine",
   "edit_order": "Modifica ordine",
-  "start_now": "Inizia ora!",
+  "start_now": "Inizia a Guardare Ora",
   "start_your_journey": "Inizia il tuo viaggio in pochi passi.",
   "already_have_an_account": "Hai già un account?",
   "continue_with_google": "Continua con Google",
@@ -829,8 +829,8 @@
   "progress_completed": "Progresso completato",
   "overview": "Panoramica",
   "your_progress": "Il tuo progresso",
-  "community_badge": "✨ Fai parte di una comunità di +400 utenti",
-  "perfect_place_for_watching": "Il posto perfetto per chi guarda",
-  "everything": "tutto",
-  "manage_rate_discover": "Gestisci, valuta, scopri e condividi i tuoi contenuti preferiti. Crea liste, ricevi consigli e tieni traccia di tutto ciò che hai guardato."
+  "community_badge": "✨ Guarda Film e Serie TV Gratis",
+  "perfect_place_for_watching": "Guarda Film e Serie TV",
+  "everything": "Gratis",
+  "manage_rate_discover": "Trasmetti migliaia di film e serie televisive completamente gratis. Scopri nuove uscite, film classici e serie da guardare in binge senza costi di abbonamento."
 }

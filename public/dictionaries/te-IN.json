@@ -1,13 +1,13 @@
 {
   "home": {
-    "keywords": "organize movies, organize series, movie and series app, personalized recommendations, create movie lists, series control, best movie apps, app for series marathons, organize marathons, series reviews, online movie lists, elegant interface for series, movie suggestions, track watched movies"
+    "keywords": "ఉచిత సినిమాలు, ఉచిత టీవీ షోలు, ఉచితంగా సినిమాలు చూడండి, ఉచిత టీవీ సిరీస్ స్ట్రీమింగ్, ఉచిత సినిమా స్ట్రీమింగ్, ఉచిత సినిమాలు చూడండి, ఉచిత టీవీ సిరీస్, ఆన్లైన్ సినిమా స్ట్రీమింగ్, ఉచిత వినోదం, ఉచితంగా సినిమాలు చూడండి, ఉచితంగా టీవీ షోలను స్ట్రీమ్ చేయండి"
   },
   "movies_list": {
-    "now_playing": "Now playing movies",
-    "popular": "Popular movies",
-    "top_rated": "Top rated movies",
-    "upcoming": "Upcoming movies",
-    "show_all": "Show all"
+    "now_playing": "ప్రస్తుతం ప్రదర్శిస్తున్న సినిమాలు",
+    "popular": "జనాదరణ పొందిన సినిమాలు",
+    "top_rated": "అత్యధిక రేటింగ్ సినిమాలు",
+    "upcoming": "రాబోయే సినిమాలు",
+    "show_all": "అన్నీ చూపించు"
   },
   "login_form": {
     "email_label": "E-mail",
@@ -38,64 +38,64 @@
     "try_again": "Try again"
   },
   "tabs": {
-    "reviews": "Reviews",
-    "credits": "Credits",
-    "recommendations": "Recommendations",
-    "similar": "Similar",
-    "images": "Images",
-    "videos": "Videos",
-    "seasons": "Seasons"
+    "reviews": "సమీక్షలు",
+    "credits": "క్రెడిట్‌లు",
+    "recommendations": "సిఫార్సులు",
+    "similar": "సమానమైనవి",
+    "images": "చిత్రాలు",
+    "videos": "వీడియోలు",
+    "seasons": "సీజన్‌లు"
   },
   "navigation": {
-    "home": "Home",
-    "discover": "Discover",
-    "discover_description": "Ready for something new? Let us surprise you with movies and shows you'll love.",
-    "now_playing": "Now Playing",
-    "now_playing_description": "Stay up-to-date with the movies shining on the big screens right now.",
-    "popular": "Popular",
-    "popular_description": "See what's trending! These are the movies and shows everyone is watching and talking about.",
-    "top_rated": "Top Rated",
-    "top_rated_description": "Discover what have won over the hearts and minds of audiences and critics.",
-    "upcoming": "Upcoming",
-    "upcoming_description": "Stay tuned about the next big hits set to premiere soon.",
-    "tv_series_description": "Binge-worthy series. Explore new stories, unforgettable characters, and your next binge-watches.",
-    "airing_today": "Airing Today",
-    "airing_today_description": "Don't miss a beat! See which shows have fresh episodes coming out of the oven today.",
-    "on_the_air": "On the Air",
-    "on_the_air_description": "Tune in here to not miss out on current episodes of the hottest series right now.",
-    "animes_description": "Discover epic adventures and stunning visuals."
+    "home": "హోమ్",
+    "discover": "కనుగొనండి",
+    "discover_description": "ఏదైనా కొత్తదానికి సిద్ధంగా ఉన్నారా? మీకు ఇష్టమైన సినిమాలు మరియు షోలతో మిమ్మల్ని ఆశ్చర్యపరుస్తాము.",
+    "now_playing": "ప్రస్తుతం ప్రదర్శిస్తున్న",
+    "now_playing_description": "ప్రస్తుతం పెద్ద తెరలపై ప్రకాశిస్తున్న సినిమాలతో తాజాగా ఉండండి.",
+    "popular": "జనాదరణ పొందినవి",
+    "popular_description": "ఏమి ట్రెండింగ్‌లో ఉందో చూడండి! ఇవి అందరూ చూస్తున్న మరియు మాట్లాడుతున్న సినిమాలు మరియు షోలు.",
+    "top_rated": "అత్యధిక రేటింగ్",
+    "top_rated_description": "ప్రేక్షకుల మరియు విమర్శకుల హృదయాలు మరియు మనస్సులను గెలుచుకున్న వాటిని కనుగొనండి.",
+    "upcoming": "రాబోయేవి",
+    "upcoming_description": "త్వరలో ప్రదర్శించనున్న తదుపరి పెద్ద హిట్స్ గురించి వేచి ఉండండి.",
+    "tv_series_description": "బింజ్-వాచింగ్ కోసం తగిన సిరీస్‌లు. కొత్త కథలను, మరచిపోలేని పాత్రలను మరియు మీ తదుపరి బింజ్-వాచింగ్‌లను అన్వేషించండి.",
+    "airing_today": "ఈ రోజు ప్రసారం",
+    "airing_today_description": "ఒక్క క్షణం కూడా కోల్పోవద్దు! ఈ రోజు ఏ షోలకు కొత్త ఎపిసోడ్‌లు వస్తున్నాయో చూడండి.",
+    "on_the_air": "ప్రసారంలో",
+    "on_the_air_description": "ప్రస్తుతం అత్యంత హాట్ సిరీస్‌ల ప్రస్తుత ఎపిసోడ్‌లను కోల్పోకుండా ఇక్కడ చూడండి.",
+    "animes_description": "అద్భుతమైన సాహసాలు మరియు అద్భుతమైన దృశ్యాలను కనుగొనండి."
   },
   "sidebar_search": {
-    "placeholder": "Search for movies, TV Series, or people",
-    "search_everything": "Search anything",
-    "no_results": "No results found.",
-    "tv_series": "TV Series"
+    "placeholder": "సినిమాలు, టీవీ సిరీస్‌లు లేదా వ్యక్తులను శోధించండి",
+    "search_everything": "ఏదైనా శోధించండి",
+    "no_results": "ఫలితాలు కనుగొనబడలేదు.",
+    "tv_series": "టీవీ సిరీస్"
   },
   "watch_providers": {
-    "label": "Watch Providers",
-    "stream": "Stream",
-    "rent": "Rent",
-    "buy": "Buy"
+    "label": "చూడడానికి ప్రొవైడర్‌లు",
+    "stream": "స్ట్రీమ్",
+    "rent": "అద్దె",
+    "buy": "కొనండి"
   },
   "lists_dropdown": {
-    "my_lists": "My lists",
-    "removed_successfully": "Removed successfully.",
-    "added_successfully": "Added successfully."
+    "my_lists": "నా జాబితాలు",
+    "removed_successfully": "విజయవంతంగా తీసివేయబడింది.",
+    "added_successfully": "విజయవంతంగా జోడించబడింది."
   },
   "credits": {
-    "cast": "Cast",
-    "crew": "Crew"
+    "cast": "తారాగణం",
+    "crew": "క్రూవ్"
   },
   "review_form": {
-    "required": "Review is required.",
-    "rating_max": "Max value of rating is 5",
-    "success": "Review created successfully.",
-    "publish": "Publish",
-    "placeholder": "What you think about?",
-    "login": "Login",
-    "register": "Register",
-    "or": "or",
-    "make_first_review": "to make your first review!"
+    "required": "సమీక్ష అవసరం.",
+    "rating_max": "రేటింగ్ యొక్క గరిష్ట విలువ 5",
+    "success": "సమీక్ష విజయవంతంగా సృష్టించబడింది.",
+    "publish": "ప్రచురించండి",
+    "placeholder": "మీరు దాని గురించి ఏమి ఆలోచిస్తారు?",
+    "login": "లాగిన్",
+    "register": "నమోదు",
+    "or": "లేదా",
+    "make_first_review": "మీ మొదటి సమీక్ష చేయడానికి!"
   },
   "review_reply_form": {
     "success": "Reply created successfully."
@@ -290,8 +290,8 @@
     "release_date_field": {
       "from_label": "From",
       "to_label": "To",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Select a date"
     },
     "sort_by": {
@@ -347,8 +347,8 @@
     "air_date": {
       "from_label": "From",
       "to_label": "To",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Select a date"
     },
     "sort_by": {
@@ -815,9 +815,9 @@
   "progress_completed": "Progress completed",
   "overview": "Overview",
   "your_progress": "Your progress",
-  "community_badge": "✨ Be part of a community of +400 users",
-  "perfect_place_for_watching": "The perfect place for who watch",
-  "everything": "everything",
-  "manage_rate_discover": "Manage, rate, discover, and share your favorite content. Create lists, receive recommendations, and keep track of everything you've watched.",
-  "start_now": "Start now"
+  "community_badge": "✨ సినిమాలు మరియు టీవీ షోలను ఉచితంగా చూడండి",
+  "perfect_place_for_watching": "సినిమాలు మరియు టీవీ షోలను చూడండి",
+  "everything": "ఉచితంగా",
+  "manage_rate_discover": "వేలాది సినిమాలు మరియు టీవీ సిరీస్‌లను పూర్తిగా ఉచితంగా స్ట్రీమ్ చేయండి. కొత్త విడుదలలు, క్లాసిక్ సినిమాలు మరియు బింజ్-వాచింగ్ షోలను సభ్యత్వ ఫీజు లేకుండా కనుగొనండి.",
+  "start_now": "ఇప్పుడు చూడడం ప్రారంభించండి"
 }

@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "organize movies, organize series, movie and series app, personalized recommendations, create movie lists, series control, best movie apps, app for series marathons, organize marathons, series reviews, online movie lists, elegant interface for series, movie suggestions, track watched movies"
+    "keywords": "free movies, free tv shows, watch movies online free, stream tv series free, free movie streaming, watch free movies, free tv series, online movie streaming, free entertainment, watch movies free, stream tv shows free"
   },
   "movies_list": {
     "now_playing": "Now playing movies",
@@ -290,8 +290,8 @@
     "release_date_field": {
       "from_label": "From",
       "to_label": "To",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Select a date"
     },
     "sort_by": {
@@ -347,8 +347,8 @@
     "air_date": {
       "from_label": "From",
       "to_label": "To",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Select a date"
     },
     "sort_by": {
@@ -815,9 +815,9 @@
   "progress_completed": "Progress completed",
   "overview": "Overview",
   "your_progress": "Your progress",
-  "community_badge": "✨ Be part of a community of +400 users",
-  "perfect_place_for_watching": "The perfect place for who watch",
-  "everything": "everything",
-  "manage_rate_discover": "Manage, rate, discover, and share your favorite content. Create lists, receive recommendations, and keep track of everything you've watched.",
-  "start_now": "Start now"
+  "community_badge": "✨ Watch Movies & TV Shows For Free",
+  "perfect_place_for_watching": "Watch Movies & TV Shows",
+  "everything": "For Free",
+  "manage_rate_discover": "Stream thousands of movies and TV series absolutely free. Discover new releases, classic films, and binge-worthy shows without any subscription fees.",
+  "start_now": "Start Watching Now"
 }

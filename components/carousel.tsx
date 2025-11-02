@@ -18,7 +18,6 @@ export default async function CarouselComponent({
     type === "movies"
       ? await tmdb.movies.trending("day", language)
       : await tmdb.tv.trending("day", language);
-  console.log(language);
 
   if (!trending) return <div>None Found</div>;
 

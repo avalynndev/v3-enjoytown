@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "映画を整理, シリーズを整理, 映画とシリーズのアプリ, パーソナライズされたおすすめ, 映画リストを作成, シリーズ管理, ベスト映画アプリ, シリーズマラソン用アプリ, マラソンを整理, シリーズレビュー, オンライン映画リスト, シリーズのエレガントなインターフェース, 映画のおすすめ, 見た映画を管理"
+    "keywords": "無料映画, 無料テレビ番組, オンライン映画無料視聴, 無料テレビシリーズストリーミング, 無料映画ストリーミング, 無料映画視聴, 無料テレビシリーズ, オンライン映画ストリーミング, 無料エンターテインメント, 無料で映画を視聴, 無料でテレビ番組をストリーミング"
   },
   "movies_list": {
     "now_playing": "上映中の映画",
@@ -361,8 +361,8 @@
     "air_date": {
       "from_label": "開始日",
       "to_label": "終了日",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "開始日を選択",
+      "to_placeholder": "終了日を選択",
       "select_date": "日付を選択"
     },
     "sort_by": {
@@ -593,7 +593,7 @@
   "explore": "探検する",
   "save_order": "順序を保存",
   "edit_order": "順序を編集",
-  "start_now": "今すぐ始める!",
+  "start_now": "今すぐ視聴を始める",
   "start_your_journey": "わずか数ステップで旅を始めましょう。",
   "already_have_an_account": "すでにアカウントをお持ちですか?",
   "continue_with_google": "Googleで続行",
@@ -832,8 +832,8 @@
   "progress_completed": "進捗完了",
   "overview": "概要",
   "your_progress": "あなたの進捗",
-  "community_badge": "✨ 400人以上のユーザーコミュニティの一員になりましょう",
-  "perfect_place_for_watching": "すべてを見る人のための完璧な場所",
-  "everything": "すべて",
-  "manage_rate_discover": "お気に入りのコンテンツを管理、評価、発見、共有しましょう。リストを作成し、おすすめを受け取り、視聴したすべてを追跡できます。"
+  "community_badge": "✨ 映画とテレビ番組を無料で視聴",
+  "perfect_place_for_watching": "映画とテレビ番組を視聴",
+  "everything": "無料",
+  "manage_rate_discover": "何千もの映画やテレビシリーズを完全無料でストリーミング。新作リリース、クラシック映画、見逃せない番組を、サブスクリプション料金なしで発見できます。"
 }

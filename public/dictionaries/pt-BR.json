@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "organizar filmes, organizar séries, app de filmes e séries, recomendações personalizadas, criar listas de filmes, controle de séries, melhores apps de filmes, app para maratonas de séries, organizar maratonas, avaliações de séries, listas de filmes online, interface elegante para séries, sugestões de filmes, controle de filmes assistidos"
+    "keywords": "filmes grátis, séries de tv grátis, assistir filmes online grátis, transmitir séries de tv grátis, streaming de filmes grátis, assistir filmes grátis, séries de tv grátis, streaming de filmes online, entretenimento grátis, assistir filmes gratuitamente, transmitir séries de tv gratuitamente"
   },
   "movies_list": {
     "now_playing": "Filmes em exibição",
@@ -302,8 +302,8 @@
     "release_date_field": {
       "from_label": "De",
       "to_label": "Até",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Selecione uma data"
     },
     "sort_by": {
@@ -363,8 +363,8 @@
     "air_date": {
       "from_label": "De",
       "to_label": "Até",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Selecione uma data"
     },
     "sort_by": {
@@ -830,9 +830,9 @@
   "progress_completed": "Progresso completo",
   "overview": "Visão geral",
   "your_progress": "Seu progresso",
-  "community_badge": "✨ Faça parte de uma comunidade de +400 usuários",
-  "perfect_place_for_watching": "O lugar perfeito para quem assiste de",
-  "everything": "tudo",
-  "manage_rate_discover": "Gerencie, avalie, descubra e compartilhe seus conteúdos favoritos. Crie listas, receba recomendações e acompanhe tudo o que já assistiu.",
-  "start_now": "Comece agora"
+  "community_badge": "✨ Assista Filmes e Séries de TV Grátis",
+  "perfect_place_for_watching": "Assista Filmes e Séries de TV",
+  "everything": "Grátis",
+  "manage_rate_discover": "Transmita milhares de filmes e séries de televisão totalmente grátis. Descubra novos lançamentos, filmes clássicos e séries para maratonar sem custos de assinatura.",
+  "start_now": "Começar a Assistir Agora"
 }

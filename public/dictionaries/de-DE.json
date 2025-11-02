@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "Filme organisieren, Serien organisieren, App für Filme und Serien, personalisierte Empfehlungen, Filmlisten erstellen, Serienverwaltung, beste Film-Apps, App für Serien-Marathons, Marathons organisieren, Serienbewertungen, Online-Filmlisten, elegante Benutzeroberfläche für Serien, Filmvorschläge, gesehenen Filme verwalten"
+    "keywords": "kostenlose Filme, kostenlose TV-Serien, Filme online kostenlos ansehen, TV-Serien kostenlos streamen, kostenloses Film-Streaming, kostenlose Filme ansehen, kostenlose TV-Serien, Online-Film-Streaming, kostenlose Unterhaltung, Filme kostenlos ansehen, TV-Serien kostenlos streamen"
   },
   "movies_list": {
     "now_playing": "Aktuelle Kinofilme",
@@ -299,8 +299,8 @@
     "release_date_field": {
       "from_label": "Von",
       "to_label": "Bis",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Wähle ein Datum"
     },
     "sort_by": {
@@ -589,7 +589,7 @@
   "explore": "Erkunden",
   "save_order": "Ordnung speichern",
   "edit_order": "Ordnung bearbeiten",
-  "start_now": "Jetzt starten",
+  "start_now": "Jetzt Ansehen Starten",
   "start_your_journey": "Beginnen Sie Ihre Reise in nur wenigen Schritten.",
   "already_have_an_account": "Haben Sie schon ein Konto?",
   "continue_with_google": "Weiter mit Google",
@@ -826,8 +826,8 @@
   "progress_completed": "Fortschritt abgeschlossen",
   "overview": "Übersicht",
   "your_progress": "Ihr Fortschritt",
-  "community_badge": "✨ Werden Sie Teil einer Gemeinschaft von +400 Benutzern",
-  "perfect_place_for_watching": "Der perfekte Ort für alle, die",
-  "everything": "alles",
-  "manage_rate_discover": "Verwalten, bewerten, entdecken und teilen Sie Ihre Lieblingsinhalte. Erstellen Sie Listen, erhalten Sie Empfehlungen und behalten Sie den Überblick über alles, was Sie gesehen haben."
+  "community_badge": "✨ Filme und TV-Serien Kostenlos Ansehen",
+  "perfect_place_for_watching": "Filme und TV-Serien Ansehen",
+  "everything": "Kostenlos",
+  "manage_rate_discover": "Streamen Sie Tausende von Filmen und TV-Serien völlig kostenlos. Entdecken Sie neue Veröffentlichungen, klassische Filme und Serien zum Binge-Watching ohne Abogebühren."
 }

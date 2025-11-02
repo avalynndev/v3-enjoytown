@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enjoytown - Free Movie & TV Streaming Platform
+
+Enjoytown is a free streaming platform where you can watch thousands of movies and TV series without any subscription fees. Discover new releases, classic films, and binge-worthy shows all in one place.
+
+## Features
+
+- 🎬 **Free Streaming**: Watch movies and TV shows completely free
+- 📺 **Extensive Library**: Access thousands of titles across multiple genres
+- 🎯 **Discover**: Find new content with personalized recommendations
+- 📱 **Multi-Platform**: Works on desktop and mobile devices
+- 🌍 **Multi-Language**: Support for multiple languages including English, Spanish, French, German, Italian, Portuguese, Japanese, and Telugu
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
+bun install
+# or
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
+
+```bash
+bun dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 16** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **TMDB API** - Movie and TV show data
+- **React Server Components** - Server-side rendering
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/              # Next.js app router pages
+├── components/       # React components
+├── public/           # Static files and dictionaries
+├── services/         # API services
+├── tmdb/            # TMDB API integration
+└── utils/           # Utility functions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is for educational purposes.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+  <a href="https://moonshot.hackclub.com" target="_blank">
+    <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/35ad2be8c916670f3e1ac63c1df04d76a4b337d1_moonshot.png" 
+         alt="This project is part of Moonshot, a 4-day hackathon in Florida visiting Kennedy Space Center and Universal Studios!" 
+         style="width: 100%;">
+  </a>
+</div>

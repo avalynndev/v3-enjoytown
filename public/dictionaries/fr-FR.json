@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "organiser des films, organiser des séries, application pour films et séries, recommandations personnalisées, créer des listes de films, gestion des séries, meilleures applications de films, application pour des marathons de séries, organiser des marathons, avis sur les séries, listes de films en ligne, interface élégante pour séries, suggestions de films, gérer les films regardés"
+    "keywords": "films gratuits, séries tv gratuites, regarder des films en ligne gratuitement, diffuser des séries tv gratuitement, streaming de films gratuit, regarder des films gratuits, séries tv gratuites, streaming de films en ligne, divertissement gratuit, regarder des films gratuitement, diffuser des séries tv gratuitement"
   },
   "movies_list": {
     "now_playing": "Films à l'affiche",
@@ -305,8 +305,8 @@
     "release_date_field": {
       "from_label": "De",
       "to_label": "À",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Sélectionnez une date"
     },
     "sort_by": {
@@ -362,8 +362,8 @@
     "air_date": {
       "from_label": "De",
       "to_label": "À",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Sélectionnez une date"
     },
     "sort_by": {
@@ -595,7 +595,7 @@
   "explore": "Explorer",
   "save_order": "Sauvegarder l'ordre",
   "edit_order": "Modifier l'ordre",
-  "start_now": "Commencez maintenant!",
+  "start_now": "Commencez à Regarder Maintenant",
   "start_your_journey": "Commencez votre voyage en quelques étapes seulement.",
   "already_have_an_account": "Vous avez déjà un compte?",
   "continue_with_google": "Continuer avec Google",
@@ -832,8 +832,9 @@
   "progress_completed": "Progrès complet",
   "overview": "Aperçu",
   "your_progress": "Votre progression",
-  "community_badge": "✨ Faites partie d'une communauté de +400 utilisateurs",
-  "perfect_place_for_watching": "L'endroit parfait pour ceux qui regardent",
-  "everything": "tout",
-  "manage_rate_discover": "Gérez, évaluez, découvrez et partagez votre contenu préféré. Créez des listes, recevez des recommandations et suivez tout ce que vous avez regardé."
+  "community_badge": "✨ Regardez des Films et Séries TV Gratuitement",
+  "perfect_place_for_watching": "Regardez des Films et Séries TV",
+  "everything": "Gratuitement",
+  "manage_rate_discover": "Diffusez des milliers de films et de séries télévisées totalement gratuitement. Découvrez de nouvelles sorties, des films classiques et des émissions à regarder en rafale sans frais d'abonnement.",
+  "start_now": "Commencez à Regarder Maintenant"
 }

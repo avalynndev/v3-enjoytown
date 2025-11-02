@@ -1,6 +1,6 @@
 {
   "home": {
-    "keywords": "organizar películas, organizar series, app de películas y series, recomendaciones personalizadas, crear listas de películas, control de series, mejores apps de películas, app para maratones de series, organizar maratones, reseñas de series, listas de películas online, interfaz elegante para series, sugerencias de películas, controlar películas vistas"
+    "keywords": "películas gratis, series de tv gratis, ver películas online gratis, transmitir series de tv gratis, streaming de películas gratis, ver películas gratis, series de tv gratis, streaming de películas online, entretenimiento gratis, ver películas gratis, transmitir series de tv gratis"
   },
   "movies_list": {
     "now_playing": "Películas en cartelera",
@@ -304,8 +304,8 @@
     "release_date_field": {
       "from_label": "Desde",
       "to_label": "Hasta",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Selecciona una fecha"
     },
     "sort_by": {
@@ -361,8 +361,8 @@
     "air_date": {
       "from_label": "Desde",
       "to_label": "Hasta",
-      "from_placeholder": "18/11/2002",
-      "to_placeholder": "18/11/2003",
+      "from_placeholder": "",
+      "to_placeholder": "",
       "select_date": "Selecciona una fecha"
     },
     "sort_by": {
@@ -829,9 +829,9 @@
   "progress_completed": "Progreso completado",
   "overview": "Resumen",
   "your_progress": "Tu progreso",
-  "community_badge": "✨ Sé parte de una comunidad de +400 usuarios",
-  "perfect_place_for_watching": "El lugar perfecto para quien ve",
-  "everything": "todo",
-  "manage_rate_discover": "Gestiona, califica, descubre y comparte tu contenido favorito. Crea listas, recibe recomendaciones y mantén un registro de todo lo que has visto.",
-  "start_now": "Empezar ahora"
+  "community_badge": "✨ Ve Películas y Series de TV Gratis",
+  "perfect_place_for_watching": "Ve Películas y Series de TV",
+  "everything": "Gratis",
+  "manage_rate_discover": "Transmite miles de películas y series de televisión completamente gratis. Descubre nuevos estrenos, películas clásicas y series para maratón sin ningún costo de suscripción.",
+  "start_now": "Comenzar a Ver Ahora"
 }
