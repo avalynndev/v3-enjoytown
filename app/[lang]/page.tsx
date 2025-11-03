@@ -7,6 +7,7 @@ import { APP_URL } from "@/constants";
 
 import { SUPPORTED_LANGUAGES } from "@/languages";
 import { Hero } from "@/components/hero";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const { lang } = await props.params;
@@ -22,7 +23,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
       }
       return acc;
     },
-    {} as Record<string, string>,
+    {} as Record<string, string>
   );
 
   const title = `${dictionary.perfect_place_for_watching} ${dictionary.everything}`;
@@ -64,9 +65,10 @@ export default async function Home(props: PageProps) {
 
   return (
     <>
-      <main>
-        <Hero dictionary={dictionary} />
-      </main>
+      <header className="sticky top-0 z-50 flex h-14 items-center gap-2 backdrop-blur rounded-t-2xl px-3 sm:px-6">
+        <SidebarTrigger className="-ml-1" />
+      </header>
+      <Hero dictionary={dictionary} />
     </>
   );
 }
