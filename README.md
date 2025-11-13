@@ -64,3 +64,9 @@ This project is for educational purposes.
          style="width: 100%;">
   </a>
 </div>
+
+
+## Disclaimer
+All movie-related data, including titles, descriptions, posters, ratings, and other details, are provided by The Movie Database (TMDB). This website is not affiliated with TMDB or any of its partners.
+
+We do not host, upload, or store any movies, TV shows, or streaming content on our servers. All streaming links are sourced from third-party providers. We are not responsible for the accuracy, legality, or content of any external sites or services. Users are advised to use their discretion when accessing third-party content.
